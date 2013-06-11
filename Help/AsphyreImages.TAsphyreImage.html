@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreImages: Class TAsphyreImage</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreImage"></a><h1 class="cio">Class TAsphyreImage</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreImages.html">AsphyreImages</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreImage = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+2-dimensional image implementation that may contain one or more patterns and/or textures which can be rendered on Asphyre's canvas. The image data can be loaded quickly from Asphyre archives or from external file on disk. The image supports different pixel formats with or without alpha-channel, mipmapping and dynamic access.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreImage</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#IndexOfTexture">IndexOfTexture</a></b>(Sample: <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#InsertTexture">InsertTexture</a></b>(): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#InsertTexture">InsertTexture</a></b>(Width, Height: Integer): <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#LoadFromArchive">LoadFromArchive</a></b>(const Key: <a   href="AsphyreDef.html#UniString">UniString</a>; Archive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#LoadFromFile">LoadFromFile</a></b>(const FileName: <a   href="AsphyreDef.html#StdString">StdString</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#LoadFromStream">LoadFromStream</a></b>(Stream: TStream): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#RetrieveTex">RetrieveTex</a></b>(Pattern: Integer; const SrcRect: TRect; Mirror, Flip: Boolean; var Mapping: <a   href="AsphyreTypes.html#TPoint4">TPoint4</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImage.html#RetrieveTex">RetrieveTex</a></b>(Pattern: Integer; var Mapping: <a   href="AsphyreTypes.html#TPoint4">TPoint4</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreImages.TAsphyreImage.html#RemoveAllTextures">RemoveAllTextures</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreImages.TAsphyreImage.html#RemoveTexture">RemoveTexture</a></b>(Index: Integer);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#DynamicImage">DynamicImage</a></b>: Boolean read FDynamicImage write FDynamicImage;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#MipMapping">MipMapping</a></b>: Boolean read FMipMapping write FMipMapping;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#Name">Name</a></b>: <a   href="AsphyreDef.html#UniString">UniString</a> read FName write FName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#PatternCount">PatternCount</a></b>: Integer read FPatternCount write FPatternCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#PatternSize">PatternSize</a></b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> read FPatternSize write FPatternSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#PixelFormat">PixelFormat</a></b>: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> read FPixelFormat write FPixelFormat;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#Texture">Texture</a></b>[Index: Integer]: <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a> read GetTexture;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#TextureCount">TextureCount</a></b>: Integer read GetTextureCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImage.html#VisibleSize">VisibleSize</a></b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> read FVisibleSize write FVisibleSize;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOfTexture"></a><code>function <b>IndexOfTexture</b>(Sample: <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the specified texture sample to the list of image's textures and returns its new index.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="InsertTexture"></a><code>function <b>InsertTexture</b>(): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts new texture to the end of the list. The texture is added to the image's list of textures without initializing. The index of newly added texture is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="InsertTexture"></a><code>function <b>InsertTexture</b>(Width, Height: Integer): <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts new texture to the end of the list. The texture is initialized first with the specified size. The reference to newly added texture is returned and the texture is added to image's list of textures only if initialization succeeds. If initialization fails, <code>Nil</code> is returned and no texture is added to the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadFromArchive"></a><code>function <b>LoadFromArchive</b>(const Key: <a   href="AsphyreDef.html#UniString">UniString</a>; Archive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads image in its native Asphyre specification from Asphyre archive. The image should be previously added to the archive using <i>AsphyreManager</i> tool.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadFromFile"></a><code>function <b>LoadFromFile</b>(const FileName: <a   href="AsphyreDef.html#StdString">StdString</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads image consisting of a single texture from external file on disk. This function returns <code>True</code> on success and <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadFromStream"></a><code>function <b>LoadFromStream</b>(Stream: TStream): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads image in its native Asphyre specification from the stream. This function returns <code>True</code> if it succeeds and <code>False</code> otherwise. This image format is used when adding images to Asphyre archives using <i>AsphyreManager</i> tool.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RetrieveTex"></a><code>function <b>RetrieveTex</b>(Pattern: Integer; const SrcRect: TRect; Mirror, Flip: Boolean; var Mapping: <a   href="AsphyreTypes.html#TPoint4">TPoint4</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retrieves the texture's index that matches the specified pattern number. The texture mapping coordinates for that pattern are also returned. If no texture matches the specified pattern, -1 is returned and texture mapping coordinates are not modified.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RetrieveTex"></a><code>function <b>RetrieveTex</b>(Pattern: Integer; var Mapping: <a   href="AsphyreTypes.html#TPoint4">TPoint4</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retrieves the texture's index that matches the specified pattern number. The texture mapping coordinates for that pattern are also returned. If no texture matches the specified pattern, -1 is returned and texture mapping coordinates are not modified.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveAllTextures"></a><code>procedure <b>RemoveAllTextures</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes and releases all image's textures.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveTexture"></a><code>procedure <b>RemoveTexture</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the texture specified by the given index from the list. The index should be in range of [0..(TextureCount - 1)]. If the index is outside of valid range, this method does nothing.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DynamicImage"></a><code>property <b>DynamicImage</b>: Boolean read FDynamicImage write FDynamicImage;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether this image requires frequent access to its pixel data. If this parameter is set to <code>True</code>, dynamic textures will be used, where pixel data can be updated frequently. This should be used when image pixels need to be updated at least once per frame.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MipMapping"></a><code>property <b>MipMapping</b>: Boolean read FMipMapping write FMipMapping;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether the image should contain mipmap data. This can increase memory consumption and slow down the loading of images, but produces better visual results when the image is shrunken to smaller sizes.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Name"></a><code>property <b>Name</b>: <a   href="AsphyreDef.html#UniString">UniString</a> read FName write FName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The unique name of image that identifies it in the owner's list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PatternCount"></a><code>property <b>PatternCount</b>: Integer read FPatternCount write FPatternCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The total number of patterns contained within the image.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PatternSize"></a><code>property <b>PatternSize</b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> read FPatternSize write FPatternSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The size of individual pattern inside the image. If no patterns are stored, this size should match the texture's size.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PixelFormat"></a><code>property <b>PixelFormat</b>: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> read FPixelFormat write FPixelFormat;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The pixel format that will be used in all image's textures. This parameter is actually a suggestion and different format may be used in the textures, depending on hardware support; if this format is not supported, usually the closest format will be chosen in textures. When loading pixel data from archives or external files, the conversion will be done automatically, if the texture format does not match the stored pixel format.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Texture"></a><code>property <b>Texture</b>[Index: Integer]: <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a> read GetTexture;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access to image's individual textures by using index, which should be in range of [0..(TextureCount - 1)]. If the index is outside of valid range, the returned value will be <code>Nil</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextureCount"></a><code>property <b>TextureCount</b>: Integer read GetTextureCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of textures used in the image.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VisibleSize"></a><code>property <b>VisibleSize</b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> read FVisibleSize write FVisibleSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The visible area inside of each image's pattern that will be used in rendering. This size must be smaller or equal to <a class="normal"  href="AsphyreImages.TAsphyreImage.html#PatternSize">PatternSize</a>.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

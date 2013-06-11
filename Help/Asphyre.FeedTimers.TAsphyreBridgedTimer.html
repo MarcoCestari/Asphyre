@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.FeedTimers: Class TAsphyreBridgedTimer</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreBridgedTimer"></a><h1 class="cio">Class TAsphyreBridgedTimer</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.FeedTimers.html">Asphyre.FeedTimers</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreBridgedTimer = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+The implementation of Asphyre's event-based multimedia timer running on a variety of platforms including Windows, Mac OS and iOS. This class is not independent, it requires the application to call <code>NotifyIdle</code> method, which will provide similar functionality of <a class="normal"  href="Asphyre.FormTimers.TAsphyreTimer.html">TAsphyreTimer</a> class.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreBridgedTimer</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#NotifyIdle">NotifyIdle</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Process">Process</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Reset">Reset</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Delta">Delta</a></b>: Double read FDelta;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Enabled">Enabled</a></b>: Boolean read FEnabled write FEnabled;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#FrameRate">FrameRate</a></b>: Integer read FFrameRate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Latency">Latency</a></b>: Double read FLatency;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#MaxFPS">MaxFPS</a></b>: Integer read FMaxFPS write SetMaxFPS;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnProcess">OnProcess</a></b>: TNotifyEvent read FOnProcess write FOnProcess;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a></b>: TNotifyEvent read FOnTimer write FOnTimer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#SingleCallOnly">SingleCallOnly</a></b>: Boolean read FSingleCallOnly write FSingleCallOnly;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Speed">Speed</a></b>: Double read FSpeed write SetSpeed;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="NotifyIdle"></a><code>procedure <b>NotifyIdle</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This event should be called as fast as possible from within the main application for the timer to work. It can be either called when idle event occurs or from within system timer event.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Process"></a><code>procedure <b>Process</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This method should only be called from within <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> event to do constant object movement and animation control. Each time this method is called, <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnProcess">OnProcess</a> event may (or may not) occur depending on the current rendering frame rate (see <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#FrameRate">FrameRate</a>) and the desired processing speed (see <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Speed">Speed</a>). The only thing that is assured is that <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnProcess">OnProcess</a> event will occur exactly <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Speed">Speed</a> times per second no matter how fast <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> occurs (that is, the value of <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#FrameRate">FrameRate</a>).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Reset"></a><code>procedure <b>Reset</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Resets internal structures of the timer and starts over the timing calculations. This can be useful when a very time-consuming task was executed inside <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> event that only occurs once. Normally, it would stall the timer making it think that the processing takes too long or the rendering is too slow; calling this method will tell the timer that it should ignore the situation and prevent the stall.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Delta"></a><code>property <b>Delta</b>: Double read FDelta;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Movement differential between the current frame rate and the requested <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Speed">Speed</a>. Object movement and animation control can be made inside <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> event if all displacements are multiplied by this coefficient. For instance, if frame rate is 30 FPS and speed is set to 60, this coefficient will equal to 2.0, so objects moving at 30 FPS will have double displacement to match 60 FPS speed; on the other hand, if frame rate is 120 FPS with speed set to 60, this coefficient will equal to 0.5, to move objects two times slower. An easier and more straight-forward approach can be used with <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnProcess">OnProcess</a> event, where using this coefficient is not necessary.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Enabled"></a><code>property <b>Enabled</b>: Boolean read FEnabled write FEnabled;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether the timer is enabled or not. The internal processing may still be occurring independently of this value, but it controls whether <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> event occurs or not.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FrameRate"></a><code>property <b>FrameRate</b>: Integer read FFrameRate;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The current frame rate in frames per second. This value is calculated approximately two times per second and can only be used for informative purposes (e.g. displaying frame rate in the application). For precise real-time indications it is recommended to use <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Latency">Latency</a> property instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Latency"></a><code>property <b>Latency</b>: Double read FLatency;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The time (in milliseconds) calculated between previous frame and the current one. This can be a direct indicator of rendering performance as it indicates how much time it took to render (and possibly process) the frame.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MaxFPS"></a><code>property <b>MaxFPS</b>: Integer read FMaxFPS write SetMaxFPS;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The maximum allowed frame rate at which <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> should be executed. This value is an approximate and the resulting frame rate may be quite different (the resolution can be as low as 10 ms). It should be used with reasonable values to prevent the application from using 100% of CPU and GPU with unnecessarily high frame rates such as 1000 FPS. A reasonable and default value for this property is 200.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OnProcess"></a><code>property <b>OnProcess</b>: TNotifyEvent read FOnProcess write FOnProcess;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This event occurs when calling <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Process">Process</a> method inside <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> event. In this event all constant object movement and animation control should be made. This event can occur more than once for each call to <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Process">Process</a> or may not occur, depending on the current <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#FrameRate">FrameRate</a> and <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Speed">Speed</a>. For instance, when frame rate is 120 FPS and speed set to 60, this event will occur for each second call to <code>Process</code>; on the other hand, if frame rate is 30 FPS with speed set to 60, this event will occur twice for each call to <code>Process</code> to maintain constant processing. An alternative to this is doing processing inside <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnTimer">OnTimer</a> event using <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Delta">Delta</a> as coefficient for object movement. If the processing takes too much time inside this event so that the target speed cannot be achieved, the timer may stall (that is, reduce number of occurences of this event until the balance is restored).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OnTimer"></a><code>property <b>OnTimer</b>: TNotifyEvent read FOnTimer write FOnTimer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This event occurs when <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Enabled">Enabled</a> is set to <code>True</code> and as fast as possible (only limited approximately by <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#MaxFPS">MaxFPS</a>). In this event, all rendering should be made. Inside this event, at some location it is recommended to call <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Process">Process</a> method, which will invoke <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnProcess">OnProcess</a> event for constant object movement and animation control. The idea is to render graphics as fast as possible while moving objects and controlling animation at constant speed. Note that for this event to occur, it is necessary to call <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#NotifyIdle">NotifyIdle</a> at some point in the application for this timer to do the required calculations.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="SingleCallOnly"></a><code>property <b>SingleCallOnly</b>: Boolean read FSingleCallOnly write FSingleCallOnly;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+If this property is set to <code>True</code>, it will prevent the timer from trying to fix situations where the rendering speed is slower than the processing speed (that is, <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#FrameRate">FrameRate</a> is lower than <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Speed">Speed</a>). Therefore, faster rendering produces constant speed, while slower rendering slows the processing down. This is particularly useful for dedicated servers that do no rendering but only processing; in this case, the processing cannot be technically any faster than it already is.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Speed"></a><code>property <b>Speed</b>: Double read FSpeed write SetSpeed;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The speed of constant processing and animation control in frames per second. This affects both <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#Delta">Delta</a> property and occurence of <a class="normal"  href="Asphyre.FeedTimers.TAsphyreBridgedTimer.html#OnProcess">OnProcess</a> event.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

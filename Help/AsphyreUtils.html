@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreUtils</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit AsphyreUtils</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td>Classes, Interfaces, Objects and Records</td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td>Types</td><td>Constants</td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+A collection of useful functions and utilities working with numbers and rectangles that are used throughout the entire framework.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#CatmullRom">CatmullRom</a></b>(x0, x1, x2, x3, Theta: Single): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#CeilPowerOfTwo">CeilPowerOfTwo</a></b>(Value: Integer): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#FloorPowerOfTwo">FloorPowerOfTwo</a></b>(Value: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#IsPowerOfTwo">IsPowerOfTwo</a></b>(Value: Integer): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#Lerp">Lerp</a></b>(x0, x1, Theta: Single): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#Max2">Max2</a></b>(a, b: Integer): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#Max3">Max3</a></b>(a, b, c: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#Min2">Min2</a></b>(a, b: Integer): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#Min3">Min3</a></b>(a, b, c: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#MinMax2">MinMax2</a></b>(Value, Min, Max: Integer): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#MoveRect">MoveRect</a></b>(const Rect: TRect; const Point: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): TRect;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#OverlapRect">OverlapRect</a></b>(const Rect1, Rect2: TRect): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#PointInRect">PointInRect</a></b>(const Point: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Rect: TRect): Boolean; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#PointInRect">PointInRect</a></b>(const Point: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; const Rect: TRect): Boolean; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#PointInTriangle">PointInTriangle</a></b>(const Pos, v1, v2, v3: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#RectInRect">RectInRect</a></b>(const Rect1, Rect2: TRect): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#ShortRect">ShortRect</a></b>(const Rect1, Rect2: TRect): TRect;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="AsphyreUtils.html#ShrinkRect">ShrinkRect</a></b>(const Rect: TRect; hIn, vIn: Integer): TRect;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="CatmullRom"></a><code>function <b>CatmullRom</b>(x0, x1, x2, x3, Theta: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the resulting interpolated value from the given four vertices and the <i>Theta</i> parameter, which must be specified in [0..1] range. The interpolation uses Catmull-Rom spline.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="CeilPowerOfTwo"></a><code>function <b>CeilPowerOfTwo</b>(Value: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the least power of two greater or equal to the specified value.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="FloorPowerOfTwo"></a><code>function <b>FloorPowerOfTwo</b>(Value: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the greatest power of two lesser or equal to the specified value.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IsPowerOfTwo"></a><code>function <b>IsPowerOfTwo</b>(Value: Integer): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns <code>True</code> if the specified value is a power of two or <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp"></a><code>function <b>Lerp</b>(x0, x1, Theta: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the resulting interpolated value from the given two depending on the <i>Theta</i> parameter, which must be specified in [0..1] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Max2"></a><code>function <b>Max2</b>(a, b: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the value that is biggest among the two.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Max3"></a><code>function <b>Max3</b>(a, b, c: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the value that is biggest among the three.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Min2"></a><code>function <b>Min2</b>(a, b: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the value that is smallest among the two.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Min3"></a><code>function <b>Min3</b>(a, b, c: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the value that is smallest among the three.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="MinMax2"></a><code>function <b>MinMax2</b>(Value, Min, Max: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Clamps the given value so that it always lies within the specified range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="MoveRect"></a><code>function <b>MoveRect</b>(const Rect: TRect; const Point: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): TRect;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Displaces the specified rectangle by the given offset and returns the new resulting rectangle.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="OverlapRect"></a><code>function <b>OverlapRect</b>(const Rect1, Rect2: TRect): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns <code>True</code> if the two specified rectangles overlap or <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PointInRect"></a><code>function <b>PointInRect</b>(const Point: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Rect: TRect): Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns <code>True</code> if the given point is within the specified rectangle or <code>False</code> otherwise. This function works with floating-point vector by rounding it down.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PointInRect"></a><code>function <b>PointInRect</b>(const Point: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; const Rect: TRect): Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns <code>True</code> if the given point is within the specified rectangle or <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PointInTriangle"></a><code>function <b>PointInTriangle</b>(const Pos, v1, v2, v3: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns <code>True</code> if the specified point is inside the triangle specified by the given three vertices or <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RectInRect"></a><code>function <b>RectInRect</b>(const Rect1, Rect2: TRect): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns <code>True</code> if the given rectangle is within the specified rectangle or <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ShortRect"></a><code>function <b>ShortRect</b>(const Rect1, Rect2: TRect): TRect;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the smaller rectangle resulting from the intersection of the given two rectangles.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ShrinkRect"></a><code>function <b>ShrinkRect</b>(const Rect: TRect; hIn, vIn: Integer): TRect;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Reduces the size of the specified rectangle by the given offsets on all edges.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Math.Sets: Class TPointList</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TPointList"></a><h1 class="cio">Class TPointList</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Math.Sets.html">Asphyre.Math.Sets</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TPointList = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+List of 2D integer point holders that in addition to the vector itself contain a pointer to custom user data each. This list can be used when an association is needed between 2D points and some sort of data.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TPointList</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.Sets.TPointList.html#IndexOf">IndexOf</a></b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.Sets.TPointList.html#Insert">Insert</a></b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>; AData: Pointer = nil): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.Sets.TPointList.html#Insert">Insert</a></b>(x, y: Integer; AData: Pointer = nil): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TPointList.html#AddFrom">AddFrom</a></b>(const Source: <a   href="Asphyre.Math.Sets.TPointList.html">TPointList</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TPointList.html#Clear">Clear</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TPointList.html#CopyFrom">CopyFrom</a></b>(const Source: <a   href="Asphyre.Math.Sets.TPointList.html">TPointList</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TPointList.html#Exclude">Exclude</a></b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TPointList.html#Include">Include</a></b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>; AData: Pointer = nil);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TPointList.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TPointList.html#Count">Count</a></b>: Integer read DataCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TPointList.html#Item">Item</a></b>[Index: Integer]: <a   href="Asphyre.Math.Sets.html#PPointHolder">PPointHolder</a> read GetItem;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TPointList.html#MemAddr">MemAddr</a></b>: Pointer read GetMemAddr;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TPointList.html#Point">Point</a></b>[Index: Integer]: <a   href="Asphyre.Math.html#PPoint2px">PPoint2px</a> read GetPoint;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the first occurrence of the given 2D point in the list. If the given point is not found, this function returns -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Insert"></a><code>function <b>Insert</b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>; AData: Pointer = nil): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the specified 2D point and custom user data to the end of list, returning the index where they were placed.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Insert"></a><code>function <b>Insert</b>(x, y: Integer; AData: Pointer = nil): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts a new 2D point specified using individual coordinates along with custom user data to the end of list, returning the index where they were placed.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFrom"></a><code>procedure <b>AddFrom</b>(const Source: <a   href="Asphyre.Math.Sets.TPointList.html">TPointList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds all elements from the source list to this one at the end of the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Clear"></a><code>procedure <b>Clear</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all elements from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CopyFrom"></a><code>procedure <b>CopyFrom</b>(const Source: <a   href="Asphyre.Math.Sets.TPointList.html">TPointList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Copies all elements from the source list to this one. The new list becomes the exact copy of the source one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Exclude"></a><code>procedure <b>Exclude</b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Excludes the first occurrence of the given 2D point from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Include"></a><code>procedure <b>Include</b>(const APoint: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>; AData: Pointer = nil);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Includes the given 2D point and custom user data to the list. This method checks if the 2D point with the given coordinates already exists and in this case, does nothing. The custom user data is not checked.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the element at given index, shifting all elements by one from that location and further. If the index is outside of valid range, this method does nothing.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read DataCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of elements in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Item"></a><code>property <b>Item</b>[Index: Integer]: <a   href="Asphyre.Math.Sets.html#PPointHolder">PPointHolder</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This property gives access to individual elements in the list by returning a reference to element at the given index, which should be in range of <i>[0..(Count - 1)]</i>. If the index is outside of valid range, <code>Nil</code> is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MemAddr"></a><code>property <b>MemAddr</b>: Pointer read GetMemAddr;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns pointer to the first element in the list or <code>Nil</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Point"></a><code>property <b>Point</b>[Index: Integer]: <a   href="Asphyre.Math.html#PPoint2px">PPoint2px</a> read GetPoint;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This property allows accessing individual 2D points in the list directly ignoring the custom user data field.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

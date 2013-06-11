@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreMatrices: Class TAsphyreMatrix</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreMatrix"></a><h1 class="cio">Class TAsphyreMatrix</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreMatrices.html">AsphyreMatrices</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreMatrix = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+High-level 4x4 matrix class that facilitates working with matrices for moving objects, cameras and projections. The matrix information is aligned on 16-byte boundaries, which allows it to be used with aligned SSE assembly instructions for improved performance.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreMatrix</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#HeadingPitchBank">HeadingPitchBank</a></b>(Heading, Pitch, Bank: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#HeadingPitchBank">HeadingPitchBank</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Inverse">Inverse</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#InverseTranspose">InverseTranspose</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#LoadIdentity">LoadIdentity</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#LoadMtx">LoadMtx</a></b>(Source: <a   href="Matrices4.html#PMatrix4">PMatrix4</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#LoadMtx">LoadMtx</a></b>(const Source: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#LoadRotation">LoadRotation</a></b>(SrcMtx: <a   href="Matrices4.html#PMatrix4">PMatrix4</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#LoadZero">LoadZero</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#LookAt">LookAt</a></b>(const Origin, Target, Roof: <a   href="Vectors3.TVector3.html">TVector3</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Multiply">Multiply</a></b>(SrcMtx: <a   href="Matrices4.html#PMatrix4">PMatrix4</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Multiply">Multiply</a></b>(const SrcMtx: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Multiply">Multiply</a></b>(Source: <a   href="AsphyreMatrices.TAsphyreMatrix.html">TAsphyreMatrix</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#OrthogonalBDS">OrthogonalBDS</a></b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#OrthogonalVOL">OrthogonalVOL</a></b>(Width, Height, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#PerspectiveBDS">PerspectiveBDS</a></b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#PerspectiveFOVX">PerspectiveFOVX</a></b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#PerspectiveFOVY">PerspectiveFOVY</a></b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#PerspectiveVOL">PerspectiveVOL</a></b>(Width, Height, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#RotateX">RotateX</a></b>(Phi: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#RotateXLocal">RotateXLocal</a></b>(Phi: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#RotateY">RotateY</a></b>(Phi: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#RotateYLocal">RotateYLocal</a></b>(Phi: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#RotateZ">RotateZ</a></b>(Phi: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#RotateZLocal">RotateZLocal</a></b>(Phi: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Scale">Scale</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Scale">Scale</a></b>(dx, dy, dz: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Scale">Scale</a></b>(Delta: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Translate">Translate</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Translate">Translate</a></b>(dx, dy, dz: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#Transpose">Transpose</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#YawPitchRoll">YawPitchRoll</a></b>(Yaw, Pitch, Roll: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#YawPitchRoll">YawPitchRoll</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#EyePos">EyePos</a></b>: <a   href="Vectors3.TVector3.html">TVector3</a> read GetEyePos;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#RawMtx">RawMtx</a></b>: <a   href="Matrices4.html#PMatrix4">PMatrix4</a> read FRawMtx;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreMatrices.TAsphyreMatrix.html#WorldPos">WorldPos</a></b>: <a   href="Vectors3.TVector3.html">TVector3</a> read GetWorldPos;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="HeadingPitchBank"></a><code>procedure <b>HeadingPitchBank</b>(Heading, Pitch, Bank: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads a new matrix containing 3D rotation based on parameters similar to flight dynamics, specifically heading, pitch and Bank. Each of the components is specified individually.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="HeadingPitchBank"></a><code>procedure <b>HeadingPitchBank</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads a new matrix containing 3D rotation based on parameters similar to flight dynamics, specifically heading, pitch and bank. The components are taken from the specified vector with Y corresponding to heading, X to pitch and Z to bank.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Inverse"></a><code>procedure <b>Inverse</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates and loads the inverse of the current matrix. The resulting matrix, in other words, is the transformation that can be applied to a 3D vector to undo the transformation applied to it previously.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="InverseTranspose"></a><code>procedure <b>InverseTranspose</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates the inverse of the current matrix and then transposes it. This is mostly useful for transforming the normals of the 3D mesh.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadIdentity"></a><code>procedure <b>LoadIdentity</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads an identity matrix equal to <a class="normal"  href="Matrices4.html#IdentityMtx4">IdentityMtx4</a> into this class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadMtx"></a><code>procedure <b>LoadMtx</b>(Source: <a   href="Matrices4.html#PMatrix4">PMatrix4</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads the contents of the matrix specified by the pointer into this class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadMtx"></a><code>procedure <b>LoadMtx</b>(const Source: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads the contents of the specified matrix into this class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadRotation"></a><code>procedure <b>LoadRotation</b>(SrcMtx: <a   href="Matrices4.html#PMatrix4">PMatrix4</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads the rotation information from matrix specified by the given pointer. In other words, only 3x3 part of the matrix is loaded with the rest of contents replaced by identity matrix.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadZero"></a><code>procedure <b>LoadZero</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads a zero matrix equal to <a class="normal"  href="Matrices4.html#ZeroMtx4">ZeroMtx4</a> into this class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LookAt"></a><code>procedure <b>LookAt</b>(const Origin, Target, Roof: <a   href="Vectors3.TVector3.html">TVector3</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Multiplies the contents of the current matrix by a so-called &quot;View&quot; matrix, which is created by defining camera's position, its target and the vertical axis or &quot;roof&quot;. In typical applications, it is recommended to call <a class="normal"  href="AsphyreMatrices.TAsphyreMatrix.html#LoadIdentity">LoadIdentity</a> before this method.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Multiply"></a><code>procedure <b>Multiply</b>(SrcMtx: <a   href="Matrices4.html#PMatrix4">PMatrix4</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Multiplies the current matrix by another matrix specified by the given pointer.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Multiply"></a><code>procedure <b>Multiply</b>(const SrcMtx: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Multiples the current matrix by another matrix given as a parameter.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Multiply"></a><code>procedure <b>Multiply</b>(Source: <a   href="AsphyreMatrices.TAsphyreMatrix.html">TAsphyreMatrix</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Multiplies the current matrix by another matrix from another <a class="normal"  href="AsphyreMatrices.TAsphyreMatrix.html">TAsphyreMatrix</a> class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OrthogonalBDS"></a><code>procedure <b>OrthogonalBDS</b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads orthogonal projection matrix defined by the individual axis's boundaries.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OrthogonalVOL"></a><code>procedure <b>OrthogonalVOL</b>(Width, Height, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads orthogonal projection matrix defined by the viewing volume in 3D space.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PerspectiveBDS"></a><code>procedure <b>PerspectiveBDS</b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads perspective projection matrix defined by the individual axis's boundaries.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PerspectiveFOVX"></a><code>procedure <b>PerspectiveFOVX</b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads perspective projection matrix defined by a field of view on X axis. In 3D shooters the field of view needs to be adjusted to allow more visible area on wide-screen monitors. The parameters that define the viewed range are important for defining the precision of the depth transformation or a depth-buffer.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FieldOfView</dt>
+<dd>The camera's field of view in radians. For example Pi/4.</dd>
+<dt>AspectRatio</dt>
+<dd>The screen's aspect ratio. Can be calculated as x/y.</dd>
+<dt>MinRange</dt>
+<dd>The closest range at which the scene will be viewed.</dd>
+<dt>MaxRange</dt>
+<dd>The farthest range at which the scene will be viewed.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PerspectiveFOVY"></a><code>procedure <b>PerspectiveFOVY</b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads perspective projection matrix defined by a field of view on Y axis. This is a common way for typical 3D applications. In 3D shooters special care is to be taken because on wide-screen monitors the visible area will be bigger. The parameters that define the viewed range are important for defining the precision of the depth transformation or a depth-buffer.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FieldOfView</dt>
+<dd>The camera's field of view in radians. For example Pi/4.</dd>
+<dt>AspectRatio</dt>
+<dd>The screen's aspect ratio. Can be calculated as y/x.</dd>
+<dt>MinRange</dt>
+<dd>The closest range at which the scene will be viewed.</dd>
+<dt>MaxRange</dt>
+<dd>The farthest range at which the scene will be viewed.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PerspectiveVOL"></a><code>procedure <b>PerspectiveVOL</b>(Width, Height, MinRange, MaxRange: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads perspective projection matrix defined by the viewing volume in 3D space.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RotateX"></a><code>procedure <b>RotateX</b>(Phi: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies rotation to the current matrix around global X axis specified by the given angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RotateXLocal"></a><code>procedure <b>RotateXLocal</b>(Phi: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies rotation to the current matrix around local X axis specified by the given angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RotateY"></a><code>procedure <b>RotateY</b>(Phi: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies rotation to the current matrix around global Y axis specified by the given angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RotateYLocal"></a><code>procedure <b>RotateYLocal</b>(Phi: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies rotation to the current matrix around local Y axis specified by the given angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RotateZ"></a><code>procedure <b>RotateZ</b>(Phi: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies rotation to the current matrix around global Z axis specified by the given angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RotateZLocal"></a><code>procedure <b>RotateZLocal</b>(Phi: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies rotation to the current matrix around local Z axis specified by the given angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Scale"></a><code>procedure <b>Scale</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies scaling to the current matrix specified by the given 3D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Scale"></a><code>procedure <b>Scale</b>(dx, dy, dz: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies scaling to the current matrix specified by the components of each individual axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Scale"></a><code>procedure <b>Scale</b>(Delta: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies uniform scaling to the current matrix specified by a single coefficient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Translate"></a><code>procedure <b>Translate</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies translation to the current matrix specified by the given 3D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Translate"></a><code>procedure <b>Translate</b>(dx, dy, dz: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applies translation to the current matrix specified by the components of each individual axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Transpose"></a><code>procedure <b>Transpose</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Transposes the current matrix. That is, the rows become columns and vice-versa.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="YawPitchRoll"></a><code>procedure <b>YawPitchRoll</b>(Yaw, Pitch, Roll: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads a new matrix containing 3D rotation based on parameters similar to flight dynamics, specifically yaw, pitch and roll. Each of the components is specified individually.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="YawPitchRoll"></a><code>procedure <b>YawPitchRoll</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads a new matrix containing 3D rotation based on parameters similar to flight dynamics, specifically yaw, pitch and roll. The components are taken from the specified vector with Y corresponding to yaw, X to pitch and Z to roll.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="EyePos"></a><code>property <b>EyePos</b>: <a   href="Vectors3.TVector3.html">TVector3</a> read GetEyePos;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+If the matrix defines camera view, this property returns the supposed camera (or &quot;eye&quot;) position as a 3D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RawMtx"></a><code>property <b>RawMtx</b>: <a   href="Matrices4.html#PMatrix4">PMatrix4</a> read FRawMtx;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Pointer th the actual <a class="normal"  href="Matrices4.TMatrix4.html">TMatrix4</a> internal structure. This pointer is always aligned to 16-byte boundaries so that the resulting matrix can be used with aligned SSE assembly instructions.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="WorldPos"></a><code>property <b>WorldPos</b>: <a   href="Vectors3.TVector3.html">TVector3</a> read GetWorldPos;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+If the matrix defines world or object position, this property returns the supposed position as a 3D vector.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

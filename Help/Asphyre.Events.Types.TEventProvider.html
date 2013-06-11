@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Events.Types: Class TEventProvider</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TEventProvider"></a><h1 class="cio">Class TEventProvider</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Events.Types.html">Asphyre.Events.Types</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TEventProvider = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Event subscription class implementing observer pattern. Recipient classes are added to the subscriber list to receive notifactions of events sent by other classes.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TEventProvider</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Events.Types.TEventProvider.html#Notify">Notify</a></b>(const Sender: TObject; const Param: Pointer = nil): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Events.Types.TEventProvider.html#SetClassPriority">SetClassPriority</a></b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>; const Priority: Integer): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Events.Types.TEventProvider.html#Subscribe">Subscribe</a></b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>; const Callback: <a   href="Asphyre.Events.Types.html#TEventCallbackType">TEventCallbackType</a>; const Priority: Integer = -1): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProvider.html#MarkEventListDirty">MarkEventListDirty</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProvider.html#Unsubscribe">Unsubscribe</a></b>(const EventId: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProvider.html#UnsubscribeClass">UnsubscribeClass</a></b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Events.Types.TEventProvider.html#EventValidator">EventValidator</a></b>: <a   href="Asphyre.Events.Types.html#TEventValidatorType">TEventValidatorType</a> read FEventValidator
+   write FEventValidator;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Events.Types.TEventProvider.html#Owner">Owner</a></b>: <a   href="Asphyre.Events.Types.TEventProviders.html">TEventProviders</a> read FOwner;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Notify"></a><code>function <b>Notify</b>(const Sender: TObject; const Param: Pointer = nil): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Send event notification to all subscribed classes and their callback functions, filtered through <a class="normal"  href="Asphyre.Events.Types.TEventProvider.html#EventValidator">EventValidator</a> event.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="SetClassPriority"></a><code>function <b>SetClassPriority</b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>; const Priority: Integer): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Sets the secondary priority of all event callback functions registered to the specified class. This secondary priority is used after the first primary priority is applied (the one passed to <a class="normal"  href="Asphyre.Events.Types.TEventProvider.html#Subscribe">Subscribe</a> function).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Subscribe"></a><code>function <b>Subscribe</b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>; const Callback: <a   href="Asphyre.Events.Types.html#TEventCallbackType">TEventCallbackType</a>; const Priority: Integer = -1): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Subscribes the given class and its event handling callback to receive all events sent from this provider. If the priority is set, the class will receive events depending on the list of priorities either after or before other events depending on priority settings. This function returns the identification number of the subscribed function, which can later be used to unsubscribe from this provider using <a class="normal"  href="Asphyre.Events.Types.TEventProvider.html#Unsubscribe">Unsubscribe</a> method.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MarkEventListDirty"></a><code>procedure <b>MarkEventListDirty</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Marks the priority list of all event callback functions dirty, so it is refreshed next time an event occurs. This should be called after changing the priority of some class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Unsubscribe"></a><code>procedure <b>Unsubscribe</b>(const EventId: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Unsubscribes the event callback function registered using the specified ID, which is usually returned by <a class="normal"  href="Asphyre.Events.Types.TEventProvider.html#Subscribe">Subscribe</a> function.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UnsubscribeClass"></a><code>procedure <b>UnsubscribeClass</b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Unsubscribes all event callbacks registered to the specified class.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="EventValidator"></a><code>property <b>EventValidator</b>: <a   href="Asphyre.Events.Types.html#TEventValidatorType">TEventValidatorType</a> read FEventValidator
+   write FEventValidator;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Event validation callback that filters which events should be received by which classes depending on different circumstances.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Owner"></a><code>property <b>Owner</b>: <a   href="Asphyre.Events.Types.TEventProviders.html">TEventProviders</a> read FOwner;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The owner class that contains the list of all existing providers.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

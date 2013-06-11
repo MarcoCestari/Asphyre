@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Archives.Auth: Class TAsphyreAuth</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreAuth"></a><h1 class="cio">Class TAsphyreAuth</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td>Properties</td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Archives.Auth.html">Asphyre.Archives.Auth</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreAuth = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Archive password authentication class that implements observer pattern for providing passwords to archives for encrypting and decrypting sensitive information.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreAuth</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.Auth.TAsphyreAuth.html#Authorize">Authorize</a></b>(Sender: TObject; Archive: <a   href="Asphyre.Archives.TAsphyreArchive.html">TAsphyreArchive</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.Auth.TAsphyreAuth.html#Subscribe">Subscribe</a></b>(Callback: <a   href="Asphyre.Archives.Auth.html#TAuthCallback">TAuthCallback</a>): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Archives.Auth.TAsphyreAuth.html#ProvideKey">ProvideKey</a></b>(Key: Pointer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Archives.Auth.TAsphyreAuth.html#Unauthorize">Unauthorize</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Archives.Auth.TAsphyreAuth.html#Unsubscribe">Unsubscribe</a></b>(EventID: Cardinal);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Authorize"></a><code>function <b>Authorize</b>(Sender: TObject; Archive: <a   href="Asphyre.Archives.TAsphyreArchive.html">TAsphyreArchive</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides password authentication to the provided Asphyre archive by calling existing callback functions to provide the password. If the password has been provided, the returned value is <code>True</code> and <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Subscribe"></a><code>function <b>Subscribe</b>(Callback: <a   href="Asphyre.Archives.Auth.html#TAuthCallback">TAuthCallback</a>): Cardinal;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Subscribes a new callback function that will provide secure password authentication to Asphyre archives. The returned ID can be used to unsubscribe the callback function.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ProvideKey"></a><code>procedure <b>ProvideKey</b>(Key: Pointer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides the password to the archive that is currently being authenticated. The <code>Key</code> parameter should point to a valid memory block of 16 bytes that contain 128-bit password.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Unauthorize"></a><code>procedure <b>Unauthorize</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes and burns the provided password for the existing Asphyre archive so that the password cannot be acquired by a third party.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Unsubscribe"></a><code>procedure <b>Unsubscribe</b>(EventID: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the subscribed callback function from the list.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

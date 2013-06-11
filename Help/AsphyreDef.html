@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreDef</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit AsphyreDef</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td>Classes, Interfaces, Objects and Records</td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+General integer and floating-point types optimized for each platform that are used throughout the entire framework.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="AsphyreDef.html#FreeNullMem">FreeNullMem</a></b>(var Value);</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PPreciseFloat">PPreciseFloat</a></b> = &circ;<a   href="AsphyreDef.html#PreciseFloat">PreciseFloat</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PreciseFloat">PreciseFloat</a></b> = Double;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PSizeFloat">PSizeFloat</a></b> = &circ;<a   href="AsphyreDef.html#SizeFloat">SizeFloat</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PSizeInt">PSizeInt</a></b> = &circ;<a   href="AsphyreDef.html#SizeInt">SizeInt</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PSizeUInt">PSizeUInt</a></b> = &circ;<a   href="AsphyreDef.html#SizeUInt">SizeUInt</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PStdString">PStdString</a></b> = &circ;<a   href="AsphyreDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PtrInt">PtrInt</a></b>  = <a   href="AsphyreDef.html#SizeInt">SizeInt</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PtrUInt">PtrUInt</a></b> = <a   href="AsphyreDef.html#SizeUInt">SizeUInt</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#PUniString">PUniString</a></b> = &circ;<a   href="AsphyreDef.html#UniString">UniString</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#SizeFloat">SizeFloat</a></b> = Double;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#SizeInt">SizeInt</a></b> = NativeInt;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#SizeUInt">SizeUInt</a></b> = NativeUInt;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#StdString">StdString</a></b> = string;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreDef.html#UniString">UniString</a></b> = UnicodeString;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="FreeNullMem"></a><code>procedure <b>FreeNullMem</b>(var Value);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calls FreeMem for the given value and then sets the value to <code>Nil</code>.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PPreciseFloat"></a><code><b>PPreciseFloat</b> = &circ;<a   href="AsphyreDef.html#PreciseFloat">PreciseFloat</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="AsphyreDef.html#PreciseFloat">PreciseFloat</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PreciseFloat"></a><code><b>PreciseFloat</b> = Double;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+High-precision floating-point type. It is typically equivalent of Double, unless target platform does not support 64-bit floats, in which case it is considered as Single.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PSizeFloat"></a><code><b>PSizeFloat</b> = &circ;<a   href="AsphyreDef.html#SizeFloat">SizeFloat</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="AsphyreDef.html#SizeFloat">SizeFloat</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PSizeInt"></a><code><b>PSizeInt</b> = &circ;<a   href="AsphyreDef.html#SizeInt">SizeInt</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="AsphyreDef.html#SizeInt">SizeInt</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PSizeUInt"></a><code><b>PSizeUInt</b> = &circ;<a   href="AsphyreDef.html#SizeUInt">SizeUInt</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="AsphyreDef.html#SizeInt">SizeInt</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PStdString"></a><code><b>PStdString</b> = &circ;<a   href="AsphyreDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="AsphyreDef.html#StdString">StdString</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PtrInt"></a><code><b>PtrInt</b>  = <a   href="AsphyreDef.html#SizeInt">SizeInt</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special signed integer type that can be used for pointer arithmetic.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PtrUInt"></a><code><b>PtrUInt</b> = <a   href="AsphyreDef.html#SizeUInt">SizeUInt</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special unsigned integer type that can be used for pointer arithmetic.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PUniString"></a><code><b>PUniString</b> = &circ;<a   href="AsphyreDef.html#UniString">UniString</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="AsphyreDef.html#UniString">UniString</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SizeFloat"></a><code><b>SizeFloat</b> = Double;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+General floating-point type. On 64-bit platform it is an equivalent of <i>Double</i> for better real-time performance, while on 32-bit systems it is an equivalent of <i>Single</i>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SizeInt"></a><code><b>SizeInt</b> = NativeInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+General-purpose signed integer type.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SizeUInt"></a><code><b>SizeUInt</b> = NativeUInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+General-purpose unsigned integer type.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StdString"></a><code><b>StdString</b> = string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Standard string type that is compatible with most Delphi and/or FreePascal functions that is version dependant. In latest Delphi versions it is considered Unicode, while older versions and FreePascal consider it AnsiString.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UniString"></a><code><b>UniString</b> = UnicodeString;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+General-purpose Unicode string type.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

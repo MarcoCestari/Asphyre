@@ -1,0 +1,359 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Archives: Class TAsphyreArchive</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreArchive"></a><h1 class="cio">Class TAsphyreArchive</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Archives.html">Asphyre.Archives</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreArchive = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Asphyre archive implementation class that provides methods for reading, writing, deleting and renaming records in compressed (and possibly encrypted) archive; Zlib is used for data compression, CRC32 is used for data integrity checks and Asphyre's native 128-bit XTEA cipher is used for data encryption. <br> <br> Note that this implementation is not meant for concurrent access so modifying archives from different threads and/or applications simultaneously is not supported. The data can be read by different threads/applications only if it is not being written/updated at the same time and it is the application's responsibility to ensure this.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreArchive</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#IndexOf">IndexOf</a></b>(const Key: string): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#OpenFile">OpenFile</a></b>(const AFileName: string): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#ReadMemStream">ReadMemStream</a></b>(const Key: string; MemStream: TMemoryStream): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#ReadRecord">ReadRecord</a></b>(const Key: string; out Data: Pointer; out DataSize: Integer): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#ReadStream">ReadStream</a></b>(const Key: string; Stream: TStream): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RemoveRecord">RemoveRecord</a></b>(const Key: string): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RenameRecord">RenameRecord</a></b>(const Key, NewKey: string): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#WriteRecord">WriteRecord</a></b>(const Key: string; Source: Pointer; SourceSize: Integer; RecType: <a   href="Asphyre.Archives.html#TArchiveRecordType">TArchiveRecordType</a> = artFile; RecDate: TDateTime = 0.0): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Archives.TAsphyreArchive.html#WriteStream">WriteStream</a></b>(const Key: string; Stream: TStream; RecType: <a   href="Asphyre.Archives.html#TArchiveRecordType">TArchiveRecordType</a> = artFile; RecDate: TDateTime = 0.0): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Archives.TAsphyreArchive.html#Refresh">Refresh</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#FileName">FileName</a></b>: string read FFileName write SetFileName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#FileSize">FileSize</a></b>: Integer read FFileSize;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#OpenMode">OpenMode</a></b>: <a   href="Asphyre.Archives.html#TArchiveOpenMode">TArchiveOpenMode</a> read FOpenMode write FOpenMode;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#Password">Password</a></b>: Pointer read FPassword write FPassword;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#Ready">Ready</a></b>: Boolean read FReady;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordChecksum">RecordChecksum</a></b>[Index: Integer]: Cardinal read GetRecordChecksum;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordCount">RecordCount</a></b>: Integer read GetRecordCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordDate">RecordDate</a></b>[Index: Integer]: TDateTime read GetRecordDate;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordKey">RecordKey</a></b>[Index: Integer]: string read GetRecordKey;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordOrigSize">RecordOrigSize</a></b>[Index: Integer]: Cardinal read GetRecordOrigSize;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordPhysSize">RecordPhysSize</a></b>[Index: Integer]: Cardinal read GetRecordPhysSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordSecure">RecordSecure</a></b>[Index: Integer]: Boolean read GetRecordSecure;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Archives.TAsphyreArchive.html#RecordType">RecordType</a></b>[Index: Integer]: <a   href="Asphyre.Archives.html#TArchiveRecordType">TArchiveRecordType</a> read GetRecordType;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(const Key: string): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns index of the record that has the specified key. If no record with such key exists, the returned value is -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OpenFile"></a><code>function <b>OpenFile</b>(const AFileName: string): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Opens the specified file and refreshes the record list. If the specified file is already open, this method does nothing (in this case, <a class="normal"  href="Asphyre.Archives.TAsphyreArchive.html#Refresh">Refresh</a> can be called to explicitly refresh the record list).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ReadMemStream"></a><code>function <b>ReadMemStream</b>(const Key: string; MemStream: TMemoryStream): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Reads existing record from archive with the given key to the specified &quot;memory&quot; stream. The difference between this method and <a class="normal"  href="Asphyre.Archives.TAsphyreArchive.html#ReadStream">ReadStream</a> is the explicit use of <i>TMemoryStream</i> making this method faster to execute. The entire contents of the given stream are overwritten. If the method succeeds, <code>True</code> is returned and the specified stream will contain the record's data block with position set to zero. If the method fails, <code>False</code> is returned and the stream will be empty.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ReadRecord"></a><code>function <b>ReadRecord</b>(const Key: string; out Data: Pointer; out DataSize: Integer): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Reads existing record with the specified key from the archive and returns its raw data. The memory is allocated within this method and it's the caller responsibility to release the memory after it is no longer being used by using <code>FreeNullMem(Data)</code>. If the method succeeds, <code>True</code> is returned; if the method fails, <code>False</code> is returned, <i>Data</i> is set to <code>Nil</code> and <i>DataSize</i> is set to zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ReadStream"></a><code>function <b>ReadStream</b>(const Key: string; Stream: TStream): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Reads existing record from archive with the given key to the specified stream. If the method succeeds, <code>True</code> is returned and the data block will be written to stream at current position. If the method fails, <code>False</code> is returned and the stream remains unchanged.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveRecord"></a><code>function <b>RemoveRecord</b>(const Key: string): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the given record from archive. The returned value is <code>True</code> if the method succeeds and <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RenameRecord"></a><code>function <b>RenameRecord</b>(const Key, NewKey: string): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Changes the name of the given record updating the record table and writing it to disk. The returned value is <code>True</code> if the method succeeds and <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="WriteRecord"></a><code>function <b>WriteRecord</b>(const Key: string; Source: Pointer; SourceSize: Integer; RecType: <a   href="Asphyre.Archives.html#TArchiveRecordType">TArchiveRecordType</a> = artFile; RecDate: TDateTime = 0.0): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Writes a new record with the specified key and data. If a record with the same name exists, it will be removed first. If the specified date/time is zero or no date/time is specified, the current date and time will be used instead. The method returns <code>True</code> if the record has been written successfully or <code>False</code> if there was a problem.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="WriteStream"></a><code>function <b>WriteStream</b>(const Key: string; Stream: TStream; RecType: <a   href="Asphyre.Archives.html#TArchiveRecordType">TArchiveRecordType</a> = artFile; RecDate: TDateTime = 0.0): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Writes a new record with the specified key from the given stream. The stream's current position is used and the remaining data is read; therefore, to use the entire stream, make sure to call <code>Stream.Seek(0, soFromBeginning)</code> first. If a record with the same name exists, it will be removed first. If the specified date/time is zero or no date/time is specified, the current date and time will be used instead. The method returns <code>True</code> if the record has been written successfully or <code>False</code> if there was a problem.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Refresh"></a><code>procedure <b>Refresh</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Reloads the record table for the given archive, updating the list of records. This can be used to ensure that the list of records is current.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FileName"></a><code>property <b>FileName</b>: string read FFileName write SetFileName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The file name of the archive. This can be interpreted differently depending how the global variable <a class="normal"  href="Asphyre.Archives.html#ArchiveTypeAccess">ArchiveTypeAccess</a> is set. Setting this property may cause the list of records to be refreshed when a different file name is being set; <a class="normal"  href="Asphyre.Archives.TAsphyreArchive.html#Ready">Ready</a> property will also be updated as well. For a more flexible and controlled approach, consider using <a class="normal"  href="Asphyre.Archives.TAsphyreArchive.html#OpenFile">OpenFile</a> method instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FileSize"></a><code>property <b>FileSize</b>: Integer read FFileSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Physical size of the archive on disk.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OpenMode"></a><code>property <b>OpenMode</b>: <a   href="Asphyre.Archives.html#TArchiveOpenMode">TArchiveOpenMode</a> read FOpenMode write FOpenMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+How the file should be handled and accessed.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Password"></a><code>property <b>Password</b>: Pointer read FPassword write FPassword;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+128-bit password that will be used for reading and writing encrypted records within archive. If set to <code>Nil</code> (by default), the data is stored unsecurely. Secure records require this password to be set, trying to read them without password will fail. The data pointed by this property should have 16 bytes or 128 bits, the encryption uses Asphyre's native 128-bit XTEA cipher.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Ready"></a><code>property <b>Ready</b>: Boolean read FReady;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the archive with name set in <a class="normal"  href="Asphyre.Archives.TAsphyreArchive.html#FileName">FileName</a> has been opened property and can be used for reading and/or writing records.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordChecksum"></a><code>property <b>RecordChecksum</b>[Index: Integer]: Cardinal read GetRecordChecksum;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the record's CRC32 Checksum for the given index. If the index is outside of [0..(RecordCount - 1)] range, the returned value is zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordCount"></a><code>property <b>RecordCount</b>: Integer read GetRecordCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Number of existing records in the archive.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordDate"></a><code>property <b>RecordDate</b>[Index: Integer]: TDateTime read GetRecordDate;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the record date and time for the given index. If the index is outside of [0..(RecordCount - 1)] range, the returned value is zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordKey"></a><code>property <b>RecordKey</b>[Index: Integer]: string read GetRecordKey;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns key of the record specified by the given index, which should be in range of [0..(RecordCount - 1)]. If the index is outside of valid range, empty string will be returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordOrigSize"></a><code>property <b>RecordOrigSize</b>[Index: Integer]: Cardinal read GetRecordOrigSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the original (uncompressed) record's size for the given index. If the index is outside of [0..(RecordCount - 1)] range, the returned size is zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordPhysSize"></a><code>property <b>RecordPhysSize</b>[Index: Integer]: Cardinal read GetRecordPhysSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the physical record's size on disk for the given index, which does not include its internal header or space used in record table. If the index is outside of [0..(RecordCount - 1)] range, the returned size is zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordSecure"></a><code>property <b>RecordSecure</b>[Index: Integer]: Boolean read GetRecordSecure;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns whether the record at the specified index is encrypted or not. If the index is outside of [0..(RecordCount - 1)] range, the returned value is <code>False</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RecordType"></a><code>property <b>RecordType</b>[Index: Integer]: <a   href="Asphyre.Archives.html#TArchiveRecordType">TArchiveRecordType</a> read GetRecordType;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the record type for the given index. If the index is outside of [0..(RecordCount - 1)] range, the returned type is <code>artFile</code>.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

@@ -1,0 +1,487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: HelperSets: Class TIntegerList</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TIntegerList"></a><h1 class="cio">Class TIntegerList</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="HelperSets.html">HelperSets</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TIntegerList = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+A list of 32-bit signed integers with many functions that include ordering, shuffling and analysis. This class can also be used in for ... in loops, e.g. &quot;for IntVal in MyList do&quot;, where IntVal will iterate through all numbers in the list.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TIntegerList</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HelperSets.TIntegerList.html#ChainToString">ChainToString</a></b>(): <a   href="AsphyreDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HelperSets.TIntegerList.html#Exists">Exists</a></b>(Value: Integer): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HelperSets.TIntegerList.html#GetValueAtIndex">GetValueAtIndex</a></b>(Index: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HelperSets.TIntegerList.html#IndexOf">IndexOf</a></b>(Value: Integer): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HelperSets.TIntegerList.html#Insert">Insert</a></b>(Value: Integer): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="HelperSets.TIntegerList.html#IsSameAs">IsSameAs</a></b>(OtherList: <a   href="HelperSets.TIntegerList.html">TIntegerList</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#AddFrom">AddFrom</a></b>(Source: <a   href="HelperSets.TIntegerList.html">TIntegerList</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#BestShuffle">BestShuffle</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Clear">Clear</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#CopyFrom">CopyFrom</a></b>(Source: <a   href="HelperSets.TIntegerList.html">TIntegerList</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#DefineValueAtIndex">DefineValueAtIndex</a></b>(Index: Integer; Value: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Exclude">Exclude</a></b>(Value: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Include">Include</a></b>(Value: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#IncrementValueAtIndex">IncrementValueAtIndex</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#InsertFirst">InsertFirst</a></b>(Value: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#InsertRepeatValue">InsertRepeatValue</a></b>(Value: Integer; ValCount: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#LoadFromStream">LoadFromStream</a></b>(Stream: TStream);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#RemoveDuplicates">RemoveDuplicates</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#SaveToStream">SaveToStream</a></b>(Stream: TStream);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Series">Series</a></b>(NumCount: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Shuffle">Shuffle</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Sort">Sort</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="HelperSets.TIntegerList.html#Swap">Swap</a></b>(Index0, Index1: Integer);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#Count">Count</a></b>: Integer read DataCount write SetCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#IntAvg">IntAvg</a></b>: Integer read GetIntAvg;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#IntMax">IntMax</a></b>: Integer read GetIntMax;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#IntMin">IntMin</a></b>: Integer read GetIntMin;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#IntSum">IntSum</a></b>: Integer read GetIntSum;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#Items">Items</a></b>[Index: Integer]: Integer read GetItem
+   write SetItem;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#MemAddr">MemAddr</a></b>: Pointer read GetMemAddr;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="HelperSets.TIntegerList.html#RandomValue">RandomValue</a></b>: Integer read GetRandomValue;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ChainToString"></a><code>function <b>ChainToString</b>(): <a   href="AsphyreDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns text representation of the string e.g. &quot;21, 7, 14, 10, 20&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Exists"></a><code>function <b>Exists</b>(Value: Integer): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns <code>True</code> if the given number exists in the list and <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="GetValueAtIndex"></a><code>function <b>GetValueAtIndex</b>(Index: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the number at the specified index. If the index is outside of valid range, zero is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(Value: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the index of the first occurrence of the specified number in the list. If the number does not exist, -1 is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Insert"></a><code>function <b>Insert</b>(Value: Integer): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the given number into the list and returns its index. The number is added to the end of the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IsSameAs"></a><code>function <b>IsSameAs</b>(OtherList: <a   href="HelperSets.TIntegerList.html">TIntegerList</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Checks whether this list is an exact copy of the other list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFrom"></a><code>procedure <b>AddFrom</b>(Source: <a   href="HelperSets.TIntegerList.html">TIntegerList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds all numbers from the source list at the end of this list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="BestShuffle"></a><code>procedure <b>BestShuffle</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Shuffles the elements in the list by creating a new list and extracting numbers randomly from this one. This method is slow but it guarantees the proper random distribution. For a faster alternative, use <a class="normal"  href="HelperSets.TIntegerList.html#Shuffle">Shuffle</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Clear"></a><code>procedure <b>Clear</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all elements in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CopyFrom"></a><code>procedure <b>CopyFrom</b>(Source: <a   href="HelperSets.TIntegerList.html">TIntegerList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Copies all numbers from the source list. This list becomes exact copy of the source list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DefineValueAtIndex"></a><code>procedure <b>DefineValueAtIndex</b>(Index: Integer; Value: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Specifies the number at the given location. If the specified index is bigger than the number of elements, additional zeros are added to fill the unused space. For instance, if the list is empty, calling <i>DefineValueAtIndex(4, 15)</i> will add five zeros and set the fifth one to 15, so the list will become &quot;0, 0, 0, 0, 15&quot;. If index is below zero, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Exclude"></a><code>procedure <b>Exclude</b>(Value: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the first occurrence of the given number in this list. If the number does not exist, the method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Include"></a><code>procedure <b>Include</b>(Value: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Includes the given number to the end of list. If the number already exists, the method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IncrementValueAtIndex"></a><code>procedure <b>IncrementValueAtIndex</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Increments the number at the given position by one. If the index is bigger than the number of elements, additional zeros are added to fill the unused space similarly to <a class="normal"  href="HelperSets.TIntegerList.html#DefineValueAtIndex">DefineValueAtIndex</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="InsertFirst"></a><code>procedure <b>InsertFirst</b>(Value: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the given number at the beginning of the list, shifting all elements by one. The index of the element is not returned because it is always zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="InsertRepeatValue"></a><code>procedure <b>InsertRepeatValue</b>(Value: Integer; ValCount: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds a repeating sequence of the specified number to the end of list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadFromStream"></a><code>procedure <b>LoadFromStream</b>(Stream: TStream);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads the entire list from stream that was previously saved by <a class="normal"  href="HelperSets.TIntegerList.html#SaveToStream">SaveToStream</a> method.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes number at the specified index, shifting all elements from that index and further by one. If the index is invalid, this function does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveDuplicates"></a><code>procedure <b>RemoveDuplicates</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes duplicate numbers from the list so that the resulting list has only numbers that are unique.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="SaveToStream"></a><code>procedure <b>SaveToStream</b>(Stream: TStream);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Saves the entire list to stream. Each value is saved as 32-bit integer with an additional 32-bit integer used to define the length.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Series"></a><code>procedure <b>Series</b>(NumCount: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Replaces the contents of the current list with a new series of numbers starting from 0 and ending with <i>NumCount - 1</i>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Shuffle"></a><code>procedure <b>Shuffle</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Shuffles the elements in the list by exchanging randomly numbers at different locations. This method is fast but it does not guarantee proper random distribution in small lists (for such purposes it is better to use <a class="normal"  href="HelperSets.TIntegerList.html#BestShuffle">BestShuffle</a>. It works better for larger lists.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Sort"></a><code>procedure <b>Sort</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Sorts all numbers in the list in ascending order.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Swap"></a><code>procedure <b>Swap</b>(Index0, Index1: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Swaps two numbers at the corresponding indexes. For performance reasons, this function does not test if the indexes are valid, therefore this method should be used with caution.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read DataCount write SetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of elements in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IntAvg"></a><code>property <b>IntAvg</b>: Integer read GetIntAvg;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the average of all numbers in the list or zero if the list is empty.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IntMax"></a><code>property <b>IntMax</b>: Integer read GetIntMax;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the highest (maximum) number in the list or zero if the list is empty.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IntMin"></a><code>property <b>IntMin</b>: Integer read GetIntMin;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the lowest (minimum) number in the list or zero if the list is empty.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IntSum"></a><code>property <b>IntSum</b>: Integer read GetIntSum;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the sum of all numbers in the list or zero if the list is empty.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Items"></a><code>property <b>Items</b>[Index: Integer]: Integer read GetItem
+   write SetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This property allows accessing the individual integer members by using their index, which should be in [0..(Count - 1)] range. If the index is out of valid range, <i>Low(Integer)</i> is returned. Setting values with index outside of valid range does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MemAddr"></a><code>property <b>MemAddr</b>: Pointer read GetMemAddr;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The pointer to the first element in list or <i>nil</i> if no elements are present.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RandomValue"></a><code>property <b>RandomValue</b>: Integer read GetRandomValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns a random number from the list or zero if the list is empty.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

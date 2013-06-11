@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: PixelUtils</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit PixelUtils</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td>Classes, Interfaces, Objects and Records</td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td>Types</td><td>Constants</td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Utility routines for processing, mixing and blending pixels (or colors).</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#AddPixels">AddPixels</a></b>(Color1, Color2: Cardinal): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#AvgFourPixels">AvgFourPixels</a></b>(Color1, Color2, Color3, Color4: Cardinal): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#AvgPixels">AvgPixels</a></b>(Color1, Color2: Cardinal): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#AvgSixPixels">AvgSixPixels</a></b>(Color1, Color2, Color3, Color4, Color5, Color6: Cardinal): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#BlendPixels">BlendPixels</a></b>(Color1, Color2: Cardinal; Alpha: Integer): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#DisplaceRB">DisplaceRB</a></b>(Color: Cardinal): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="PixelUtils.html#ExtractAlpha">ExtractAlpha</a></b>(Src1, Src2, Bk1, Bk2: Single; out Alpha, Px: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#LerpPixels">LerpPixels</a></b>(Color1, Color2: Cardinal; Alpha: Single): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#MulPixelAlpha">MulPixelAlpha</a></b>(Color: Cardinal; Alpha: Single): Cardinal; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#MulPixelAlpha">MulPixelAlpha</a></b>(Color: Cardinal; Alpha: Integer): Cardinal; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#MulPixels">MulPixels</a></b>(Color1, Color2: Cardinal): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#PixelToGray">PixelToGray</a></b>(Pixel: Cardinal): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="PixelUtils.html#PixelToGrayEx">PixelToGrayEx</a></b>(Pixel: Cardinal): Single;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AddPixels"></a><code>function <b>AddPixels</b>(Color1, Color2: Cardinal): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Adds two 32-bit RGBA color values together clamping the resulting values if necessary.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AvgFourPixels"></a><code>function <b>AvgFourPixels</b>(Color1, Color2, Color3, Color4: Cardinal): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the average of four given 32-bit RGBA color values.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AvgPixels"></a><code>function <b>AvgPixels</b>(Color1, Color2: Cardinal): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the average of two given 32-bit RGBA color values.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AvgSixPixels"></a><code>function <b>AvgSixPixels</b>(Color1, Color2, Color3, Color4, Color5, Color6: Cardinal): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the average of six given 32-bit RGBA color values.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="BlendPixels"></a><code>function <b>BlendPixels</b>(Color1, Color2: Cardinal; Alpha: Integer): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes alpha-blending for a pair of 32-bit RGBA colors values. <i>Alpha</i> can be in [0..255] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DisplaceRB"></a><code>function <b>DisplaceRB</b>(Color: Cardinal): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Switches red and blue channels in 32-bit RGBA color value.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ExtractAlpha"></a><code>procedure <b>ExtractAlpha</b>(Src1, Src2, Bk1, Bk2: Single; out Alpha, Px: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Extracts alpha-channel from two grayscale samples. The sample must be rendered with the same color on two different backgrounds, preferably on black and white; the resulting colors are provided in <i>Src1</i> and <i>Src2</i>, with original backgrounds in <i>Bk1</i> and <i>Bk2</i>. The resulting alpha-channel and original color are computed and returned. This method is particularly useful for calculating alpha-channel when rendering GDI fonts or in tools that generate resulting images without providing alpha-channel (therefore rendering the same image on two backgrounds is sufficient to calculate its alpha-channel).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="LerpPixels"></a><code>function <b>LerpPixels</b>(Color1, Color2: Cardinal; Alpha: Single): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes alpha-blending for a pair of 32-bit RGBA colors values using floating-point approach. <i>Alpha</i> can be in [0..1] range. For a faster alternative, use <a class="normal"  href="PixelUtils.html#BlendPixels">BlendPixels</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="MulPixelAlpha"></a><code>function <b>MulPixelAlpha</b>(Color: Cardinal; Alpha: Single): Cardinal; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplies alpha-channel of the given 32-bit RGBA color value by the given coefficient using floating-point approach.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="MulPixelAlpha"></a><code>function <b>MulPixelAlpha</b>(Color: Cardinal; Alpha: Integer): Cardinal; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplies alpha-channel of the given 32-bit RGBA color value by the given coefficient and divides the result by 255.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="MulPixels"></a><code>function <b>MulPixels</b>(Color1, Color2: Cardinal): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplies two 32-bit RGBA color values together.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PixelToGray"></a><code>function <b>PixelToGray</b>(Pixel: Cardinal): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns grayscale value in range of [0..255] from the given 32-bit RGBA color value. The alpha-channel is ignored.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PixelToGrayEx"></a><code>function <b>PixelToGrayEx</b>(Pixel: Cardinal): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns grayscale value in range of [0..1] from the given 32-bit RGBA color value. The resulting value can be considered the color's <i>luma</i>. The alpha-channel is ignored.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

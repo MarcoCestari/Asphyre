@@ -1,0 +1,1438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Math</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Asphyre.Math</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Mathematical types and functions that facilitate working with common tasks. This unit includes a complete functional set of 2D, 3D and 4D vectors, 3D and 4D matrices and quaternions.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Math.TAsphyreMatrix.html"><code>TAsphyreMatrix</code></a></td>
+<td class="itemdesc">High-level 4x4 matrix class that facilitates working with matrices for moving objects, cameras and projections.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Math.TMatrix3.html"><code>TMatrix3</code></a></td>
+<td class="itemdesc">3x3 transformation matrix.</td>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Math.TMatrix4.html"><code>TMatrix4</code></a></td>
+<td class="itemdesc">4x4 transformation matrix.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Math.TPoint2.html"><code>TPoint2</code></a></td>
+<td class="itemdesc">2D floating-point vector.</td>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Math.TPoint2px.html"><code>TPoint2px</code></a></td>
+<td class="itemdesc">2D integer vector.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Math.TPoints2.html"><code>TPoints2</code></a></td>
+<td class="itemdesc">A general-purpose list of 2D floating-point vectors.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Math.TPoints2px.html"><code>TPoints2px</code></a></td>
+<td class="itemdesc">A general-purpose list of 2D integer vectors.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Math.TQuaternion.html"><code>TQuaternion</code></a></td>
+<td class="itemdesc">3D quaternion</td>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Math.TVector3.html"><code>TVector3</code></a></td>
+<td class="itemdesc">3D floating-point vector.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Math.TVector4.html"><code>TVector4</code></a></td>
+<td class="itemdesc">4D (3D + w) floating-point vector.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Math.TVectors3.html"><code>TVectors3</code></a></td>
+<td class="itemdesc">A general-purpose list of 3D floating-point vectors.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Math.TVectors4.html"><code>TVectors4</code></a></td>
+<td class="itemdesc">A general-purpose list of 4D (3D + w) floating-point vectors.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Angle2">Angle2</a></b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Angle2px">Angle2px</a></b>(const v: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Angle3">Angle3</a></b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#ColorToVec3">ColorToVec3</a></b>(Color: Cardinal): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#ColorToVec4">ColorToVec4</a></b>(Color: Cardinal): <a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#ConjugateQuat">ConjugateQuat</a></b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Cross2">Cross2</a></b>(const a, b: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Cross2px">Cross2px</a></b>(const a, b: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Cross3">Cross3</a></b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Dot2">Dot2</a></b>(const a, b: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Dot2px">Dot2px</a></b>(const a, b: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Dot3">Dot3</a></b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#DotQuat">DotQuat</a></b>(const a, b: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#ExpQuat">ExpQuat</a></b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>; Exponent: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#GetEyePos4">GetEyePos4</a></b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#GetWorldPos4">GetWorldPos4</a></b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#HeadingPitchBankMtx4">HeadingPitchBankMtx4</a></b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#HeadingPitchBankMtx4">HeadingPitchBankMtx4</a></b>(Heading, Pitch, Bank: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#InvertMtx4">InvertMtx4</a></b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Length2">Length2</a></b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Length2px">Length2px</a></b>(const v: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Length3">Length3</a></b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Length4">Length4</a></b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Lerp2">Lerp2</a></b>(const v0, v1: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Alpha: Single): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Lerp2px">Lerp2px</a></b>(const v0, v1: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>; Alpha: Single): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Lerp3">Lerp3</a></b>(const v0, v1: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Alpha: Single): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Lerp4">Lerp4</a></b>(const v0, v1: <a   href="Asphyre.Math.TVector4.html">TVector4</a>; Alpha: Single): <a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#LookAtMtx4">LookAtMtx4</a></b>(const Origin, Target, Roof: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Norm2">Norm2</a></b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Norm3">Norm3</a></b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Norm4">Norm4</a></b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#NormalizeQuat">NormalizeQuat</a></b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#OrthogonalBDSMtx4">OrthogonalBDSMtx4</a></b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#OrthogonalVOLMtx4">OrthogonalVOLMtx4</a></b>(Width, Height, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Parallel3">Parallel3</a></b>(const v, n: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Perp3">Perp3</a></b>(const v, n: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#PerspectiveBDSMtx4">PerspectiveBDSMtx4</a></b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#PerspectiveFOVXMtx4">PerspectiveFOVXMtx4</a></b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#PerspectiveFOVYMtx4">PerspectiveFOVYMtx4</a></b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#PerspectiveVOLMtx4">PerspectiveVOLMtx4</a></b>(Width, Height, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Point2">Point2</a></b>(x, y: Single): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Point2px">Point2px</a></b>(x, y: Integer): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Point2ToPx">Point2ToPx</a></b>(const p: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Reflect3">Reflect3</a></b>(const i, n: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#ReflectMtx4">ReflectMtx4</a></b>(const Axis: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateAboutAxisQuat">RotateAboutAxisQuat</a></b>(const Axis: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateAboutXQuat">RotateAboutXQuat</a></b>(Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateAboutYQuat">RotateAboutYQuat</a></b>(Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateAboutZQuat">RotateAboutZQuat</a></b>(Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateInertialToObjectQuat">RotateInertialToObjectQuat</a></b>(Pitch, Bank, Heading: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateMtx3">RotateMtx3</a></b>(Angle: Single): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateMtx4">RotateMtx4</a></b>(const Axis: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateObjectToIntertialQuat">RotateObjectToIntertialQuat</a></b>(Pitch, Bank, Heading: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateXMtx4">RotateXMtx4</a></b>(Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateYMtx4">RotateYMtx4</a></b>(Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotateZMtx4">RotateZMtx4</a></b>(Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotationAngleQuat">RotationAngleQuat</a></b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#RotationAxisQuat">RotationAxisQuat</a></b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#SameVec2">SameVec2</a></b>(const a, b: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#SameVec3">SameVec3</a></b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#SameVec4">SameVec4</a></b>(const a, b: <a   href="Asphyre.Math.TVector4.html">TVector4</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#ScaleMtx3">ScaleMtx3</a></b>(const Coef: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#ScaleMtx4">ScaleMtx4</a></b>(const Coef: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#SlerpQuat">SlerpQuat</a></b>(const q0, q1: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>; t: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#StringMtx4">StringMtx4</a></b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): string;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#TranslateMtx3">TranslateMtx3</a></b>(const Offset: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#TranslateMtx4">TranslateMtx4</a></b>(const Offset: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#TransposeMtx3">TransposeMtx3</a></b>(const Mtx: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#TransposeMtx4">TransposeMtx4</a></b>(const Mtx: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vec2ToPx">Vec2ToPx</a></b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vec3ToColor">Vec3ToColor</a></b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vec3toString">Vec3toString</a></b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): string;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vec4To3Proj">Vec4To3Proj</a></b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vec4ToColor">Vec4ToColor</a></b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vector3">Vector3</a></b>(x, y, z: Single): <a   href="Asphyre.Math.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vector3">Vector3</a></b>(const p: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; z: Single): <a   href="Asphyre.Math.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vector4">Vector4</a></b>(x, y, z: Single; w: Single = 1.0): <a   href="Asphyre.Math.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#Vector4">Vector4</a></b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; w: Single = 1.0): <a   href="Asphyre.Math.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#YawPitchRollMtx4">YawPitchRollMtx4</a></b>(Yaw, Pitch, Roll: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.html#YawPitchRollMtx4">YawPitchRollMtx4</a></b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#PMatrix3">PMatrix3</a></b> = &circ;<a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#PMatrix4">PMatrix4</a></b> = &circ;<a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#PPoint2">PPoint2</a></b> = &circ;<a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#PPoint2px">PPoint2px</a></b> = &circ;<a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#PVector3">PVector3</a></b> = &circ;<a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#PVector4">PVector4</a></b> = &circ;<a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#AxisXVec3">AxisXVec3</a></b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 1.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#AxisXVec4">AxisXVec4</a></b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 1.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#AxisYVec3">AxisYVec3</a></b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 0.0; y: 1.0; z: 0.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#AxisYVec4">AxisYVec4</a></b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 1.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#AxisZVec3">AxisZVec3</a></b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#AxisZVec4">AxisZVec4</a></b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#IdentityMtx3">IdentityMtx3</a></b>: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a> = (Data: ((1.0, 0.0, 0.0), (0.0, 1.0, 0.0),
+  (0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#IdentityMtx4">IdentityMtx4</a></b>: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a> = (Data: ((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0),
+  (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#IdentityQuat">IdentityQuat</a></b>: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a> = (w: 1.0; x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#InfPoint2px">InfPoint2px</a></b>: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a> = (x: Low(Integer); y: Low(Integer));</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#UnityPoint2px">UnityPoint2px</a></b>: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a> = (x: 1; y: 1);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#UnityVec2">UnityVec2</a></b>: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a> = (x: 1.0; y: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#UnityVec3">UnityVec3</a></b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 1.0; y: 1.0; z: 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#UnityVec4">UnityVec4</a></b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 1.0; y: 1.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#ZeroMtx3">ZeroMtx3</a></b>: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a> = (Data: ((0.0, 0.0, 0.0), (0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0)));</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#ZeroMtx4">ZeroMtx4</a></b>: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a> = (Data: ((0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0)));</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#ZeroPoint2px">ZeroPoint2px</a></b>: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a> = (x: 0; y: 0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#ZeroVec2">ZeroVec2</a></b>: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a> = (x: 0.0; y: 0.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#ZeroVec3">ZeroVec3</a></b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#ZeroVec4">ZeroVec4</a></b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 0.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Math.html#ZeroVec4H">ZeroVec4H</a></b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Angle2"></a><code>function <b>Angle2</b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the angle (in radians) at which the 2D vector is pointing at.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Angle2px"></a><code>function <b>Angle2px</b>(const v: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the angle (in radians) at which the 2D vector is pointing at.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Angle3"></a><code>function <b>Angle3</b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the angle between two 3D vectors. The returning value has range of [0..Pi].</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ColorToVec3"></a><code>function <b>ColorToVec3</b>(Color: Cardinal): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts Red, Green and Blue components of 32-bit color to X, Y and Z components of 3D vector accordingly. This can be useful for making calculations with the color as if it was a 3D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ColorToVec4"></a><code>function <b>ColorToVec4</b>(Color: Cardinal): <a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts Red, Green, Blue and Alpha components of 32-bit color to X, Y, Z and W components of 4D vector accordingly. This can be useful for making calculations with the color as if it was a 4D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ConjugateQuat"></a><code>function <b>ConjugateQuat</b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the quaternion's conjugate. The resulting quaternion has opposite rotation to the original quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Cross2"></a><code>function <b>Cross2</b>(const a, b: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates a so-called &quot;cross product&quot; of 2D vectors, or analog of thereof.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Cross2px"></a><code>function <b>Cross2px</b>(const a, b: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates a so-called &quot;cross product&quot; of 2D vectors, or analog of thereof.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Cross3"></a><code>function <b>Cross3</b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the cross-product of the specified 3D vectors. The resulting vector is perpendicular to both source vectors and normal to the plane containing them.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Dot2"></a><code>function <b>Dot2</b>(const a, b: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the dot-product of the specified 2D vectors. The dot-product is an indirect measure of the angle between two vectors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Dot2px"></a><code>function <b>Dot2px</b>(const a, b: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the dot-product of the specified 2D vectors. The dot-product is an indirect measure of the angle between two vectors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Dot3"></a><code>function <b>Dot3</b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the dot-product of the specified 3D vectors. The dot-product is an indirect measure of the angle between two vectors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DotQuat"></a><code>function <b>DotQuat</b>(const a, b: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the dot product of the two given quaternions.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ExpQuat"></a><code>function <b>ExpQuat</b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>; Exponent: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the exponentiation of the given quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="GetEyePos4"></a><code>function <b>GetEyePos4</b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Assuming that the specified matrix is a view matrix, this method calculates the 3D position where the camera (or &quot;eye&quot;) is supposedly located.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="GetWorldPos4"></a><code>function <b>GetWorldPos4</b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Assuming that the specified matrix is a world matrix, this method calculates the 3D position where the object or world is supposedly located.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="HeadingPitchBankMtx4"></a><code>function <b>HeadingPitchBankMtx4</b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically heading, pitch and bank. The components are taken from the specified vector with Y corresponding to heading, X to pitch and Z to bank.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="HeadingPitchBankMtx4"></a><code>function <b>HeadingPitchBankMtx4</b>(Heading, Pitch, Bank: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically heading, pitch and Bank. Each of the components is specified individually.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="InvertMtx4"></a><code>function <b>InvertMtx4</b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the inverse of the matrix. The resulting matrix, in other words, is the transformation that can be applied to a 3D vector to undo the transformation applied previously.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Length2"></a><code>function <b>Length2</b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the length of the specified 2D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Length2px"></a><code>function <b>Length2px</b>(const v: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the length of the specified 2D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Length3"></a><code>function <b>Length3</b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the length of the specified 3D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Length4"></a><code>function <b>Length4</b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the length of the specified 4D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp2"></a><code>function <b>Lerp2</b>(const v0, v1: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Alpha: Single): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between the specified two 2D vectors.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>v0</dt>
+<dd>The first vector to be used in the interpolation</dd>
+<dt>v1</dt>
+<dd>The second vector to be used in the interpolation</dd>
+<dt>Alpha</dt>
+<dd>The mixture of the two vectors with the a range of [0..1].</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp2px"></a><code>function <b>Lerp2px</b>(const v0, v1: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>; Alpha: Single): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between the specified two vectors.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>v0</dt>
+<dd>The first vector to be used in the interpolation</dd>
+<dt>v1</dt>
+<dd>The second vector to be used in the interpolation</dd>
+<dt>Alpha</dt>
+<dd>The mixture of the two vectors with the a range of [0..1].</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp3"></a><code>function <b>Lerp3</b>(const v0, v1: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Alpha: Single): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between the specified two 3D vectors.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>v0</dt>
+<dd>The first vector to be used in the interpolation</dd>
+<dt>v1</dt>
+<dd>The second vector to be used in the interpolation</dd>
+<dt>Alpha</dt>
+<dd>The mixture of the two vectors with the a range of [0..1].</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp4"></a><code>function <b>Lerp4</b>(const v0, v1: <a   href="Asphyre.Math.TVector4.html">TVector4</a>; Alpha: Single): <a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between the specified two 4D vectors.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>v0</dt>
+<dd>The first vector to be used in the interpolation</dd>
+<dt>v1</dt>
+<dd>The second vector to be used in the interpolation</dd>
+<dt>Alpha</dt>
+<dd>The mixture of the two vectors with the a range of [0..1].</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="LookAtMtx4"></a><code>function <b>LookAtMtx4</b>(const Origin, Target, Roof: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a view matrix that is defined by the camera's position, its target and the defined vertical axis or so-called &quot;roof&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Norm2"></a><code>function <b>Norm2</b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalizes the specified 2D vector to unity length. The second parameter is used to prevent division by zero in vectors that are of zero length.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Norm3"></a><code>function <b>Norm3</b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalizes the specified 3D vector to unity length. The second parameter is used to prevent division by zero in vectors that are of zero length.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Norm4"></a><code>function <b>Norm4</b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalizes the specified 4D vector to unity length. The second parameter is used to prevent division by zero in vectors that are of zero length.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="NormalizeQuat"></a><code>function <b>NormalizeQuat</b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalizes the given quaternion. Note that normally quaternions are always normalized (of course, within limits of numerical precision). This function is provided mainly to combat floating point &quot;error creep&quot;, which occurs after many successive quaternion operations.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="OrthogonalBDSMtx4"></a><code>function <b>OrthogonalBDSMtx4</b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates orthogonal projection matrix defined by the individual axis's boundaries.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="OrthogonalVOLMtx4"></a><code>function <b>OrthogonalVOLMtx4</b>(Width, Height, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates orthogonal projection matrix defined by the viewing volume in 3D space.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Parallel3"></a><code>function <b>Parallel3</b>(const v, n: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the portion of 3D vector &quot;v&quot; that is parallel to the vector &quot;n&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Perp3"></a><code>function <b>Perp3</b>(const v, n: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the portion of 3D vector &quot;v&quot; that is perpendicular to the vector &quot;n&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveBDSMtx4"></a><code>function <b>PerspectiveBDSMtx4</b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by the individual axis's boundaries.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveFOVXMtx4"></a><code>function <b>PerspectiveFOVXMtx4</b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by a field of view on X axis. In 3D shooters the field of view needs to be adjusted to allow more visible area on wide-screen monitors. The parameters that define the viewed range are important for defining the precision of the depth transformation or a depth-buffer.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FieldOfView</dt>
+<dd>The camera's field of view in radians. For example Pi/4.</dd>
+<dt>AspectRatio</dt>
+<dd>The screen's aspect ratio. Can be calculated as x/y.</dd>
+<dt>MinRange</dt>
+<dd>The closest range at which the scene will be viewed.</dd>
+<dt>MaxRange</dt>
+<dd>The farthest range at which the scene will be viewed.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveFOVYMtx4"></a><code>function <b>PerspectiveFOVYMtx4</b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by a field of view on Y axis. This is a common way for typical 3D applications. In 3D shooters special care is to be taken because on wide-screen monitors the visible area will be bigger. The parameters that define the viewed range are important for defining the precision of the depth transformation or a depth-buffer.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FieldOfView</dt>
+<dd>The camera's field of view in radians. For example Pi/4.</dd>
+<dt>AspectRatio</dt>
+<dd>The screen's aspect ratio. Can be calculated as y/x.</dd>
+<dt>MinRange</dt>
+<dd>The closest range at which the scene will be viewed.</dd>
+<dt>MaxRange</dt>
+<dd>The farthest range at which the scene will be viewed.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveVOLMtx4"></a><code>function <b>PerspectiveVOLMtx4</b>(Width, Height, MinRange, MaxRange: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by the viewing volume in 3D space.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Point2"></a><code>function <b>Point2</b>(x, y: Single): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Asphyre.Math.TPoint2.html">TPoint2</a> record using the specified coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Point2px"></a><code>function <b>Point2px</b>(x, y: Integer): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Asphyre.Math.TPoint2px.html">TPoint2px</a> record using the specified coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Point2ToPx"></a><code>function <b>Point2ToPx</b>(const p: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts <a class="normal"  href="Asphyre.Math.TPoint2.html">TPoint2</a> to <a class="normal"  href="Asphyre.Math.TPoint2px.html">TPoint2px</a> by using floating-point rounding.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Reflect3"></a><code>function <b>Reflect3</b>(const i, n: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates 3D vector that is a reflection of vector &quot;i&quot; from surface given by the normal &quot;n&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ReflectMtx4"></a><code>function <b>ReflectMtx4</b>(const Axis: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a reflection matrix specified by the given vector defining the orientation of the reflection.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutAxisQuat"></a><code>function <b>RotateAboutAxisQuat</b>(const Axis: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around an arbitrary axis that is specified by the given vector; the rotation is specified in radians.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutXQuat"></a><code>function <b>RotateAboutXQuat</b>(Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around X axis with the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutYQuat"></a><code>function <b>RotateAboutYQuat</b>(Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around Y axis with the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutZQuat"></a><code>function <b>RotateAboutZQuat</b>(Theta: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around Z axis with the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateInertialToObjectQuat"></a><code>function <b>RotateInertialToObjectQuat</b>(Pitch, Bank, Heading: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion setup to perform Inertial-To-Object rotation using the angles specified in Euler format.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateMtx3"></a><code>function <b>RotateMtx3</b>(Angle: Single): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3x3 matrix containing 2D rotation made using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateMtx4"></a><code>function <b>RotateMtx4</b>(const Axis: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along an arbitrary axis defined by the given vector and the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateObjectToIntertialQuat"></a><code>function <b>RotateObjectToIntertialQuat</b>(Pitch, Bank, Heading: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion setup to perform Object-To-Inertial rotation using the angles specified in Euler format.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateXMtx4"></a><code>function <b>RotateXMtx4</b>(Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along X matrix using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateYMtx4"></a><code>function <b>RotateYMtx4</b>(Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along Y matrix using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateZMtx4"></a><code>function <b>RotateZMtx4</b>(Angle: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along Z matrix using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotationAngleQuat"></a><code>function <b>RotationAngleQuat</b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the rotational angle &quot;theta&quot; that is currently present in the given quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotationAxisQuat"></a><code>function <b>RotationAxisQuat</b>(const q: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the rotational axis that is currently present in the given quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SameVec2"></a><code>function <b>SameVec2</b>(const a, b: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compares the two specified 2D vectors using the given threshold.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SameVec3"></a><code>function <b>SameVec3</b>(const a, b: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compares the two specified 3D vectors using the given threshold.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SameVec4"></a><code>function <b>SameVec4</b>(const a, b: <a   href="Asphyre.Math.TVector4.html">TVector4</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compares all of the components from the given two vectors to see whether they are within the specified threshold.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ScaleMtx3"></a><code>function <b>ScaleMtx3</b>(const Coef: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3x3 matrix containing 2D scaling made using the specified coefficient for both axes.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ScaleMtx4"></a><code>function <b>ScaleMtx4</b>(const Coef: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D scaling made using the specified vector coefficient for the axes.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SlerpQuat"></a><code>function <b>SlerpQuat</b>(const q0, q1: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>; t: Single): <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Applies spherical linear interpolation between the specified two quaternions. The last parameter specifies the amount of interpolation with zero giving the first quaternion and one giving the second quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StringMtx4"></a><code>function <b>StringMtx4</b>(const m: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns textual representation of the matrix. This is mainly suited for debugging purposes to see that the matrix is defined properly.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TranslateMtx3"></a><code>function <b>TranslateMtx3</b>(const Offset: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3x3 matrix containing 2D translation made using the specified offset.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TranslateMtx4"></a><code>function <b>TranslateMtx4</b>(const Offset: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D translation made using the specified vector offset.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TransposeMtx3"></a><code>function <b>TransposeMtx3</b>(const Mtx: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>): <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Transposes the given matrix. That is, the rows become columns and vice-versa.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TransposeMtx4"></a><code>function <b>TransposeMtx4</b>(const Mtx: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Transposes the given matrix. That is, the rows become columns and vice-versa.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec2ToPx"></a><code>function <b>Vec2ToPx</b>(const v: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts floating-point 2D vector to 2D integer vector by rounding down.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec3ToColor"></a><code>function <b>Vec3ToColor</b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts X, Y and Z components of 3D vector to Red, Green and Blue components of 32-bit color accordingly. The resulting color has Alpha value of 255.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec3toString"></a><code>function <b>Vec3toString</b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns a string that describes the source 3D vector with two decimal places precision; for example &quot;(0.25, 0.31, 1.45)&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec4To3Proj"></a><code>function <b>Vec4To3Proj</b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>): <a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts 4D vector to 3D vector, projecting it (dividing by W).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec4ToColor"></a><code>function <b>Vec4ToColor</b>(const v: <a   href="Asphyre.Math.TVector4.html">TVector4</a>): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts X, Y, Z and W components of 4D vector to Red, Green, Blue and Alpha components of 32-bit color accordingly.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector3"></a><code>function <b>Vector3</b>(x, y, z: Single): <a   href="Asphyre.Math.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> record using the specified coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector3"></a><code>function <b>Vector3</b>(const p: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; z: Single): <a   href="Asphyre.Math.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> record using 2D vector and specified Z coordinate.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector4"></a><code>function <b>Vector4</b>(x, y, z: Single; w: Single = 1.0): <a   href="Asphyre.Math.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> record using the specified X, Y, Z and W coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector4"></a><code>function <b>Vector4</b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>; w: Single = 1.0): <a   href="Asphyre.Math.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> record using the specified 3D vector and W coordinate.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="YawPitchRollMtx4"></a><code>function <b>YawPitchRollMtx4</b>(Yaw, Pitch, Roll: Single): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically yaw, pitch and roll. Each of the components is specified individually.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="YawPitchRollMtx4"></a><code>function <b>YawPitchRollMtx4</b>(const v: <a   href="Asphyre.Math.TVector3.html">TVector3</a>): <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically yaw, pitch and roll. The components are taken from the specified vector with Y corresponding to yaw, X to pitch and Z to roll.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PMatrix3"></a><code><b>PMatrix3</b> = &circ;<a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Asphyre.Math.TMatrix3.html">TMatrix3</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PMatrix4"></a><code><b>PMatrix4</b> = &circ;<a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Asphyre.Math.TMatrix4.html">TMatrix4</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PPoint2"></a><code><b>PPoint2</b> = &circ;<a   href="Asphyre.Math.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Asphyre.Math.TPoint2.html">TPoint2</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PPoint2px"></a><code><b>PPoint2px</b> = &circ;<a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Asphyre.Math.TPoint2px.html">TPoint2px</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PVector3"></a><code><b>PVector3</b> = &circ;<a   href="Asphyre.Math.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PVector4"></a><code><b>PVector4</b> = &circ;<a   href="Asphyre.Math.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> by reference.</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisXVec3"></a><code><b>AxisXVec3</b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 1.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> that defines X axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisXVec4"></a><code><b>AxisXVec4</b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 1.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> that defines X axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisYVec3"></a><code><b>AxisYVec3</b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 0.0; y: 1.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> that defines Y axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisYVec4"></a><code><b>AxisYVec4</b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 1.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> that defines Y axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisZVec3"></a><code><b>AxisZVec3</b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> that defines Z axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisZVec4"></a><code><b>AxisZVec4</b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> that defines Z axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IdentityMtx3"></a><code><b>IdentityMtx3</b>: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a> = (Data: ((1.0, 0.0, 0.0), (0.0, 1.0, 0.0),
+  (0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+3x3 matrix values representing identity. This can be used either for matrix initialization or where no transformation should be applied.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IdentityMtx4"></a><code><b>IdentityMtx4</b>: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a> = (Data: ((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0),
+  (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+4x4 matrix values representing identity. This can be used either for matrix initialization or where no transformation should be applied.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IdentityQuat"></a><code><b>IdentityQuat</b>: <a   href="Asphyre.Math.TQuaternion.html">TQuaternion</a> = (w: 1.0; x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Identity quaternion that can be used to specify an object with no rotation.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="InfPoint2px"></a><code><b>InfPoint2px</b>: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a> = (x: Low(Integer); y: Low(Integer));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Infinity constant for <a class="normal"  href="Asphyre.Math.TPoint2px.html">TPoint2px</a>. In certain situations this vector is used to identify unknown vector value.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UnityPoint2px"></a><code><b>UnityPoint2px</b>: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a> = (x: 1; y: 1);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Unity constant for <a class="normal"  href="Asphyre.Math.TPoint2px.html">TPoint2px</a> that can be used for vector initialization.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UnityVec2"></a><code><b>UnityVec2</b>: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a> = (x: 1.0; y: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Unity constant for <a class="normal"  href="Asphyre.Math.TPoint2.html">TPoint2</a> that can be used for vector initialization.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UnityVec3"></a><code><b>UnityVec3</b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 1.0; y: 1.0; z: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> that can be used as a parameter to some function and for vector initialization. This vector, however, contradictory to its name is actually not a unity vector in mathematical terms.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UnityVec4"></a><code><b>UnityVec4</b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 1.0; y: 1.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> that can be used as a parameter to some function and for vector initialization. This vector, however, contradictory to its name is actually not a unity vector in mathematical terms.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroMtx3"></a><code><b>ZeroMtx3</b>: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a> = (Data: ((0.0, 0.0, 0.0), (0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+3x3 matrix values containing zeros. This can be used in special occasions for matrix initialization or where no valid matrix exists.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroMtx4"></a><code><b>ZeroMtx4</b>: <a   href="Asphyre.Math.TMatrix4.html">TMatrix4</a> = (Data: ((0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+4x4 matrix values containing zeros. This can be used in special occasions for matrix initialization or where no valid matrix exists.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroPoint2px"></a><code><b>ZeroPoint2px</b>: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a> = (x: 0; y: 0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Asphyre.Math.TPoint2px.html">TPoint2px</a> that can be used for vector initialization.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroVec2"></a><code><b>ZeroVec2</b>: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a> = (x: 0.0; y: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Asphyre.Math.TPoint2.html">TPoint2</a> that can be used for vector initialization.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroVec3"></a><code><b>ZeroVec3</b>: <a   href="Asphyre.Math.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Asphyre.Math.TVector3.html">TVector3</a> that can be used as a parameter to some function and for vector initialization.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroVec4"></a><code><b>ZeroVec4</b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> that can be used as a parameter to some function and for vector initialization. In this case, homogeneous is set to zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroVec4H"></a><code><b>ZeroVec4H</b>: <a   href="Asphyre.Math.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Asphyre.Math.TVector4.html">TVector4</a> that can be used as a parameter to some function and for vector initialization. In this case, homogeneous is set to one.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

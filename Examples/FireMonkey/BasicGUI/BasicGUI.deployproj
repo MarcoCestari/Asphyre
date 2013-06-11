@@ -1,0 +1,87 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup Condition="'$(Platform)'=='iOSSimulator'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="media.asvf">
+            <RemoteDir>BasicGUI\</RemoteDir>
+            <RemoteName>media.asvf</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win64'">
+        <DeployFile Include="BasicGUI.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BasicGUI\</RemoteDir>
+            <RemoteName>BasicGUI.exe</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="media.asvf">
+            <RemoteDir>BasicGUI\</RemoteDir>
+            <RemoteName>media.asvf</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="BasicGUI.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BasicGUI.app\</RemoteDir>
+            <RemoteName>Entitlements.plist</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="BasicGUI.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BasicGUI.app\Contents\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="BasicGUI.rsm" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BasicGUI.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>BasicGUI.rsm</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="BasicGUI.icns" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BasicGUI.app\Contents\Resources\</RemoteDir>
+            <RemoteName>BasicGUI.icns</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="BasicGUI" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BasicGUI.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>BasicGUI</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>BasicGUI.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="media.asvf">
+            <RemoteDir>BasicGUI.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>media.asvf</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='WinNX32'"/>
+</Project>

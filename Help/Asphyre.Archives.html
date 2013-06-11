@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Archives</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Asphyre.Archives</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td>Functions and Procedures</td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td><a class="section"  href="#%40Variables">Variables</a></td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Asphyre Archive format with its functions and utilities that can be used for storing images, textures, and application's data. The information is compressed to save disk space and optionally encrypted to ensure confidentiality and protect the contents from unauthorized usage.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Archives.TAsphyreArchive.html"><code>TAsphyreArchive</code></a></td>
+<td class="itemdesc">Asphyre archive implementation class that provides methods for reading, writing, deleting and renaming records in compressed (and possibly encrypted) archive; Zlib is used for data compression, CRC32 is used for data integrity checks and Asphyre's native 128-bit XTEA cipher is used for data encryption.</td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Archives.html#TArchiveOpenMode">TArchiveOpenMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Archives.html#TArchiveRecordType">TArchiveRecordType</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Archives.html#TArchiveTypeAccess">TArchiveTypeAccess</a></b> = (...);</code></td>
+</tr>
+</table>
+<a name="%40Variables"></a><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Archives.html#ArchiveHInstance">ArchiveHInstance</a></b>: <a   href="Asphyre.TypeDef.html#SizeUInt">SizeUInt</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Archives.html#ArchiveTypeAccess">ArchiveTypeAccess</a></b>: <a   href="Asphyre.Archives.html#TArchiveTypeAccess">TArchiveTypeAccess</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TArchiveOpenMode"></a><code><b>TArchiveOpenMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Handling mode for Asphyre archives that indicates possible usage scenarios and limitations.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+aomUpdate: The archive will be used both for reading and writing. <br> <br></li>
+<li>
+aomReadOnly: The archive will be used for reading data. No modifications are allowed. <br> <br></li>
+<li>
+aomOverwrite: The archive will be overwritten with blank new file; once this is accomplished, the mode will be changed to <code>aomUpdate</code>. <br> <br></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TArchiveRecordType"></a><code><b>TArchiveRecordType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Explicit type of the archive's record, which determines how the data should be interpreted.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+artFile: The record is a file or binary data. <br> <br></li>
+<li>
+artImage: The record is a native Asphyre image that has been prepared and pre-formatted for loading directly to hardware's memory. <br> <br></li>
+<li>
+artFont: The record is a binary Asphyre font that has been optimized for performance and has its accompanying image data prepared to be loaded to hardware's memory. <br> <br></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TArchiveTypeAccess"></a><code><b>TArchiveTypeAccess</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+File access type when handled by Asphyre, indicating how the archive's file name should be interpreted.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+ataAnyFile: The file name is a typical name as used by the underlying OS, which should include its full path. <br> <br></li>
+<li>
+ataResource: The file name is the name of resource that is integrated directly to the application's executable. Only the actual name will be used for resource name, any existing paths from the name will be stripped. <br> <br></li>
+<li>
+ataPackaged: The file name which is distributed in the same folder as the application's executable or within the same bundle on Mac OS. The file name will be treated as regular file name with any existing paths stripped and the path to the executable added. <br> <br></li>
+</ul>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ArchiveHInstance"></a><code><b>ArchiveHInstance</b>: <a   href="Asphyre.TypeDef.html#SizeUInt">SizeUInt</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The instance handle of the application's thread. This parameter must be specified when <a class="normal"  href="Asphyre.Archives.html#ArchiveTypeAccess">ArchiveTypeAccess</a> is set to <code>ataResource</code> for reading data from resources. Typically, it should be set to application's <i>hInstance</i>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ArchiveTypeAccess"></a><code><b>ArchiveTypeAccess</b>: <a   href="Asphyre.Archives.html#TArchiveTypeAccess">TArchiveTypeAccess</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Global access type for any instance of <a class="normal"  href="Asphyre.Archives.TAsphyreArchive.html">TAsphyreArchive</a>, controlling how the archive's file name is interpreted.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

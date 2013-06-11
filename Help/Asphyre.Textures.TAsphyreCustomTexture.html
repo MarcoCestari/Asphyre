@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Textures: Class TAsphyreCustomTexture</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreCustomTexture"></a><h1 class="cio">Class TAsphyreCustomTexture</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Textures.html">Asphyre.Textures</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreCustomTexture = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+General texture specification, which specifies common parameters and provides basic utilities.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreCustomTexture</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#GetResourceView">GetResourceView</a></b>(): Pointer; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Initialize">Initialize</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#LogicalToPixel">LogicalToPixel</a></b>(const Pos: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#PixelToLogical">PixelToLogical</a></b>(const Pos: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#PixelToLogical">PixelToLogical</a></b>(const Pos: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Bind">Bind</a></b>(Stage: Integer); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Finalize">Finalize</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#UpdateMipmaps">UpdateMipmaps</a></b>(); virtual;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Active">Active</a></b>: Boolean read FActive;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#BytesPerPixel">BytesPerPixel</a></b>: Integer read GetBytesPerPixel;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Format">Format</a></b>: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> read FFormat write SetFormat;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Height">Height</a></b>: Integer index 1 read FHeight write SetSize;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Mipmapping">Mipmapping</a></b>: Boolean read FMipMapping write SetMipmapping;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreCustomTexture.html#Width">Width</a></b> : Integer index 0 read FWidth write SetSize;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="GetResourceView"></a><code>function <b>GetResourceView</b>(): Pointer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the pointer to shader resource view when used in latest DX10+ providers.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialize"></a><code>function <b>Initialize</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Initializes the texture creating all provider specific resources. If this method succeeds, the texture can be used for rendering and the returned value is <code>True</code>. If the returned value is <code>False</code>, it means that the texture initialization failed and configuration parameters need to be revised.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LogicalToPixel"></a><code>function <b>LogicalToPixel</b>(const Pos: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Converts 2D logic texture coordinates in range of [0..1] to pixel coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PixelToLogical"></a><code>function <b>PixelToLogical</b>(const Pos: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Converts 2D integer pixel coordinates to their logical representation provided in range of [0..1].</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PixelToLogical"></a><code>function <b>PixelToLogical</b>(const Pos: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>): <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Converts 2D floating-point pixel coordinates to their logical representation provided in range of [0..1].</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Bind"></a><code>procedure <b>Bind</b>(Stage: Integer); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Binds the texture to the given stage index in DX9- and OGL providers.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Finalize"></a><code>procedure <b>Finalize</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finalizes the texture releasing all provider specific resources.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UpdateMipmaps"></a><code>procedure <b>UpdateMipmaps</b>(); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Updates all mipmap images contained in the texture. This should only be used when <a class="normal"  href="Asphyre.Textures.TAsphyreCustomTexture.html#Mipmapping">Mipmapping</a> is set to <code>True</code>.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Active"></a><code>property <b>Active</b>: Boolean read FActive;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the texture has been created and initialized properly.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="BytesPerPixel"></a><code>property <b>BytesPerPixel</b>: Integer read GetBytesPerPixel;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates how many bytes each pixel in texture occupies.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Format"></a><code>property <b>Format</b>: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> read FFormat write SetFormat;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The pixel format of the texture's surface and its mipmap levels.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Height"></a><code>property <b>Height</b>: Integer index 1 read FHeight write SetSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The height of texture's surface or first mipmap level.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Mipmapping"></a><code>property <b>Mipmapping</b>: Boolean read FMipMapping write SetMipmapping;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether mipmapping should be used for this texture. If this parameter is set to <code>True</code>, a full set of mipmap levels will be used in the texture and handled by its specific provider implementation. Mipmapping is used when the texture is drawn in significantly smaller sizes to improve visual quality of the displayed image.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Width"></a><code>property <b>Width</b> : Integer index 0 read FWidth write SetSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The width of texture's surface or first mipmap level.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

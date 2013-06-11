@@ -1,0 +1,443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreFonts: Class TAsphyreFont</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreFont"></a><h1 class="cio">Class TAsphyreFont</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreFonts.html">AsphyreFonts</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreFont = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Asphyre native font implementation that supports Unicode, pre-rendered text effects such as border and shadow, customized spacing between individual letter pairs, rendering using vertical color gradient and formatted text.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreFont</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFont.html#ParseLink">ParseLink</a></b>(const Link: <a   href="AsphyreDef.html#UniString">UniString</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFont.html#TexExtent">TexExtent</a></b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFont.html#TexHeight">TexHeight</a></b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFont.html#TextExtent">TextExtent</a></b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): <a   href="Vectors2.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFont.html#TextHeight">TextHeight</a></b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFont.html#TextWidth">TextWidth</a></b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFont.html#TexWidth">TexWidth</a></b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#ClearStates">ClearStates</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#CustomOut">CustomOut</a></b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Color: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single; Event: <a   href="AsphyreFonts.html#TCustomTextEvent">TCustomTextEvent</a>; User: Pointer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#RestoreState">RestoreState</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#SaveState">SaveState</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#TextMid">TextMid</a></b>(const Pos: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#TextMidF">TextMidF</a></b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#TextMidFF">TextMidFF</a></b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#TextMidH">TextMidH</a></b>(const Pos: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#TextOut">TextOut</a></b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#TextRect">TextRect</a></b>(const Pos, Size, Paragraph: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFont.html#TextRects">TextRects</a></b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; List: <a   href="HelperSets.TRectList.html">TRectList</a>);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#DivSet">DivSet</a></b>: <a   href="AsphyreDef.html#UniString">UniString</a> read FDivSet write FDivSet;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#FontSize">FontSize</a></b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> read FFontSize write FFontSize;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#ImageIndex">ImageIndex</a></b>: Integer read FImageIndex write FImageIndex;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#Kerning">Kerning</a></b>: Single read FKerning write FKerning;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#Kernings">Kernings</a></b>: <a   href="FontLetterGroups.TFontLetterGroups.html">TFontLetterGroups</a> read FKernings;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#Linespace">Linespace</a></b>: Single read FLinespace write FLinespace;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#Name">Name</a></b>: <a   href="AsphyreDef.html#StdString">StdString</a> read FName write FName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#Owner">Owner</a></b>: <a   href="AsphyreFonts.TAsphyreFonts.html">TAsphyreFonts</a> read FOwner;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#ParaSet">ParaSet</a></b>: <a   href="AsphyreDef.html#UniString">UniString</a> read FParaSet write FParaSet;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#Scale">Scale</a></b>: Single read FScale write FScale;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFont.html#Whitespace">Whitespace</a></b>: Single read FWhitespace write FWhitespace;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ParseLink"></a><code>function <b>ParseLink</b>(const Link: <a   href="AsphyreDef.html#UniString">UniString</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads the font description from the specified link, which can point either to Asphyre archive (e.g. &quot;MyMedia.asvf | SomeFont.xml&quot;) or external file on disk.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TexExtent"></a><code>function <b>TexExtent</b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates the vertical size of the provided text that will be occupied when this text is rendered on the screen. The resulting size is rounded to the nearest integer. If more precision is required, <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#TextExtent">TextExtent</a> should be used instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TexHeight"></a><code>function <b>TexHeight</b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates the vertical size of the provided text that will be occupied when this text is rendered on the screen. The result is rounded to the nearest integer. If more precision is required, <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#TextHeight">TextHeight</a> should be used instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextExtent"></a><code>function <b>TextExtent</b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): <a   href="Vectors2.TPoint2.html">TPoint2</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates horizontal and vertical dimensions of the provided text that will be occupied when drawing this text on the screen.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextHeight"></a><code>function <b>TextHeight</b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates the vertical size of the provided text that will be occupied when this text is rendered on the screen.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextWidth"></a><code>function <b>TextWidth</b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates the horizontal size of the provided text that will be occupied when this text is rendered on the screen.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TexWidth"></a><code>function <b>TexWidth</b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Calculates the horizontal size of the provided text that will be occupied when this text is rendered on the screen. The result is rounded to the nearest integer. If more precision is required, <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#TextWidth">TextWidth</a> should be used instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ClearStates"></a><code>procedure <b>ClearStates</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all states that were previously saved by <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#SaveState">SaveState</a>. This can be useful in certain circumstances where the stack should be cleared.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CustomOut"></a><code>procedure <b>CustomOut</b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Color: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single; Event: <a   href="AsphyreFonts.html#TCustomTextEvent">TCustomTextEvent</a>; User: Pointer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Custom font drawing function that calls the specified event for every letter that should be drawn. The text is supposedly drawn at the given top-left position with the specified alpha-transparency and vertical color gradient. The provided event is actually responsible for drawing each of the letters.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RestoreState"></a><code>procedure <b>RestoreState</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Restores the state of most font properties such as scale, kerning and so on that were previously saved by <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#SaveState">SaveState</a> method.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="SaveState"></a><code>procedure <b>SaveState</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Saves the state of most font properties such as scale, kerning and so on. This can be useful when modifying font parameters for drawing text so that they can be later restored without breaking the rest of text rendering code that relies on default font parameters.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextMid"></a><code>procedure <b>TextMid</b>(const Pos: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws the text centered both horizontally and vertically at the given position with the specified alpha-transparency and vertical color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextMidF"></a><code>procedure <b>TextMidF</b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws the text centered both horizontally and vertically at the given position with the specified alpha-transparency and vertical color gradient. The provided 2D floating-point vector is rounded to nearest integer to avoid drawing blurred text; to prevent this, use <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#TextMidFF">TextMidFF</a> instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextMidFF"></a><code>procedure <b>TextMidFF</b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws the text centered both horizontally and vertically at the given position with the specified alpha-transparency and vertical color gradient. The text is drawn at the given 2D floating-point position.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextMidH"></a><code>procedure <b>TextMidH</b>(const Pos: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws the text centered horizontally at the given position with the specified alpha-transparency and vertical color gradient. The text is not centered vertically, it starts from the top of the given position.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextOut"></a><code>procedure <b>TextOut</b>(const Pos: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws the text starting at the given top-left position with the specified alpha-transparency and vertical color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextRect"></a><code>procedure <b>TextRect</b>(const Pos, Size, Paragraph: <a   href="Vectors2.TPoint2.html">TPoint2</a>; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Alpha: Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws formatted text that is justified horizontally using variable horizontal spacing between individual words (using separation characters set in <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#DivSet">DivSet</a>. The text is fitted to the provided rectangle. If a paragraph character is found (as defined by <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#ParaSet">ParaSet</a>, the text is rendered from the next line with paragraph space added both vertically and horizontally. The rendering stops when the requested text reaches the bottom of the rendered rectangle.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TextRects"></a><code>procedure <b>TextRects</b>(const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; List: <a   href="HelperSets.TRectList.html">TRectList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Estimates the size and position of individual letter rectangles if they are rendered on the screen. The resulting rectangles are saved to the specified list. If the text is empty, the list will also be empty.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DivSet"></a><code>property <b>DivSet</b>: <a   href="AsphyreDef.html#UniString">UniString</a> read FDivSet write FDivSet;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The list of dividing characters used to split text into words when using <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#TextRect">TextRect</a> for drawing formatted text.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FontSize"></a><code>property <b>FontSize</b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> read FFontSize write FFontSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The maximum size of letter box that covers all letters. This is originally set in Asphyre's FontTool and is used for rendering vertical text gradients properly.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ImageIndex"></a><code>property <b>ImageIndex</b>: Integer read FImageIndex write FImageIndex;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The index of image that contains letters to be rendered on the screen. This index refers to <code>Images</code> property of the owner and must be property specified for displaying text.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Kerning"></a><code>property <b>Kerning</b>: Single read FKerning write FKerning;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This value is an additional space (in pixels) added to every character's width; it can be used to compress or expand the rendered text.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Kernings"></a><code>property <b>Kernings</b>: <a   href="FontLetterGroups.TFontLetterGroups.html">TFontLetterGroups</a> read FKernings;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The list of spacings between the individual letter pairs for pixel-perfect text rendering.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Linespace"></a><code>property <b>Linespace</b>: Single read FLinespace write FLinespace;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The space added between individual text lines drawn using <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#TextRect">TextRect</a> when drawing formatted text.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Name"></a><code>property <b>Name</b>: <a   href="AsphyreDef.html#StdString">StdString</a> read FName write FName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The unique name of the font that will be used for accessing this font from the owner list by using its name.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Owner"></a><code>property <b>Owner</b>: <a   href="AsphyreFonts.TAsphyreFonts.html">TAsphyreFonts</a> read FOwner;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The owner of current font that points to the valid instance of <a class="normal"  href="AsphyreFonts.TAsphyreFonts.html">TAsphyreFonts</a> where shared data such as color tags will be taken from.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ParaSet"></a><code>property <b>ParaSet</b>: <a   href="AsphyreDef.html#UniString">UniString</a> read FParaSet write FParaSet;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The list of paragraph-identifying characters that indicate the beginning of new paragraph when using <a class="normal"  href="AsphyreFonts.TAsphyreFont.html#TextRect">TextRect</a> for drawing formatted text.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Scale"></a><code>property <b>Scale</b>: Single read FScale write FScale;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The scale of the rendered font, specifying how big the letters should appear. By default this parameter is set to one; using other values will make the text appear bigger or smaller, but the result may be blurred because of letter image stretching.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Whitespace"></a><code>property <b>Whitespace</b>: Single read FWhitespace write FWhitespace;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The width in pixels that should be used for blank characters (space is one of them).</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

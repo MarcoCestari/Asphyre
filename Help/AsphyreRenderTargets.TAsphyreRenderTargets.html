@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreRenderTargets: Class TAsphyreRenderTargets</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreRenderTargets"></a><h1 class="cio">Class TAsphyreRenderTargets</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreRenderTargets.html">AsphyreRenderTargets</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreRenderTargets = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+List of render target textures that can be used for rendering scenes into and also as source textures for drawing.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreRenderTargets</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreRenderTargets.TAsphyreRenderTargets.html#Add">Add</a></b>(AddCount, Width, Height: Integer; Format: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; DepthStencil: Boolean = False; MipMapping: Boolean = False; Multisamples: Integer = 0): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreRenderTargets.TAsphyreRenderTargets.html#IndexOf">IndexOf</a></b>(Element: <a   href="AbstractTextures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreRenderTargets.TAsphyreRenderTargets.html#Insert">Insert</a></b>(): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreRenderTargets.TAsphyreRenderTargets.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreRenderTargets.TAsphyreRenderTargets.html#RemoveAll">RemoveAll</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreRenderTargets.TAsphyreRenderTargets.html#Count">Count</a></b>: Integer read GetCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreRenderTargets.TAsphyreRenderTargets.html#Texture">Texture</a></b>[Index: Integer]: <a   href="AbstractTextures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>
+   read GetTexture;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Add"></a><code>function <b>Add</b>(AddCount, Width, Height: Integer; Format: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; DepthStencil: Boolean = False; MipMapping: Boolean = False; Multisamples: Integer = 0): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds one or more render target textures to the end of the list and initializes them. If the method succeeds, the index to first added element is returned; if the method fails, -1 is returned.       </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AddCount</dt>
+<dd>The number of render target textures to add.</dd>
+<dt>Width</dt>
+<dd>The width of added render target textures.</dd>
+<dt>Height</dt>
+<dd>The height of added render target textures.</dd>
+<dt>Format</dt>
+<dd>The pixel format to be used in added render target textures.</dd>
+<dt>DepthStencil</dt>
+<dd>Determines whether to create depth-stencil buffer in the added render target textures.</dd>
+<dt>Mipmapping</dt>
+<dd>Determines whether to use mipmapping in added render target textures.</dd>
+<dt>Multisamples</dt>
+<dd>Indicates the number of samples to use for antialiasing in added render target textures. This parameter is only supported on latest DX10+ providers.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(Element: <a   href="AbstractTextures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the index of existing render target texture in the list. If the given element is not found in the list, the returned value is -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Insert"></a><code>function <b>Insert</b>(): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts a new render target texture to the list without initializing it.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes element at the given index from the list, shifting all further elements by one. Index must be specified in range of [0..(Count - 1)]. If the specified index is outside of valid range, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveAll"></a><code>procedure <b>RemoveAll</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all existing render target textures from the list.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read GetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of render target textures in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Texture"></a><code>property <b>Texture</b>[Index: Integer]: <a   href="AbstractTextures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>
+   read GetTexture;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access to individual render target textures in the list by using the index in range of [0..(Count - 1)]. If the specified index is outside of valid range, <code>Nil</code> is returned.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

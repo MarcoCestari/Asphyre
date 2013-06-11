@@ -1,0 +1,140 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Asphyre Networking example'
+  ClientHeight = 360
+  ClientWidth = 369
+  Position = poScreenCenter
+  FormFactor.Width = 1280
+  FormFactor.Height = 1024
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  object IncomingGroupBox: TGroupBox
+    StyledSettings = [ssFamily, ssSize, ssStyle, ssFontColor, ssOther]
+    Height = 185.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Text = ' Incoming Messages '
+    Width = 353.000000000000000000
+    TabOrder = 0
+    object IncomingMemo: TMemo
+      Height = 148.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 23.000000000000000000
+      TabOrder = 0
+      Width = 329.000000000000000000
+    end
+  end
+  object SendGroupBox: TGroupBox
+    StyledSettings = [ssFamily, ssSize, ssStyle, ssFontColor, ssOther]
+    Height = 121.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 200.000000000000000000
+    Text = ' Send Message '
+    Width = 353.000000000000000000
+    TabOrder = 1
+    object DestHostEdit: TEdit
+      TabOrder = 0
+      Text = '127.0.0.1'
+      Position.X = 168.000000000000000000
+      Position.Y = 24.000000000000000000
+      Width = 169.000000000000000000
+      Height = 22.000000000000000000
+      KillFocusByReturn = False
+    end
+    object Label1: TLabel
+      AutoSize = True
+      Height = 19.000000000000000000
+      Position.X = 74.000000000000000000
+      Position.Y = 25.000000000000000000
+      Text = 'Destination Host:'
+      TextAlign = taTrailing
+      Width = 87.000000000000000000
+      WordWrap = False
+    end
+    object DestPortEdit: TEdit
+      TabOrder = 2
+      Text = '7500'
+      Position.X = 168.000000000000000000
+      Position.Y = 56.000000000000000000
+      Width = 169.000000000000000000
+      Height = 22.000000000000000000
+      KillFocusByReturn = False
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Height = 19.000000000000000000
+      Position.X = 77.000000000000000000
+      Position.Y = 56.000000000000000000
+      Text = 'Destination Port:'
+      TextAlign = taTrailing
+      Width = 85.000000000000000000
+      WordWrap = False
+    end
+    object TextEdit: TEdit
+      TabOrder = 4
+      Text = 'Hello world there!'
+      Position.X = 80.000000000000000000
+      Position.Y = 88.000000000000000000
+      Width = 185.000000000000000000
+      Height = 22.000000000000000000
+      KillFocusByReturn = False
+    end
+    object SendButton: TButton
+      Height = 22.000000000000000000
+      Position.X = 272.000000000000000000
+      Position.Y = 88.000000000000000000
+      TabOrder = 5
+      Text = 'Send'
+      Width = 64.000000000000000000
+      OnClick = SendButtonClick
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Height = 19.000000000000000000
+      Position.X = 26.000000000000000000
+      Position.Y = 88.000000000000000000
+      Text = 'Message:'
+      Width = 49.000000000000000000
+      WordWrap = False
+    end
+  end
+  object StatusBar: TStatusBar
+    Height = 22.000000000000000000
+    Position.Y = 338.000000000000000000
+    ShowSizeGrip = True
+    Width = 369.000000000000000000
+  end
+  object StatusLabel1: TLabel
+    AutoSize = True
+    Height = 19.000000000000000000
+    Position.X = 6.000000000000000000
+    Position.Y = 340.000000000000000000
+    Text = 'Local IP: Unknown'
+    Width = 93.000000000000000000
+    WordWrap = False
+  end
+  object StatusLabel2: TLabel
+    AutoSize = True
+    Height = 19.000000000000000000
+    Position.X = 144.000000000000000000
+    Position.Y = 340.000000000000000000
+    Text = 'Local Port: None'
+    Width = 84.000000000000000000
+    WordWrap = False
+  end
+  object SysTimer: TTimer
+    Interval = 100
+    OnTimer = SysTimerTimer
+    Left = 16
+    Top = 224
+  end
+end

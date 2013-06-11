@@ -1,0 +1,120 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 460
+  ClientWidth = 320
+  FormFactor.Width = 1920
+  FormFactor.Height = 1080
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMobile = True
+  DesignerWidth = 320
+  DesignerHeight = 480
+  DesignerDeviceName = 'iPhone'
+  DesignerOrientation = 0
+  object IncomingGroupBox: TGroupBox
+    Font.Family = 'Helvetica'
+    StyledSettings = [ssSize, ssStyle, ssFontColor]
+    Height = 89.000000000000000000
+    Position.X = 8.000000000000000000
+    Text = 'Incoming Messages'
+    Width = 297.000000000000000000
+    TabOrder = 0
+    object IncomingMemo: TMemo
+      Touch.InteractiveGestures = [igPan]
+      Height = 49.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 0
+      Width = 273.000000000000000000
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Font.Size = 14.000000000000000000
+    end
+  end
+  object SendGroupBox: TGroupBox
+    Height = 137.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 96.000000000000000000
+    Text = 'Send Message'
+    Width = 297.000000000000000000
+    TabOrder = 1
+    object Label1: TLabel
+      Height = 17.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Text = 'Destination Host:'
+      TextAlign = taTrailing
+      Width = 153.000000000000000000
+      WordWrap = False
+    end
+    object Label2: TLabel
+      Height = 25.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      Text = 'Destination Port:'
+      TextAlign = taTrailing
+      Width = 161.000000000000000000
+      WordWrap = False
+    end
+    object DestHostEdit: TEdit
+      TabOrder = 2
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Text = '127.0.0.1'
+      Position.X = 176.000000000000000000
+      Position.Y = 16.000000000000000000
+      Width = 100.000000000000000000
+      Height = 31.000000000000000000
+    end
+    object DestPortEdit: TEdit
+      TabOrder = 3
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Text = '7500'
+      Position.X = 176.000000000000000000
+      Position.Y = 48.000000000000000000
+      Width = 100.000000000000000000
+      Height = 31.000000000000000000
+    end
+    object Label3: TLabel
+      Height = 25.000000000000000000
+      Position.X = 32.000000000000000000
+      Position.Y = 64.000000000000000000
+      Text = 'Message:'
+      TextAlign = taCenter
+      Width = 161.000000000000000000
+    end
+    object TextEdit: TEdit
+      TabOrder = 5
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Text = 'Hello from iOS device! :)'
+      Position.X = 16.000000000000000000
+      Position.Y = 96.000000000000000000
+      Width = 185.000000000000000000
+      Height = 31.000000000000000000
+    end
+    object SendButton: TButton
+      DisableFocusEffect = False
+      Height = 33.000000000000000000
+      Position.X = 208.000000000000000000
+      Position.Y = 96.000000000000000000
+      TabOrder = 6
+      Text = 'Send'
+      Width = 81.000000000000000000
+      OnClick = SendButtonClick
+    end
+  end
+  object SysTimer: TTimer
+    Interval = 100
+    OnTimer = SysTimerTimer
+    Left = 24
+    Top = 232
+  end
+end

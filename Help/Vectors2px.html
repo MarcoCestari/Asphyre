@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Vectors2px</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Vectors2px</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Types, functions and classes to facilitate working with 2D integer vectors.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Vectors2px.TPoint2px.html"><code>TPoint2px</code></a></td>
+<td class="itemdesc">2D integer vector.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Vectors2px.TPoints2px.html"><code>TPoints2px</code></a></td>
+<td class="itemdesc">A general-purpose list of 2D integer vectors.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors2px.html#Angle2px">Angle2px</a></b>(const v: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors2px.html#Cross2px">Cross2px</a></b>(const a, b: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors2px.html#Dot2px">Dot2px</a></b>(const a, b: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors2px.html#Length2px">Length2px</a></b>(const v: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors2px.html#Lerp2px">Lerp2px</a></b>(const v0, v1: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; Alpha: Single): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors2px.html#Point2px">Point2px</a></b>(x, y: Integer): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors2px.html#PPoint2px">PPoint2px</a></b> = &circ;<a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors2px.html#InfPoint2px">InfPoint2px</a></b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> = (x: Low(Integer); y: Low(Integer));</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Vectors2px.html#UnityPoint2px">UnityPoint2px</a></b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> = (x: 1; y: 1);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors2px.html#ZeroPoint2px">ZeroPoint2px</a></b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> = (x: 0; y: 0);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Angle2px"></a><code>function <b>Angle2px</b>(const v: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the angle (in radians) at which the 2D vector is pointing at.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Cross2px"></a><code>function <b>Cross2px</b>(const a, b: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates a so-called &quot;cross product&quot; of 2D vectors, or analog of thereof.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Dot2px"></a><code>function <b>Dot2px</b>(const a, b: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the dot-product of the specified 2D vectors. The dot-product is an indirect measure of the angle between two vectors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Length2px"></a><code>function <b>Length2px</b>(const v: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the length of the specified 2D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp2px"></a><code>function <b>Lerp2px</b>(const v0, v1: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>; Alpha: Single): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between the specified two vectors.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>v0</dt>
+<dd>The first vector to be used in the interpolation</dd>
+<dt>v1</dt>
+<dd>The second vector to be used in the interpolation</dd>
+<dt>Alpha</dt>
+<dd>The mixture of the two vectors with the a range of [0..1].</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Point2px"></a><code>function <b>Point2px</b>(x, y: Integer): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Vectors2px.TPoint2px.html">TPoint2px</a> record using the specified coordinates.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PPoint2px"></a><code><b>PPoint2px</b> = &circ;<a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Vectors2px.TPoint2px.html">TPoint2px</a> by reference.</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="InfPoint2px"></a><code><b>InfPoint2px</b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> = (x: Low(Integer); y: Low(Integer));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Infinity constant for <a class="normal"  href="Vectors2px.TPoint2px.html">TPoint2px</a>. In certain situations this vector is used to identify unknown vector value.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UnityPoint2px"></a><code><b>UnityPoint2px</b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> = (x: 1; y: 1);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Unity constant for <a class="normal"  href="Vectors2px.TPoint2px.html">TPoint2px</a> that can be used for vector initialization.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroPoint2px"></a><code><b>ZeroPoint2px</b>: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a> = (x: 0; y: 0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Vectors2px.TPoint2px.html">TPoint2px</a> that can be used for vector initialization.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

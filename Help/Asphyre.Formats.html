@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Formats</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Asphyre.Formats</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td>Types</td><td>Constants</td><td><a class="section"  href="#%40Variables">Variables</a></td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Utility routines for converting between different pixel formats. Most of the pixel formats that are described by Asphyre are supported except those that are floating-point.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Formats.TAsphyreFormatList.html"><code>TAsphyreFormatList</code></a></td>
+<td class="itemdesc">Defines a list of supported Asphyre formats.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Formats.html#FindClosestFormat">FindClosestFormat</a></b>(Format: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; ExistingFormats: <a   href="Asphyre.Formats.TAsphyreFormatList.html">TAsphyreFormatList</a>): <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Formats.html#Pixel32toX">Pixel32toX</a></b>(Source: Cardinal; Dest: Pointer; DestFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Formats.html#Pixel32toXArray">Pixel32toXArray</a></b>(Source, Dest: Pointer; DestFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; Elements: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Formats.html#PixelXto32">PixelXto32</a></b>(Source: Pointer; SourceFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Formats.html#PixelXto32Array">PixelXto32Array</a></b>(Source, Dest: Pointer; SourceFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; Elements: Integer);</code></td>
+</tr>
+</table>
+<a name="%40Variables"></a><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Formats.html#FormatList">FormatList</a></b>: <a   href="Asphyre.Formats.TAsphyreFormatList.html">TAsphyreFormatList</a> = nil;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="FindClosestFormat"></a><code>function <b>FindClosestFormat</b>(Format: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; ExistingFormats: <a   href="Asphyre.Formats.TAsphyreFormatList.html">TAsphyreFormatList</a>): <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Takes a list of existing pixel formats and tries to find in it a format that closely resembles the provided format sample. The heuristics used by this function tries not to add new channels and will never return a format that has less channels than the sample; it also tries to avoid converting between different format types like integer and floating-point formats.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Pixel32toX"></a><code>procedure <b>Pixel32toX</b>(Source: Cardinal; Dest: Pointer; DestFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts a single pixel from 32-bit RGBA format (<code>apf_A8R8G8B8</code>) to an arbitrary format. If the specified format is not supported, this function does nothing.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Source</dt>
+<dd>Source pixel specified in 32-bit RGBA format (<code>apf_A8R8G8B8</code>).</dd>
+<dt>Dest</dt>
+<dd>Pointer to the memory block where the resulting pixel should be written to. This memory should be previously allocated.</dd>
+<dt>DestFormat</dt>
+<dd>Pixel format that is used to describe the destination pixel.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Pixel32toXArray"></a><code>procedure <b>Pixel32toXArray</b>(Source, Dest: Pointer; DestFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; Elements: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts an array of pixels from 32-bit RGBA format (<code>apf_A8R8G8B8</code>) to an arbitrary format. If the specified format is not supported, this function does nothing.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Source</dt>
+<dd>Pointer to a valid memory block that holds the source pixels.</dd>
+<dt>Dest</dt>
+<dd>Pointer to a valid memory block where destination pixels will be written to.</dd>
+<dt>DestFormat</dt>
+<dd>Pixel format that is used to describe the destination pixels.</dd>
+<dt>Elements</dt>
+<dd>The number of pixels to convert.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PixelXto32"></a><code>function <b>PixelXto32</b>(Source: Pointer; SourceFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts a single pixel from an arbitrary format back to 32-bit RGBA format (<code>apf_A8R8G8B8</code>). If the specified format is not supported, this function returns zero.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Source</dt>
+<dd>Pointer to a valid block of memory where the source pixel resides.</dd>
+<dt>SourceFormat</dt>
+<dd>Pixel format that is used to describe the source pixel.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">Resulting pixel in 32-bit RGBA format (<code>apf_A8R8G8B8</code>).</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PixelXto32Array"></a><code>procedure <b>PixelXto32Array</b>(Source, Dest: Pointer; SourceFormat: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>; Elements: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts an array of pixels from an arbitrary format back to 32-bit RGBA format (<code>apf_A8R8G8B8</code>). If the specified format is not supported, this function does nothing.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Source</dt>
+<dd>Pointer to a valid memory block that holds the source pixels.</dd>
+<dt>Dest</dt>
+<dd>Pointer to a valid memory block where destination pixels will be written to.</dd>
+<dt>SourceFormat</dt>
+<dd>Pixel format that is used to describe the source pixels.</dd>
+<dt>Elements</dt>
+<dd>The number of pixels to convert.</dd>
+</dl>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="FormatList"></a><code><b>FormatList</b>: <a   href="Asphyre.Formats.TAsphyreFormatList.html">TAsphyreFormatList</a> = nil;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+A running instance of <a class="normal"  href="Asphyre.Formats.TAsphyreFormatList.html">TAsphyreFormatList</a> that is created when the application is executed and freed upon termination; therefore, this class can be used with its timing functions without having to explicitly create it elsewhere.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

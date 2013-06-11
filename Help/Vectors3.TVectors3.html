@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Vectors3: Class TVectors3</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TVectors3"></a><h1 class="cio">Class TVectors3</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Vectors3.html">Vectors3</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TVectors3 = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+A general-purpose list of 3D floating-point vectors.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TVectors3</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Vectors3.TVectors3.html#Add">Add</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Vectors3.TVectors3.html#Add">Add</a></b>(x, y, z: Single): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Vectors3.TVectors3.html#IndexOf">IndexOf</a></b>(const Vec: <a   href="Vectors3.TVector3.html">TVector3</a>; CompareEpsilon: Single = 0.0001): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Vectors3.TVectors3.html#IndexOf">IndexOf</a></b>(x, y, z: Single; CompareEpsilon: Single = 0.0001): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#AddFrom">AddFrom</a></b>(Source: <a   href="Vectors3.TVectors3.html">TVectors3</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#Centralize">Centralize</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#CopyFrom">CopyFrom</a></b>(Source: <a   href="Vectors3.TVectors3.html">TVectors3</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#Invert">Invert</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#Normalize">Normalize</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#RemoveAll">RemoveAll</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#Rescale">Rescale</a></b>(const Scale: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Vectors3.TVectors3.html#Rescale">Rescale</a></b>(Scale: Single); overload;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Vectors3.TVectors3.html#Count">Count</a></b>: Integer read DataCount write SetCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Vectors3.TVectors3.html#Items">Items</a></b>[Index: Integer]: <a   href="Vectors3.html#PVector3">PVector3</a> read GetItem;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Add"></a><code>function <b>Add</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the new vector to the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Add"></a><code>function <b>Add</b>(x, y, z: Single): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the vector with the specified coordinates to the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(const Vec: <a   href="Vectors3.TVector3.html">TVector3</a>; CompareEpsilon: Single = 0.0001): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finds the element given by the vector in the list and returns its index.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(x, y, z: Single; CompareEpsilon: Single = 0.0001): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finds the element given by the coordinates in the list and returns its index.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFrom"></a><code>procedure <b>AddFrom</b>(Source: <a   href="Vectors3.TVectors3.html">TVectors3</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds all elements from the source list to this one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Centralize"></a><code>procedure <b>Centralize</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Assuming that the vectors in the list represent a 3D mesh, this method calculates the minimal and maximum boundaries and then translates the vertices so that the resulting mesh is centered around zero point.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CopyFrom"></a><code>procedure <b>CopyFrom</b>(Source: <a   href="Vectors3.TVectors3.html">TVectors3</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Copies the entire contents from the source list to this one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Invert"></a><code>procedure <b>Invert</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inverts all the vectors in the list by pointing them into an opposite direction.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Normalize"></a><code>procedure <b>Normalize</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Normalizes all the vectors in the list to make them having unity length.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the specified element from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveAll"></a><code>procedure <b>RemoveAll</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all elements from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Rescale"></a><code>procedure <b>Rescale</b>(const Scale: <a   href="Vectors3.TVector3.html">TVector3</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Rescales all the vectors in the list by the specified coefficient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Rescale"></a><code>procedure <b>Rescale</b>(Scale: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Rescales all the vectors in the list by the specified coefficient.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read DataCount write SetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The total number of elements in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Items"></a><code>property <b>Items</b>[Index: Integer]: <a   href="Vectors3.html#PVector3">PVector3</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+A direct access to each of the elements in the list. The first element has index of 0 and the last element is <a class="normal"  href="Vectors3.TVectors3.html#Count">Count</a> - 1.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

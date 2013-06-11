@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Events</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Asphyre.Events</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td>Classes, Interfaces, Objects and Records</td><td>Functions and Procedures</td><td>Types</td><td>Constants</td><td><a class="section"  href="#%40Variables">Variables</a></td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Common Asphyre events that deal with device creation, resource initialization and GUI management.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Variables"></a><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventAsphyreCreate">EventAsphyreCreate</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventAsphyreDestroy">EventAsphyreDestroy</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventAudioCreate">EventAudioCreate</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventAudioDestroy">EventAudioDestroy</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventBeginScene">EventBeginScene</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventButtonClick">EventButtonClick</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventControlForm">EventControlForm</a></b>: string;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventControlName">EventControlName</a></b>: string;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventDeviceCreate">EventDeviceCreate</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventDeviceDestroy">EventDeviceDestroy</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventDeviceInit">EventDeviceInit</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventDeviceLost">EventDeviceLost</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventDeviceReset">EventDeviceReset</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventEndScene">EventEndScene</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Events.html#EventTimerReset">EventTimerReset</a></b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventAsphyreCreate"></a><code><b>EventAsphyreCreate</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Asphyre creation event, where all Asphyre components should be created.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventAsphyreDestroy"></a><code><b>EventAsphyreDestroy</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Asphyre release event, where all Asphyre components should be released.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventAudioCreate"></a><code><b>EventAudioCreate</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Sound device creation event, which occurs right after the audio device has been initialized. In this event it is possible to load some essential sound samples and music.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventAudioDestroy"></a><code><b>EventAudioDestroy</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Sound device finalization event, which occurs right before the audio device is to be finalized to release all other device-dependant sound resources such as samples and music.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventBeginScene"></a><code><b>EventBeginScene</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Start of rendering scene event, which occurs when the scene is being prepared to be rendered. In this event the necessary device states can be updated.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventButtonClick"></a><code><b>EventButtonClick</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Button click event, which occurs when one of GUI buttons have been clicked. Typically, <a class="normal"  href="Asphyre.Events.html#EventControlName">EventControlName</a> and <a class="normal"  href="Asphyre.Events.html#EventControlForm">EventControlForm</a> are set to define what control on which form has been clicked.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventControlForm"></a><code><b>EventControlForm</b>: string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This variable usually contains the name of the form, which contained the control that sent the latest event notification, such as button click.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventControlName"></a><code><b>EventControlName</b>: string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This variable usually contains the name of the control that has sent the latest event notification, such as button click.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventDeviceCreate"></a><code><b>EventDeviceCreate</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Device creation event, which occurs right after the device has been initialized. In this event it is possible to load some essential artwork and fonts.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventDeviceDestroy"></a><code><b>EventDeviceDestroy</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Device finalization event, which occurs right before the device is to be finalized to release all other device-dependant resources such as images and fonts.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventDeviceInit"></a><code><b>EventDeviceInit</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Device initialization event, where device and swap chain configuration should be specified. This event occurs right before Asphyre device is about to be initialized.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventDeviceLost"></a><code><b>EventDeviceLost</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Device lost event, which occurs either before the device is to be finalized or when the device has been lost. In this event all volatile device-dependant resources should be released.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventDeviceReset"></a><code><b>EventDeviceReset</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Device reset event, which occurs either after device has been initialized or recovered from lost scenario. In this event all volatile device-dependant resources should be created.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventEndScene"></a><code><b>EventEndScene</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+End of rendering scene event, which occurs when the scene has finished rendering and is about to be presented on the screen (or render target). In this event it is necessary to finish all cached rendering processes.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventTimerReset"></a><code><b>EventTimerReset</b>: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Timer reset event, which occurs when a time-consuming operation has taken place so it is necessary to reset the timer to prevent stalling.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

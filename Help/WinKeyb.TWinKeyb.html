@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: WinKeyb: Class TWinKeyb</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TWinKeyb"></a><h1 class="cio">Class TWinKeyb</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="WinKeyb.html">WinKeyb</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TWinKeyb = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Keyboard input class that uses Windows API for retrieving the state of keyboard buttons asynchronously.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TWinKeyb</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="WinKeyb.TWinKeyb.html#CharKey">CharKey</a></b>(Ch: Char): Integer;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="WinKeyb.TWinKeyb.html#Key">Key</a></b>[vKey: Integer]: Boolean read GetKey;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="WinKeyb.TWinKeyb.html#KeyName">KeyName</a></b>[vKey: Integer]: <a   href="AsphyreDef.html#StdString">StdString</a> read GetKeyName;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="WinKeyb.TWinKeyb.html#KeyPressed">KeyPressed</a></b>[vKey: Integer]: Boolean read GetKeyPressed;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CharKey"></a><code>function <b>CharKey</b>(Ch: Char): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Given the specified character, this function returns its virtual key code.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Key"></a><code>property <b>Key</b>[vKey: Integer]: Boolean read GetKey;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the status of a single keyboard key. <code>VCode</code> is the virtual key code usually defined by VK_[KeyName] constants.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="KeyName"></a><code>property <b>KeyName</b>[vKey: Integer]: <a   href="AsphyreDef.html#StdString">StdString</a> read GetKeyName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the name of the given key as it is described by underlying OS. <code>VCode</code> is the virtual key code.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="KeyPressed"></a><code>property <b>KeyPressed</b>[vKey: Integer]: Boolean read GetKeyPressed;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the key has been pressed since the last time it was checked. However, due to multitasking, a query from another application or even query to <a class="normal"  href="WinKeyb.TWinKeyb.html#Key">Key</a> can reset this state so it should not be relied upon. <code>VCode</code> is the virtual key code.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

@@ -1,0 +1,27 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Asphyre Basic Example.'
+  Color = claSpringgreen
+  ClientHeight = 480
+  ClientWidth = 320
+  Multisample = msNone
+  FormFactor.Width = 1920
+  FormFactor.Height = 1080
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnRender = FormRender
+  OnResize = FormResize
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  object SysTimer: TTimer
+    Interval = 1
+    OnTimer = OnSysTimer
+    Left = 72
+    Top = 80
+  end
+end

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreJoystick: Class TAsphyreJoysticks</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreJoysticks"></a><h1 class="cio">Class TAsphyreJoysticks</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreJoystick.html">AsphyreJoystick</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreJoysticks = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Multiple joystick implementation class that uses DirectInput 8 for joystick enumeration and management.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreJoysticks</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#Initialize">Initialize</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#Update">Update</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#Finalize">Finalize</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#Background">Background</a></b>: Boolean read FBackground write FBackground;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#Count">Count</a></b>: Integer read GetCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#Initialized">Initialized</a></b>: Boolean read FInitialized;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#Items">Items</a></b>[Index: Integer]: <a   href="AsphyreJoystick.TAsphyreJoystick.html">TAsphyreJoystick</a> read GetItem;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoysticks.html#WindowHandle">WindowHandle</a></b>: THandle read FWindowHandle write FWindowHandle;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialize"></a><code>function <b>Initialize</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Initializes the component and prepares DirectInput interface. If the method succeeds, the returned value is <code>True</code> and <code>False</code> otherwise. <a class="normal"  href="AsphyreJoystick.TAsphyreJoysticks.html#WindowHandle">WindowHandle</a> must be properly set before for this call to succeed. This also updates the number of joysticks present in the system and initializes each one of them.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Update"></a><code>function <b>Update</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Updates the status of all joysticks in the system.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Finalize"></a><code>procedure <b>Finalize</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finalizes the component releasing all previously created joysticks and the related DirectInput interfaces.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Background"></a><code>property <b>Background</b>: Boolean read FBackground write FBackground;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether the input should still be available when application is minimized or not focused.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read GetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Number of joysticks connected in the system. If no joysticks are connected, this value will be zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialized"></a><code>property <b>Initialized</b>: Boolean read FInitialized;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the component has been properly initialized and is ready to be used.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Items"></a><code>property <b>Items</b>[Index: Integer]: <a   href="AsphyreJoystick.TAsphyreJoystick.html">TAsphyreJoystick</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access to individual joysticks connected in the system. <code>Index</code> can have values in range of [0..(Count - 1)]. If the specified index is out of valid range, the returned value is zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="WindowHandle"></a><code>property <b>WindowHandle</b>: THandle read FWindowHandle write FWindowHandle;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The handle of the application's main window. This should be properly set before initializing the component as it will not work otherwise.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

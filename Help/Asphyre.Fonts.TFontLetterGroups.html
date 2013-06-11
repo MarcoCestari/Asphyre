@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Fonts: Class TFontLetterGroups</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TFontLetterGroups"></a><h1 class="cio">Class TFontLetterGroups</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Fonts.html">Asphyre.Fonts</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TFontLetterGroups = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+The hashed list of individual letter spacings used in Asphyre fonts for pixel-perfect text rendering. The list stores values between ANSI letters quickly using hash table; for Unicode characters a linear list is used.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TFontLetterGroups</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Fonts.TFontLetterGroups.html#CopyFrom">CopyFrom</a></b>(const Source: <a   href="Asphyre.Math.Sets.TPointList.html">TPointList</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Fonts.TFontLetterGroups.html#Spec">Spec</a></b>(Code1, Code2: Char; AShift: Integer); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Fonts.TFontLetterGroups.html#Spec">Spec</a></b>(Code1, Code2, AShift: Integer); overload;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Fonts.TFontLetterGroups.html#Shift">Shift</a></b>[Code1, Code2: Integer]: Integer read GetShift;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CopyFrom"></a><code>procedure <b>CopyFrom</b>(const Source: <a   href="Asphyre.Math.Sets.TPointList.html">TPointList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Copies the spacing information from the given list of 2D integer points, where <code>X</code> and <code>Y</code> are considered character codes and <code>Data</code> field as integer representation of spacing between the given characters. The existing registry entries in the current list are not deleted, but replaced when needed.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Spec"></a><code>procedure <b>Spec</b>(Code1, Code2: Char; AShift: Integer); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Modifies the spacing value for the given pair of ANSI character codes. If the registry for this combination of characters does not exist, it will be created; it if does exist, it will be replaced by the spacing value.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Spec"></a><code>procedure <b>Spec</b>(Code1, Code2, AShift: Integer); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Modifies the spacing value for the given pair of character codes. If the registry for this combination of characters does not exist, it will be created; it if does exist, it will be replaced by the spacing value.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Shift"></a><code>property <b>Shift</b>[Code1, Code2: Integer]: Integer read GetShift;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the spacing between two given character codes. If there is no registry for the given combination of characters, zero is returned.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

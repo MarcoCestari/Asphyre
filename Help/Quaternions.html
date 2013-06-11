@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Quaternions</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Quaternions</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td>Types</td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Types, functions and classes that facilitate working with 3D quaternions. Quaternions, when compared to 4x4 matrices, can only specify rotation but not translation. However, the benefit of using quaternions is that the quaternions can be interpolated easily.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Quaternions.TQuaternion.html"><code>TQuaternion</code></a></td>
+<td class="itemdesc">3D quaternion</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#ConjugateQuat">ConjugateQuat</a></b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#DotQuat">DotQuat</a></b>(const a, b: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#ExpQuat">ExpQuat</a></b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>; Exponent: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#NormalizeQuat">NormalizeQuat</a></b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotateAboutAxisQuat">RotateAboutAxisQuat</a></b>(const Axis: <a   href="Vectors3.TVector3.html">TVector3</a>; Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotateAboutXQuat">RotateAboutXQuat</a></b>(Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotateAboutYQuat">RotateAboutYQuat</a></b>(Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotateAboutZQuat">RotateAboutZQuat</a></b>(Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotateInertialToObjectQuat">RotateInertialToObjectQuat</a></b>(Pitch, Bank, Heading: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotateObjectToIntertialQuat">RotateObjectToIntertialQuat</a></b>(Pitch, Bank, Heading: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotationAngleQuat">RotationAngleQuat</a></b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#RotationAxisQuat">RotationAxisQuat</a></b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Quaternions.html#SlerpQuat">SlerpQuat</a></b>(const q0, q1: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>; t: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Quaternions.html#IdentityQuat">IdentityQuat</a></b>: <a   href="Quaternions.TQuaternion.html">TQuaternion</a> = (w: 1.0; x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ConjugateQuat"></a><code>function <b>ConjugateQuat</b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the quaternion's conjugate. The resulting quaternion has opposite rotation to the original quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DotQuat"></a><code>function <b>DotQuat</b>(const a, b: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the dot product of the two given quaternions.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ExpQuat"></a><code>function <b>ExpQuat</b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>; Exponent: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes the exponentiation of the given quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="NormalizeQuat"></a><code>function <b>NormalizeQuat</b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalizes the given quaternion. Note that normally quaternions are always normalized (of course, within limits of numerical precision). This function is provided mainly to combat floating point &quot;error creep&quot;, which occurs after many successive quaternion operations.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutAxisQuat"></a><code>function <b>RotateAboutAxisQuat</b>(const Axis: <a   href="Vectors3.TVector3.html">TVector3</a>; Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around an arbitrary axis that is specified by the given vector; the rotation is specified in radians.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutXQuat"></a><code>function <b>RotateAboutXQuat</b>(Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around X axis with the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutYQuat"></a><code>function <b>RotateAboutYQuat</b>(Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around Y axis with the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateAboutZQuat"></a><code>function <b>RotateAboutZQuat</b>(Theta: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion containing rotation around Z axis with the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateInertialToObjectQuat"></a><code>function <b>RotateInertialToObjectQuat</b>(Pitch, Bank, Heading: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion setup to perform Inertial-To-Object rotation using the angles specified in Euler format.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateObjectToIntertialQuat"></a><code>function <b>RotateObjectToIntertialQuat</b>(Pitch, Bank, Heading: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3D quaternion setup to perform Object-To-Inertial rotation using the angles specified in Euler format.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotationAngleQuat"></a><code>function <b>RotationAngleQuat</b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the rotational angle &quot;theta&quot; that is currently present in the given quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotationAxisQuat"></a><code>function <b>RotationAxisQuat</b>(const q: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the rotational axis that is currently present in the given quaternion.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SlerpQuat"></a><code>function <b>SlerpQuat</b>(const q0, q1: <a   href="Quaternions.TQuaternion.html">TQuaternion</a>; t: Single): <a   href="Quaternions.TQuaternion.html">TQuaternion</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Applies spherical linear interpolation between the specified two quaternions. The last parameter specifies the amount of interpolation with zero giving the first quaternion and one giving the second quaternion.</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IdentityQuat"></a><code><b>IdentityQuat</b>: <a   href="Quaternions.TQuaternion.html">TQuaternion</a> = (w: 1.0; x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Identity quaternion that can be used to specify an object with no rotation.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Math.Sets: Class TIntProbList</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TIntProbList"></a><h1 class="cio">Class TIntProbList</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Math.Sets.html">Asphyre.Math.Sets</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TIntProbList = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+List of probabilistic numbers, where individual pairs of numbers and their probabilities are specified, which can then be used for random selection.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TIntProbList</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Exists">Exists</a></b>(AValue: Integer): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.Sets.TIntProbList.html#ExtractRandValue">ExtractRandValue</a></b>(): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.Sets.TIntProbList.html#IndexOf">IndexOf</a></b>(AValue: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Insert">Insert</a></b>(AValue: Integer; Prob: Single = 1.0): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#AddFrom">AddFrom</a></b>(const Source: <a   href="Asphyre.Math.Sets.TIntProbList.html">TIntProbList</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Clear">Clear</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#CopyFrom">CopyFrom</a></b>(const Source: <a   href="Asphyre.Math.Sets.TIntProbList.html">TIntProbList</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Exclude">Exclude</a></b>(AValue: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Include">Include</a></b>(AValue: Integer; Prob: Single = 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#LoadFromStream">LoadFromStream</a></b>(const Stream: TStream);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#NormalizeAll">NormalizeAll</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#SaveToStream">SaveToStream</a></b>(const Stream: TStream);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#ScaleProbability">ScaleProbability</a></b>(AValue: Integer; Scale: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#ScaleProbExcept">ScaleProbExcept</a></b>(AValue: Integer; Scale: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Series">Series</a></b>(MaxValue: Integer; Prob: Single = 1.0);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Count">Count</a></b>: Integer read DataCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Item">Item</a></b>[Index: Integer]: <a   href="Asphyre.Math.Sets.html#PIntProbHolder">PIntProbHolder</a> read GetItem;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TIntProbList.html#MemAddr">MemAddr</a></b>: Pointer read GetMemAddr;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Probability">Probability</a></b>[Value: Integer]: Single
+   read GetProbability write SetProbability;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TIntProbList.html#RandValue">RandValue</a></b>: Integer read GetRandValue;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.Sets.TIntProbList.html#Value">Value</a></b>[Index: Integer]: Integer read GetValue;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Exists"></a><code>function <b>Exists</b>(AValue: Integer): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns <code>True</code> if the specified number exists in the list and <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ExtractRandValue"></a><code>function <b>ExtractRandValue</b>(): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Extracts a number from the list using the probabilities of each individual element. If duplicates are present, each duplicate is treated as unique element. The returned number is removed from the list, but only its first occurrence, if multiple instances are present. If only one element is present, after returning it the list becomes empty. If the list is empty, zero is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(AValue: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the index of the given number in the list. If duplicates are present, the index of first occurrence is returned. If the number is not found, the returned value is -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Insert"></a><code>function <b>Insert</b>(AValue: Integer; Prob: Single = 1.0): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the given number with its probability to the list. This function does not check if this number already exists, so it can create duplicates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFrom"></a><code>procedure <b>AddFrom</b>(const Source: <a   href="Asphyre.Math.Sets.TIntProbList.html">TIntProbList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds elements from the source list to this one. This method does not check for duplicates, it simply adds each and all of the elements from the source list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Clear"></a><code>procedure <b>Clear</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all elements from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CopyFrom"></a><code>procedure <b>CopyFrom</b>(const Source: <a   href="Asphyre.Math.Sets.TIntProbList.html">TIntProbList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Copies the entire contents from the source list to this one, creating an identical copy.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Exclude"></a><code>procedure <b>Exclude</b>(AValue: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Excludes the specified number from the list. If multiple instances of such number exist, only the first occurrence is removed. If the number does not exist, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Include"></a><code>procedure <b>Include</b>(AValue: Integer; Prob: Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Includes the specified number with its probability to the list. If such number already exists, its probability is adjusted by the one specified in this method. If more than one number exists, only the first occurrence is modified.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoadFromStream"></a><code>procedure <b>LoadFromStream</b>(const Stream: TStream);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Loads the contents of the list from the source stream, replacing previous list. The contents must have been saved to the stream previously by <a class="normal"  href="Asphyre.Math.Sets.TIntProbList.html#SaveToStream">SaveToStream</a> method.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="NormalizeAll"></a><code>procedure <b>NormalizeAll</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adjusts the existing probability values by normalizing them in such way so they sum to one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the element at the specified index from the list, shifting the rest of the elements by one. If the index is outside of valid range, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="SaveToStream"></a><code>procedure <b>SaveToStream</b>(const Stream: TStream);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Saves the contents of this probabilistic list to the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ScaleProbability"></a><code>procedure <b>ScaleProbability</b>(AValue: Integer; Scale: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adjusts the probability of the specified number by the given coefficient. If multiple instances of the same number exist, only the first occurrence is adjusted. If the number does not exist, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ScaleProbExcept"></a><code>procedure <b>ScaleProbExcept</b>(AValue: Integer; Scale: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adjusts the probability of all elements in the list by the specified coefficient except those elements that have the given number. If such number does not exist, simply all elements have their probability multiplied. If the list is empty or contains only the given number, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Series"></a><code>procedure <b>Series</b>(MaxValue: Integer; Prob: Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Replaces the contents of current list with series of numbers starting from zero and up to (MaxValue - 1) all with the same specified probability.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read DataCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of elements in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Item"></a><code>property <b>Item</b>[Index: Integer]: <a   href="Asphyre.Math.Sets.html#PIntProbHolder">PIntProbHolder</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access to individual elements in the list by index, which should be specified within range of <i>[0..(Count-1)]</i>. If index is outside of valid range, the returned value is <code>Nil</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MemAddr"></a><code>property <b>MemAddr</b>: Pointer read GetMemAddr;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns pointer to the first element in the list. If the list has no elements, the returned value is <code>Nil</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Probability"></a><code>property <b>Probability</b>[Value: Integer]: Single
+   read GetProbability write SetProbability;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This property allows accessing and modifying the probability of each individual numbers in the list. If there are two identical numbers, only the first occurrence is modified. Each time this property is used, a search is made for the specified value. If the number does not exist in the list, the returned probability is zero. Setting probability for a number that is not in the list will add this number to the list with the specified probability.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RandValue"></a><code>property <b>RandValue</b>: Integer read GetRandValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns a number chosen randomly from the list using the probability field of each individual element. If duplicates are present in the list, they are treated as individual elements for probabilistic selection as well. If no elements are present in the list, the returned value is zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Value"></a><code>property <b>Value</b>[Index: Integer]: Integer read GetValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access directly to individual numbers in the list ignoring the probabilistic part by index, which should be specified within range of <i>[0..(Count-1)]</i>. If index is outside of valid range, zero is returned.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Devices</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Asphyre.Devices</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Hardware device specification that handles creation of back buffers, swap chains and other administrative tasks. This device plays primordial part in communication between the application and hardware-specific implementation of each particular provider.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Devices.TAsphyreDevice.html"><code>TAsphyreDevice</code></a></td>
+<td class="itemdesc">Hardware device wrapper that handles communication between application and the video card.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Devices.html#DeviceTechnologyToString">DeviceTechnologyToString</a></b>( Technology: <a   href="Asphyre.Devices.html#TAsphyreDeviceTechnology">TAsphyreDeviceTechnology</a>): <a   href="Asphyre.TypeDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Devices.html#DeviceVersionToString">DeviceVersionToString</a></b>(Value: Integer; CompactForm: Boolean = False): <a   href="Asphyre.TypeDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Devices.html#GetFullDeviceTechString">GetFullDeviceTechString</a></b>(Device: <a   href="Asphyre.Devices.TAsphyreDevice.html">TAsphyreDevice</a>): <a   href="Asphyre.TypeDef.html#StdString">StdString</a>;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Devices.html#TAsphyreDeviceState">TAsphyreDeviceState</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Devices.html#TAsphyreDeviceTechnology">TAsphyreDeviceTechnology</a></b> = (...);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DeviceTechnologyToString"></a><code>function <b>DeviceTechnologyToString</b>( Technology: <a   href="Asphyre.Devices.html#TAsphyreDeviceTechnology">TAsphyreDeviceTechnology</a>): <a   href="Asphyre.TypeDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns a readable text string with the name of the specified device technology.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DeviceVersionToString"></a><code>function <b>DeviceVersionToString</b>(Value: Integer; CompactForm: Boolean = False): <a   href="Asphyre.TypeDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts device version value originally specified in hexadecimal format (e.g. $324) into a readable text string describing that version (e.g. &quot;3.2.4&quot;). If <i>CompactForm</i> form parameter is set to <code>True</code>, the version text is reduced for trailing zeros, so a text like &quot;3.0&quot; becomes just &quot;3&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="GetFullDeviceTechString"></a><code>function <b>GetFullDeviceTechString</b>(Device: <a   href="Asphyre.Devices.TAsphyreDevice.html">TAsphyreDevice</a>): <a   href="Asphyre.TypeDef.html#StdString">StdString</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns a readable text string that describes the current device's technology, technology version and feature level version. This information can be used for informative purposes.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TAsphyreDeviceState"></a><code><b>TAsphyreDeviceState</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The current state of the device.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+adsNotActive: The device has not yet been initialized. <br> <br></li>
+<li>
+adsActive: The device has been initialized and is working properly. <br> <br></li>
+<li>
+adsInitFailed: Initialization was attempted for this device but failed. Before attempting another initialization, <code>ResetInitFailed</code> must be called first. <br> <br></li>
+<li>
+adsRunTimeFault: Run-time failure occurred while working with the device. The device is no longer in stable state and should be finalized as soon as possible to prevent major issues from occurring. <br> <br></li>
+<li>
+adsCreating: The device is currently being initialized. This state can be detected inside device's creation events and it means that the device has not finished initialization phase yet. The application must be very cautious with any device-related calls while the device is in this state.</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TAsphyreDeviceTechnology"></a><code><b>TAsphyreDeviceTechnology</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type of technology that is being used in Asphyre device.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+adtUnknown: The technology has not yet been established.</li>
+<li>
+adtDirectX: Microsoft DirectX technology is being used.</li>
+<li>
+adtOpenGL: OpenGL by Khronos Group is being used.</li>
+<li>
+adtOpenGL_ES: OpenGL ES by Khronos Group is being used.</li>
+<li>
+adtPropietary: Private propietary technology is being used.</li>
+</ul>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Math: Class TPoints2px</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TPoints2px"></a><h1 class="cio">Class TPoints2px</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Math.html">Asphyre.Math</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TPoints2px = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+A general-purpose list of 2D integer vectors.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TPoints2px</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.TPoints2px.html#Add">Add</a></b>(const Point: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.TPoints2px.html#Add">Add</a></b>(x, y: Integer): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.TPoints2px.html#IndexOf">IndexOf</a></b>(const Point: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Math.TPoints2px.html#IndexOf">IndexOf</a></b>(x, y: Integer): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.TPoints2px.html#AddFrom">AddFrom</a></b>(const Source: <a   href="Asphyre.Math.TPoints2px.html">TPoints2px</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.TPoints2px.html#CopyFrom">CopyFrom</a></b>(const Source: <a   href="Asphyre.Math.TPoints2px.html">TPoints2px</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.TPoints2px.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Math.TPoints2px.html#RemoveAll">RemoveAll</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.TPoints2px.html#Count">Count</a></b>: Integer read DataCount write SetCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Math.TPoints2px.html#Items">Items</a></b>[Index: Integer]: <a   href="Asphyre.Math.html#PPoint2px">PPoint2px</a> read GetItem;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Add"></a><code>function <b>Add</b>(const Point: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the new vector to the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Add"></a><code>function <b>Add</b>(x, y: Integer): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts the vector with the specified coordinates to the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(const Point: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finds the element given by the vector in the list and returns its index.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(x, y: Integer): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finds the element given by the coordinates in the list and returns its index.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFrom"></a><code>procedure <b>AddFrom</b>(const Source: <a   href="Asphyre.Math.TPoints2px.html">TPoints2px</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds all elements from the source list to this one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CopyFrom"></a><code>procedure <b>CopyFrom</b>(const Source: <a   href="Asphyre.Math.TPoints2px.html">TPoints2px</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Copies the entire contents from the source list to this one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes the specified element from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveAll"></a><code>procedure <b>RemoveAll</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all elements from the list.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read DataCount write SetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The total number of elements in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Items"></a><code>property <b>Items</b>[Index: Integer]: <a   href="Asphyre.Math.html#PPoint2px">PPoint2px</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+A direct access to each of the elements in the list. The first element has index of 0 and the last element is <a class="normal"  href="Asphyre.Math.TPoints2px.html#Count">Count</a> - 1.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

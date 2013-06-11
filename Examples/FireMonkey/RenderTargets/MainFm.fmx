@@ -1,0 +1,25 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Asphyre: RenderTargets example for FireMonkey.'
+  ClientHeight = 600
+  ClientWidth = 600
+  Position = poScreenCenter
+  FormFactor.Width = 1280
+  FormFactor.Height = 1024
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = Form3DCreate
+  OnDestroy = Form3DDestroy
+  OnResize = Form3DResize
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  object SecTimer: TTimer
+    Interval = 1
+    OnTimer = SecTimerTimer
+    Left = 128
+    Top = 136
+  end
+end

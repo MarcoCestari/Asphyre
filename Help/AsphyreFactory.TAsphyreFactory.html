@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreFactory: Class TAsphyreFactory</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreFactory"></a><h1 class="cio">Class TAsphyreFactory</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td>Properties</td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreFactory.html">AsphyreFactory</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreFactory = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+General factory object that creates all provider-dependant classes such as device, canvas and textures.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreFactory</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFactory.TAsphyreFactory.html#CreateCanvas">CreateCanvas</a></b>(): <a   href="AbstractCanvas.TAsphyreCanvas.html">TAsphyreCanvas</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFactory.TAsphyreFactory.html#CreateDevice">CreateDevice</a></b>(): <a   href="AbstractDevices.TAsphyreDevice.html">TAsphyreDevice</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFactory.TAsphyreFactory.html#CreateLockableTexture">CreateLockableTexture</a></b>(): <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFactory.TAsphyreFactory.html#CreateRasterizer">CreateRasterizer</a></b>(): TAsphyreRasterizer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFactory.TAsphyreFactory.html#CreateRenderTargetTexture">CreateRenderTargetTexture</a></b>(): <a   href="AbstractTextures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFactory.TAsphyreFactory.html#Subscribe">Subscribe</a></b>(AProvider: <a   href="AsphyreFactory.TAsphyreProvider.html">TAsphyreProvider</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFactory.TAsphyreFactory.html#Unsubscribe">Unsubscribe</a></b>(AProvider: <a   href="AsphyreFactory.TAsphyreProvider.html">TAsphyreProvider</a>; NoFree: Boolean = False);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFactory.TAsphyreFactory.html#UseProvider">UseProvider</a></b>(ProviderID: Cardinal);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateCanvas"></a><code>function <b>CreateCanvas</b>(): <a   href="AbstractCanvas.TAsphyreCanvas.html">TAsphyreCanvas</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creates Asphyre canvas that is specific to the currently selected provider.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateDevice"></a><code>function <b>CreateDevice</b>(): <a   href="AbstractDevices.TAsphyreDevice.html">TAsphyreDevice</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creates Asphyre device that is specific to the currently selected provider.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateLockableTexture"></a><code>function <b>CreateLockableTexture</b>(): <a   href="AbstractTextures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creates lockable Asphyre texture that is specific to the currently selected provider.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateRasterizer"></a><code>function <b>CreateRasterizer</b>(): TAsphyreRasterizer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creates Asphyre 3D rasterizer that is specific to the currently selected provider.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateRenderTargetTexture"></a><code>function <b>CreateRenderTargetTexture</b>(): <a   href="AbstractTextures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creates render target Asphyre texture texture that is specific to the currently selected provider.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Subscribe"></a><code>procedure <b>Subscribe</b>(AProvider: <a   href="AsphyreFactory.TAsphyreProvider.html">TAsphyreProvider</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Subscribes a new provider to the list of available providers that can be used by the application. This function is usually called automatically by each of the providers.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Unsubscribe"></a><code>procedure <b>Unsubscribe</b>(AProvider: <a   href="AsphyreFactory.TAsphyreProvider.html">TAsphyreProvider</a>; NoFree: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Unsubscribes the specified provider from the list of available providers that can be used by the application.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UseProvider"></a><code>procedure <b>UseProvider</b>(ProviderID: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Activates the provider with the given numerical identifier to be used by the factory's creation functions.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

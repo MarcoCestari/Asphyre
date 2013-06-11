@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Textures: Class TAsphyreLockableTexture</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreLockableTexture"></a><h1 class="cio">Class TAsphyreLockableTexture</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Textures.html">Asphyre.Textures</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreLockableTexture = class(<a class="normal"  href="Asphyre.Textures.TAsphyreCustomTexture.html">TAsphyreCustomTexture</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Lockable texture specification where full support is provided for direct access to texture pixel data. This texture can typically be loaded from disk and can have its pixels modified while the application is running. This is the most common type of textures used in Asphyre framework.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="ancestor"><a class="normal"  href="Asphyre.Textures.TAsphyreCustomTexture.html">TAsphyreCustomTexture</a></li>
+<li class="thisitem">TAsphyreLockableTexture</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Textures.TAsphyreLockableTexture.html#Lock">Lock</a></b>(const Rect: TRect; out Bits: Pointer; out Pitch: Integer); virtual; abstract;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Textures.TAsphyreLockableTexture.html#Unlock">Unlock</a></b>(); virtual; abstract;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreLockableTexture.html#DynamicTexture">DynamicTexture</a></b>: Boolean read FDynamicTexture write SetDynamicTexture;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Textures.TAsphyreLockableTexture.html#Pixels">Pixels</a></b>[x, y: Integer]: Cardinal read GetPixel write SetPixel;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Lock"></a><code>procedure <b>Lock</b>(const Rect: TRect; out Bits: Pointer; out Pitch: Integer); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access to the raw texture's pixel data. If mipmapping is enabled, this gives access to the top-level mipmap (other mipmaps will be updated automatically). After accessing the texture's pixel data it is necessary to call <a class="normal"  href="Asphyre.Textures.TAsphyreLockableTexture.html#Unlock">Unlock</a>.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Rect</dt>
+<dd>The rectangle inside the texture that will be updated. For dynamic textures this rectangle should cover the entire texture in some providers.</dd>
+<dt>Bits</dt>
+<dd>In this parameter the pointer to the top-left pixel is provided within the specified rectangle. If the method fails, <code>Nil</code> is returned.</dd>
+<dt>Pitch</dt>
+<dd>The number of bytes that each scanline occupies in the texture. This value can be used for accessing individual rows when accessing pixel data. If the method fails, zero is returned.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Unlock"></a><code>procedure <b>Unlock</b>(); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finishes accessing texture's pixel data. If mipmapping is enabled, other mipmap levels are updated automatically.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DynamicTexture"></a><code>property <b>DynamicTexture</b>: Boolean read FDynamicTexture write SetDynamicTexture;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether the texture will be used for frequent access and updates. This is useful for textures that are modified at least once per rendering frame.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Pixels"></a><code>property <b>Pixels</b>[x, y: Integer]: Cardinal read GetPixel write SetPixel;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This property provides direct access to texture's pixels. The pixel values are handled in 32-bit RGBA pixel format (<code>apf_A8R8G8B8</code>. If the actual pixel format used in the texture is different, the conversion is done automatically. In some providers using this property may induce significant performance hit, especially if mipmapping is enabled. For performance-critical applications it is better to get access to all texture pixels at once using <a class="normal"  href="Asphyre.Textures.TAsphyreLockableTexture.html#Lock">Lock</a> and <a class="normal"  href="Asphyre.Textures.TAsphyreLockableTexture.html#Unlock">Unlock</a> methods instead.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

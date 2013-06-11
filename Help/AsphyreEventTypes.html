@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreEventTypes</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit AsphyreEventTypes</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td>Functions and Procedures</td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td><a class="section"  href="#%40Variables">Variables</a></td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Event foundations for Asphyre based on observer pattern using subscription mechanism.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="AsphyreEventTypes.TEventProvider.html"><code>TEventProvider</code></a></td>
+<td class="itemdesc">Event subscription class implementing observer pattern.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold"  href="AsphyreEventTypes.TEventProviders.html"><code>TEventProviders</code></a></td>
+<td class="itemdesc">List of all available event providers based on observer pattern where subscriber classes are notified of the events sent by other classes.</td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreEventTypes.html#TEventCallbackType">TEventCallbackType</a></b> = procedure(Sender: TObject; Param: Pointer; var Handled: Boolean) of object;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreEventTypes.html#TEventValidatorType">TEventValidatorType</a></b> = procedure(Provider: <a   href="AsphyreEventTypes.TEventProvider.html">TEventProvider</a>; Sender: TObject; Param: Pointer; const ClassName: <a   href="AsphyreDef.html#StdString">StdString</a>; var Allowed: Boolean) of object;</code></td>
+</tr>
+</table>
+<a name="%40Variables"></a><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreEventTypes.html#EventProviders">EventProviders</a></b>: <a   href="AsphyreEventTypes.TEventProviders.html">TEventProviders</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TEventCallbackType"></a><code><b>TEventCallbackType</b> = procedure(Sender: TObject; Param: Pointer; var Handled: Boolean) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Event callback function used by the majority of Asphyre events.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Sender</dt>
+<dd>Sender class used in event invocation, in certain situations this parameter may be set to <code>Nil</code>.</dd>
+<dt>Param</dt>
+<dd>Event-specific parameter that may be optionally passed by the notifier class. In most cases this parameter has value of <code>Nil</code>.</dd>
+<dt>Handled</dt>
+<dd>Determines whether to continue sending event to all other subscribed classes. If this parameter is set to <code>True</code>, the event handling will be finished and further subscribers will not be notified.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TEventValidatorType"></a><code><b>TEventValidatorType</b> = procedure(Provider: <a   href="AsphyreEventTypes.TEventProvider.html">TEventProvider</a>; Sender: TObject; Param: Pointer; const ClassName: <a   href="AsphyreDef.html#StdString">StdString</a>; var Allowed: Boolean) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Event validation callback function. This function is called to filter subscribers that should or should not receive the current event. For instance, when some button is clicked, only the class handling the active window should receive and handle the event; such validation should be done inside this event.     </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Provider</dt>
+<dd>Reference to the provider that was used in event invocation.</dd>
+<dt>Sender</dt>
+<dd>Sender class that called the event. For instance, when a button is clicked, the sender will be the button class itself. In some cases, this parameter may be <code>Nil</code>.</dd>
+<dt>Param</dt>
+<dd>Application-specific parameter sent by the caller class. This parameter is typically set to <code>Nil</code>.</dd>
+<dt>ClassName</dt>
+<dd>The name of the subscriber class that is currently being validated to receive the event.</dd>
+<dt>Allowed</dt>
+<dd>Determines whether the class that is currently being validated should receive the event or not. This parameter is by default set to <code>True</code>; setting it to <code>False</code> inside this event will skip the class identified by <code>ClassName</code> for the current event.</dd>
+</dl>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EventProviders"></a><code><b>EventProviders</b>: <a   href="AsphyreEventTypes.TEventProviders.html">TEventProviders</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+List of all existing Asphyre event providers implementing observer pattern. This class is an instance of <a class="normal"  href="AsphyreEventTypes.TEventProviders.html">TEventProviders</a> which is ready to use in the application.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

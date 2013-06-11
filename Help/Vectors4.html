@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Vectors4</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Vectors4</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Types, functions and classes to facilitate working with 4D (3D + w) floating-point vectors. In mathematical terms, these vectors are treated as true 4D vectors.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Vectors4.TVector4.html"><code>TVector4</code></a></td>
+<td class="itemdesc">4D (3D + w) floating-point vector.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Vectors4.TVectors4.html"><code>TVectors4</code></a></td>
+<td class="itemdesc">A general-purpose list of 4D (3D + w) floating-point vectors.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#ColorToVec4">ColorToVec4</a></b>(Color: Cardinal): <a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#Length4">Length4</a></b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#Lerp4">Lerp4</a></b>(const v0, v1: <a   href="Vectors4.TVector4.html">TVector4</a>; Alpha: Single): <a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#Norm4">Norm4</a></b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#SameVec4">SameVec4</a></b>(const a, b: <a   href="Vectors4.TVector4.html">TVector4</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#Vec4To3Proj">Vec4To3Proj</a></b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#Vec4ToColor">Vec4ToColor</a></b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#Vector4">Vector4</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>; w: Single = 1.0): <a   href="Vectors4.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors4.html#Vector4">Vector4</a></b>(x, y, z: Single; w: Single = 1.0): <a   href="Vectors4.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors4.html#PVector4">PVector4</a></b> = &circ;<a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors4.html#AxisXVec4">AxisXVec4</a></b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 1.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Vectors4.html#AxisYVec4">AxisYVec4</a></b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 1.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors4.html#AxisZVec4">AxisZVec4</a></b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Vectors4.html#UnityVec4">UnityVec4</a></b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 1.0; y: 1.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors4.html#ZeroVec4">ZeroVec4</a></b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 0.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Vectors4.html#ZeroVec4H">ZeroVec4H</a></b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ColorToVec4"></a><code>function <b>ColorToVec4</b>(Color: Cardinal): <a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts Red, Green, Blue and Alpha components of 32-bit color to X, Y, Z and W components of 4D vector accordingly. This can be useful for making calculations with the color as if it was a 4D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Length4"></a><code>function <b>Length4</b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the length of the specified 4D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp4"></a><code>function <b>Lerp4</b>(const v0, v1: <a   href="Vectors4.TVector4.html">TVector4</a>; Alpha: Single): <a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between the specified two 4D vectors.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>v0</dt>
+<dd>The first vector to be used in the interpolation</dd>
+<dt>v1</dt>
+<dd>The second vector to be used in the interpolation</dd>
+<dt>Alpha</dt>
+<dd>The mixture of the two vectors with the a range of [0..1].</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Norm4"></a><code>function <b>Norm4</b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalizes the specified 4D vector to unity length. The second parameter is used to prevent division by zero in vectors that are of zero length.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SameVec4"></a><code>function <b>SameVec4</b>(const a, b: <a   href="Vectors4.TVector4.html">TVector4</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compares all of the components from the given two vectors to see whether they are within the specified threshold.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec4To3Proj"></a><code>function <b>Vec4To3Proj</b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts 4D vector to 3D vector, projecting it (dividing by W).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec4ToColor"></a><code>function <b>Vec4ToColor</b>(const v: <a   href="Vectors4.TVector4.html">TVector4</a>): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts X, Y, Z and W components of 4D vector to Red, Green, Blue and Alpha components of 32-bit color accordingly.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector4"></a><code>function <b>Vector4</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>; w: Single = 1.0): <a   href="Vectors4.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> record using the specified 3D vector and W coordinate.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector4"></a><code>function <b>Vector4</b>(x, y, z: Single; w: Single = 1.0): <a   href="Vectors4.TVector4.html">TVector4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> record using the specified X, Y, Z and W coordinates.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PVector4"></a><code><b>PVector4</b> = &circ;<a   href="Vectors4.TVector4.html">TVector4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> by reference.</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisXVec4"></a><code><b>AxisXVec4</b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 1.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> that defines X axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisYVec4"></a><code><b>AxisYVec4</b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 1.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> that defines Y axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisZVec4"></a><code><b>AxisZVec4</b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> that defines Z axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UnityVec4"></a><code><b>UnityVec4</b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 1.0; y: 1.0; z: 1.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> that can be used as a parameter to some function and for vector initialization. This vector, however, contradictory to its name is actually not a unity vector in mathematical terms.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroVec4"></a><code><b>ZeroVec4</b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> that can be used as a parameter to some function and for vector initialization. In this case, homogeneous is set to zero.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroVec4H"></a><code><b>ZeroVec4H</b>: <a   href="Vectors4.TVector4.html">TVector4</a> = (x: 0.0; y: 0.0; z: 0.0; w: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Vectors4.TVector4.html">TVector4</a> that can be used as a parameter to some function and for vector initialization. In this case, homogeneous is set to one.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

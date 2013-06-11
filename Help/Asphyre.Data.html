@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Data</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Asphyre.Data</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td>Classes, Interfaces, Objects and Records</td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Utility routines for working with binary data including compression, encryption and checksum calculation.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Data.html#Base64Binary">Base64Binary</a></b>(const Source: AnsiString; Dest: Pointer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Data.html#Base64String">Base64String</a></b>(Source: Pointer; Size: Integer): AnsiString;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Data.html#CipherDataXTEA">CipherDataXTEA</a></b>(Source, Dest: Pointer; Count: Integer; const Key: <a   href="Asphyre.Data.html#TKey128">TKey128</a>; const InitVec: <a   href="Asphyre.Data.html#TBlock64">TBlock64</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Data.html#CompressData">CompressData</a></b>(Source, Dest: Pointer; SourceSize, MaxDestSize: Cardinal; Compression: <a   href="Asphyre.Data.html#TCompressionLevel">TCompressionLevel</a> = clNormal): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Data.html#ComputeCRC32">ComputeCRC32</a></b>(Source: Pointer; Size: Integer): LongWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Data.html#DecipherDataXTEA">DecipherDataXTEA</a></b>(Source, Dest: Pointer; Count: Integer; const Key: <a   href="Asphyre.Data.html#TKey128">TKey128</a>; const InitVec: <a   href="Asphyre.Data.html#TBlock64">TBlock64</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Data.html#DecodeBase64">DecodeBase64</a></b>(Source, Dest: Pointer; Size: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Data.html#DecompressData">DecompressData</a></b>(Source, Dest: Pointer; SourceSize, MaxDestSize: Cardinal): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Data.html#EncodeBase64">EncodeBase64</a></b>(Source, Dest: Pointer; Size: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Data.html#MD5Checksum">MD5Checksum</a></b>(Source: Pointer; Size: Integer; Checksum: Pointer);</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Data.html#PBlock64">PBlock64</a></b> = &circ;<a   href="Asphyre.Data.html#TBlock64">TBlock64</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Data.html#PKey128">PKey128</a></b> = &circ;<a   href="Asphyre.Data.html#TKey128">TKey128</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Data.html#TBlock64">TBlock64</a></b> = packed array[0..1] of LongWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.Data.html#TCompressionLevel">TCompressionLevel</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Data.html#TKey128">TKey128</a></b> = packed array[0..3] of LongWord;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Base64Binary"></a><code>function <b>Base64Binary</b>(const Source: AnsiString; Dest: Pointer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Decodes Base-64 encoded text back into binary form and copies it to the destination buffer, returning the number of bytes actually written.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Base64String"></a><code>function <b>Base64String</b>(Source: Pointer; Size: Integer): AnsiString;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Encodes the specified binary buffer into Base-64 readable text and returns the resulting string.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="CipherDataXTEA"></a><code>procedure <b>CipherDataXTEA</b>(Source, Dest: Pointer; Count: Integer; const Key: <a   href="Asphyre.Data.html#TKey128">TKey128</a>; const InitVec: <a   href="Asphyre.Data.html#TBlock64">TBlock64</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Encrypts data using 128-bit XTEA cipher in CBC chaining mode and residual block termination (in case the data buffer is not multiple of 8 bytes).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="CompressData"></a><code>function <b>CompressData</b>(Source, Dest: Pointer; SourceSize, MaxDestSize: Cardinal; Compression: <a   href="Asphyre.Data.html#TCompressionLevel">TCompressionLevel</a> = clNormal): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compresses data block from the source buffer to destination buffer. The memory for both buffers must be allocated. <i>MaxDestSize</i> can be used to specify the maximum data length that can be saved at the destination buffer to prevent overflow.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ComputeCRC32"></a><code>function <b>ComputeCRC32</b>(Source: Pointer; Size: Integer): LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates CRC32 checksum from the specified data. This checkum can be used in integrity tests to verify that the data has not been modified.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DecipherDataXTEA"></a><code>procedure <b>DecipherDataXTEA</b>(Source, Dest: Pointer; Count: Integer; const Key: <a   href="Asphyre.Data.html#TKey128">TKey128</a>; const InitVec: <a   href="Asphyre.Data.html#TBlock64">TBlock64</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Decrypts data using 128-bit XTEA cipher in CBC chaining mode and residual block termination (in case the data buffer is not multiple of 8 bytes).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DecodeBase64"></a><code>function <b>DecodeBase64</b>(Source, Dest: Pointer; Size: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Decodes the Base-64 readable text back into the binary format.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DecompressData"></a><code>function <b>DecompressData</b>(Source, Dest: Pointer; SourceSize, MaxDestSize: Cardinal): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Decompresses data block from the source buffer to destination buffer. The memory for both buffers must be allocated. <i>MaxDestSize</i> can be used to specify the maximum data length that can be saved at the destination buffer to prevent overflow.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="EncodeBase64"></a><code>function <b>EncodeBase64</b>(Source, Dest: Pointer; Size: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Encodes the binary source into Base-64 readable text. This effectively increases the size by 4/3 (rounded up). If the source is not divisible by 3, it will be padded with zeros.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="MD5Checksum"></a><code>procedure <b>MD5Checksum</b>(Source: Pointer; Size: Integer; Checksum: Pointer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates and returns 128-bit MD5 checksum of the given data block. The resulting checksum occupies 16 bytes of memory, which should be previously allocated. This checksum can be used as a signature to verify that the data has not been altered in any way.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PBlock64"></a><code><b>PBlock64</b> = &circ;<a   href="Asphyre.Data.html#TBlock64">TBlock64</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointer to <a class="normal"  href="Asphyre.Data.html#TBlock64">TBlock64</a> to pass that structure by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PKey128"></a><code><b>PKey128</b> = &circ;<a   href="Asphyre.Data.html#TKey128">TKey128</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointer to <a class="normal"  href="Asphyre.Data.html#TKey128">TKey128</a> to pass that structure by reference.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TBlock64"></a><code><b>TBlock64</b> = packed array[0..1] of LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+64-bit data block commonly used as init-vector for XTEA cipher.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TCompressionLevel"></a><code><b>TCompressionLevel</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The level of compression used when compressing data blocks.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+clLowest: Lowest level of compression but fastest performance.</li>
+<li>
+clNormal: A balanced approach using average compression and performance.</li>
+<li>
+clHighest: The best possible compression at the expense of decreased performance.</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TKey128"></a><code><b>TKey128</b> = packed array[0..3] of LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+128-bit data block commonly used as password XTEA cipher.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

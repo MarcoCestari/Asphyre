@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreFonts: Class TAsphyreFonts</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreFonts"></a><h1 class="cio">Class TAsphyreFonts</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreFonts.html">AsphyreFonts</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreFonts = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+The list of Asphyre native bitmap fonts supporting Unicode, pre-rendered text effects such as border and shadow, customized spacing between individual letter pairs, rendering using vertical color gradient and formatted text.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreFonts</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFonts.html#IndexOf">IndexOf</a></b>(const AFontName: <a   href="AsphyreDef.html#StdString">StdString</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFonts.html#Insert">Insert</a></b>(const DescLink, ImageName: <a   href="AsphyreDef.html#StdString">StdString</a>): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreFonts.TAsphyreFonts.html#Resolve">Resolve</a></b>(const FontName: <a   href="AsphyreDef.html#StdString">StdString</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFonts.html#InsertTag">InsertTag</a></b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Style: Cardinal = 0);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFonts.html#RemoveAll">RemoveAll</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFonts.html#RemoveFont">RemoveFont</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFonts.html#RemoveTag">RemoveTag</a></b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreFonts.TAsphyreFonts.html#RemoveTags">RemoveTags</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFonts.html#Canvas">Canvas</a></b>: <a   href="AbstractCanvas.TAsphyreCanvas.html">TAsphyreCanvas</a> read FCanvas write FCanvas;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFonts.html#Count">Count</a></b>: Integer read GetCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFonts.html#Font">Font</a></b>[const AFontName: <a   href="AsphyreDef.html#StdString">StdString</a>]: <a   href="AsphyreFonts.TAsphyreFont.html">TAsphyreFont</a> read GetFont;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFonts.html#Images">Images</a></b>: <a   href="AsphyreImages.TAsphyreImages.html">TAsphyreImages</a> read FImages write FImages;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFonts.html#Items">Items</a></b>[Index: Integer]: <a   href="AsphyreFonts.TAsphyreFont.html">TAsphyreFont</a> read GetItem;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFonts.html#OnItemFail">OnItemFail</a></b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemFail write FOnItemFail;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreFonts.TAsphyreFonts.html#OnItemLoad">OnItemLoad</a></b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemLoad write FOnItemLoad;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(const AFontName: <a   href="AsphyreDef.html#StdString">StdString</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the index of the font having the specified name (not case sensitive) in the list. This function uses binary search for quickly locating the wanted font. If the font with given name is not found, -1 is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Insert"></a><code>function <b>Insert</b>(const DescLink, ImageName: <a   href="AsphyreDef.html#StdString">StdString</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds a new font to the list and loads its letter data from the specified link that can be either Asphyre archive (e.g. &quot;MyMedia.asvf | SomeFont.xml&quot;) or external file, with the specified image name. The image must be loaded before this function is used. <code>Resolve</code> method is used for obtaining the image, so meta-data can be used for loading font images on request. If the method succeeds, the index of newly added font is returned; otherwise, the returned value will be -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Resolve"></a><code>function <b>Resolve</b>(const FontName: <a   href="AsphyreDef.html#StdString">StdString</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Resolves the unique font name and returns its index in the list. This function uses meta-data describing all fonts available to the application and if the specified font name is not found among the existing fonts, the font is loaded from disk using its meta-data specification. <a class="normal"  href="AsphyreFonts.TAsphyreFonts.html#OnItemLoad">OnItemLoad</a> event is called when the font is about to be loaded and <a class="normal"  href="AsphyreFonts.TAsphyreFonts.html#OnItemFail">OnItemFail</a> is called when the font is either not found in the meta-data or cannot be loaded with the specified information. If the method succeeds, the index of existing (or loaded) font is returned and -1 is returned otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="InsertTag"></a><code>procedure <b>InsertTag</b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>; const Colors: <a   href="AsphyreTypes.html#TColor2">TColor2</a>; Style: Cardinal = 0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts new font color tag with the given name to local registry. The color tag can be used when drawing text using &lt;tagname&gt;&lt;/&gt; tags (e.g. &quot;Some text &lt;MyColor&gt;colored text&lt;/&gt; other text&quot;). The tags can be used both in normal and preformatted text. All fonts in the list have access to existing color tags.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveAll"></a><code>procedure <b>RemoveAll</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all fonts from the list and releases them from memory.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveFont"></a><code>procedure <b>RemoveFont</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes font at the specified index and releases its memory. The index must be specified in [0..(ItemCount - 1)] range. If the specified index is outside of valid range, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveTag"></a><code>procedure <b>RemoveTag</b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes font color tag with the specified name from the local registry. If the tag with given name does not exist, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveTags"></a><code>procedure <b>RemoveTags</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Remove all font color tags from the local registry.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Canvas"></a><code>property <b>Canvas</b>: <a   href="AbstractCanvas.TAsphyreCanvas.html">TAsphyreCanvas</a> read FCanvas write FCanvas;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The reference to 2D canvas where the letters will be drawn on. This property must be set before drawing text with any of the fonts.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Count"></a><code>property <b>Count</b>: Integer read GetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of fonts in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Font"></a><code>property <b>Font</b>[const AFontName: <a   href="AsphyreDef.html#StdString">StdString</a>]: <a   href="AsphyreFonts.TAsphyreFont.html">TAsphyreFont</a> read GetFont;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the font with the given name (not case sensitive). This method uses binary search for quickly finding the required font. If the wanted font is not found in the list, <code>Nil</code> is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Images"></a><code>property <b>Images</b>: <a   href="AsphyreImages.TAsphyreImages.html">TAsphyreImages</a> read FImages write FImages;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The reference to image list that contains one or more font images used for text rendering. Each of the fonts will be referring to this list for drawing individual letters. This property must be set before loading and using fonts.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Items"></a><code>property <b>Items</b>[Index: Integer]: <a   href="AsphyreFonts.TAsphyreFont.html">TAsphyreFont</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The access to individual fonts in the list by using index that is specified in range of [0..(Count - 1)]. If the index is outside of valid range, <code>Nil</code> is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OnItemFail"></a><code>property <b>OnItemFail</b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemFail write FOnItemFail;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This event occurs when the requested font could not be loaded inside <a class="normal"  href="AsphyreFonts.TAsphyreFonts.html#Resolve">Resolve</a> function either because its meta-data is not found or because it could not be loaded from its specified location.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OnItemLoad"></a><code>property <b>OnItemLoad</b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemLoad write FOnItemLoad;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This event occurs when a new font is being loaded on request inside <a class="normal"  href="AsphyreFonts.TAsphyreFonts.html#Resolve">Resolve</a> function.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

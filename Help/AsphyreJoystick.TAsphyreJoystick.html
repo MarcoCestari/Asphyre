@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreJoystick: Class TAsphyreJoystick</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreJoystick"></a><h1 class="cio">Class TAsphyreJoystick</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreJoystick.html">AsphyreJoystick</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreJoystick = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Joystick input class that uses DirectInput 8 for retrieving the state of the joystick, its axes buttons and other parameters. This class is usually created inside <a class="normal"  href="AsphyreJoystick.TAsphyreJoysticks.html">TAsphyreJoysticks</a> for every joystick connected in the system.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreJoystick</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#Poll">Poll</a></b>(): Boolean;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#AxisCount">AxisCount</a></b>: Integer read FAxisCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#Background">Background</a></b>: Boolean read FBackground;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#ButtonCount">ButtonCount</a></b>: Integer read FButtonCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#DeviceCaps">DeviceCaps</a></b>: TDIDevCaps read FDeviceCaps;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#Initialized">Initialized</a></b>: Boolean read FInitialized;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#JoyState">JoyState</a></b>: TDIJoyState2 read FJoyState;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreJoystick.TAsphyreJoystick.html#POVCount">POVCount</a></b>: Integer read FPOVCount;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Poll"></a><code>function <b>Poll</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Updates the joystick state and refreshes values of <a class="normal"  href="AsphyreJoystick.TAsphyreJoystick.html#JoyState">JoyState</a>.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AxisCount"></a><code>property <b>AxisCount</b>: Integer read FAxisCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of axes present in the joystick.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Background"></a><code>property <b>Background</b>: Boolean read FBackground;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the joystick input is still available when the application is minimized or not focused.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ButtonCount"></a><code>property <b>ButtonCount</b>: Integer read FButtonCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of buttons present in the joystick.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DeviceCaps"></a><code>property <b>DeviceCaps</b>: TDIDevCaps read FDeviceCaps;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access to the capabilities of the joystick device.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialized"></a><code>property <b>Initialized</b>: Boolean read FInitialized;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the component has been properly initialized and is ready to be used.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="JoyState"></a><code>property <b>JoyState</b>: TDIJoyState2 read FJoyState;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The current state of joystick buttons, axes and sliders.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="POVCount"></a><code>property <b>POVCount</b>: Integer read FPOVCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of point-of-views in the joystick.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

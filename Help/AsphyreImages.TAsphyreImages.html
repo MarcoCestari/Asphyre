@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreImages: Class TAsphyreImages</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreImages"></a><h1 class="cio">Class TAsphyreImages</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreImages.html">AsphyreImages</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreImages = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+The list of 2-dimensional images that may contain many patterns and/or textures which can be rendered on Asphyre's canvas.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreImages</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#AddFromArchive">AddFromArchive</a></b>(const Key: <a   href="AsphyreDef.html#UniString">UniString</a>; AArchive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; MipMapping: Boolean = True): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#AddFromArchiveEx">AddFromArchiveEx</a></b>(const Key: <a   href="AsphyreDef.html#UniString">UniString</a>; AArchive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; PixelFormat: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> = apf_Unknown; MipMapping: Boolean = True; DynamicImage: Boolean = False): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#AddFromFile">AddFromFile</a></b>(const FileName: <a   href="AsphyreDef.html#StdString">StdString</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; MipMapping: Boolean = True): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#AddFromFileEx">AddFromFileEx</a></b>(const FileName: <a   href="AsphyreDef.html#StdString">StdString</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; PixelFormat: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> = apf_Unknown; MipMapping: Boolean = True; DynamicImage: Boolean = False): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#Include">Include</a></b>(Element: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#IndexOf">IndexOf</a></b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#IndexOf">IndexOf</a></b>(Element: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a>): Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreImages.TAsphyreImages.html#Resolve">Resolve</a></b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreImages.TAsphyreImages.html#MarkSearchDirty">MarkSearchDirty</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreImages.TAsphyreImages.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreImages.TAsphyreImages.html#RemoveAll">RemoveAll</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImages.html#Image">Image</a></b>[const Name: <a   href="AsphyreDef.html#UniString">UniString</a>]: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a> read GetImage;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImages.html#ItemCount">ItemCount</a></b>: Integer read GetItemCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImages.html#Items">Items</a></b>[Index: Integer]: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a> read GetItem;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImages.html#OnItemFail">OnItemFail</a></b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemFail write FOnItemFail;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreImages.TAsphyreImages.html#OnItemLoad">OnItemLoad</a></b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemLoad write FOnItemLoad;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFromArchive"></a><code>function <b>AddFromArchive</b>(const Key: <a   href="AsphyreDef.html#UniString">UniString</a>; AArchive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; MipMapping: Boolean = True): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds a new image to the list and loads its data from the specified Asphyre archive. If the function succeeds, the index of newly added image is returned. If the function fails, nothing is added to the list and -1 is returned. This function sets the pixel format that was used for storage to be used for image's texture creation. If the stored pixel format is not supported in hardware, the closest match will be used and the conversion will be done automatically.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Key</dt>
+<dd>The archive's key that identifies the image's record.</dd>
+<dt>AArchive</dt>
+<dd>The reference to the existing instance of Asphyre archive where the image should be loaded from.</dd>
+<dt>Name</dt>
+<dd>The name of the newly added image to the list. If this parameter is not set (or set to empty StdString), the default image name will be used equalling to <code>Key</code> parameter with any path information stripped.</dd>
+<dt>MipMapping</dt>
+<dd>This parameter determines whether mipmapping should be automatically enabled for the loaded image.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFromArchiveEx"></a><code>function <b>AddFromArchiveEx</b>(const Key: <a   href="AsphyreDef.html#UniString">UniString</a>; AArchive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; PixelFormat: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> = apf_Unknown; MipMapping: Boolean = True; DynamicImage: Boolean = False): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds a new image to the list and loads its data from the specified Asphyre archive. If the function succeeds, the index of newly added image is returned. If the function fails, nothing is added to the list and -1 is returned. This function when compared to <a class="normal"  href="AsphyreImages.TAsphyreImages.html#AddFromArchive">AddFromArchive</a> has more parameters to be set for the loaded image.    (PixelFormat The pixel format that should be used for the created image. If this pixel format is not supported in hardware, the closest match will be used. If this value is set to <code>apf_Unknown</code>, the pixel format matching the stored image will be used. If the image is created with different pixel format than the stored one, the conversion will be made automatically.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Key</dt>
+<dd>The archive's key that identifies the image's record.</dd>
+<dt>AArchive</dt>
+<dd>The reference to the existing instance of Asphyre archive where the image should be loaded from.</dd>
+<dt>Name</dt>
+<dd>The name of the newly added image to the list. If this parameter is not set (or set to empty StdString), the default image name will be used equalling to <code>Key</code> parameter with any path information stripped.</dd>
+<dt></dt>
+<dd></dd>
+<dt>MipMapping</dt>
+<dd>This parameter determines whether mipmapping should be automatically enabled for the loaded image.</dd>
+<dt>DynamicImage</dt>
+<dd>This parameter can be used for specifying that the loaded image will be a dynamic image; that is, its pixel data will be updated frequently.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFromFile"></a><code>function <b>AddFromFile</b>(const FileName: <a   href="AsphyreDef.html#StdString">StdString</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; MipMapping: Boolean = True): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds a new image to the list and loads its data from the specified external file on disk. If the function succeeds, the index of newly added image is returned. If the function fails, nothing is added to the list and -1 is returned. This function sets the pixel format that best matches the loaded file's pixel format for image's texture creation. If the source pixel format is not supported in hardware, the closest match will be used and the conversion will be done automatically.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FileName</dt>
+<dd>The name of the file to load the image from. The image is loaded using functions from <code>AsphyreBitmaps.pas</code>, so to support different image formats it is necessary to add the respective units to the project (e.g. &quot;AsphyrePNG&quot; to USES list).</dd>
+<dt>Name</dt>
+<dd>The name of the newly added image to the list. If this parameter is not set (or set to empty StdString), the default image name will be used equalling to file name with any path information stripped.</dd>
+<dt>MipMapping</dt>
+<dd>This parameter determines whether mipmapping should be automatically enabled for the loaded image.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddFromFileEx"></a><code>function <b>AddFromFileEx</b>(const FileName: <a   href="AsphyreDef.html#StdString">StdString</a>; const Name: <a   href="AsphyreDef.html#UniString">UniString</a> = ''; PixelFormat: <a   href="AsphyreTypes.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a> = apf_Unknown; MipMapping: Boolean = True; DynamicImage: Boolean = False): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds a new image to the list and loads its data from the specified external file on disk. If the function succeeds, the index of newly added image is returned. If the function fails, nothing is added to the list and -1 is returned. This function when compared to <a class="normal"  href="AsphyreImages.TAsphyreImages.html#AddFromFile">AddFromFile</a> has more parameters to be set for the loaded image.   (PixelFormat The pixel format that should be used for the created image. If this pixel format is not supported in hardware, the closest match will be used. If this value is set to <code>apf_Unknown</code>, the pixel format that closely resembles the image file will be used. If the image is created with different pixel format than the stored one, the conversion will be made automatically.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FileName</dt>
+<dd>The name of the file to load the image from. The image is loaded using functions from <code>AsphyreBitmaps.pas</code>, so to support different image formats it is necessary to add the respective units to the project (e.g. &quot;AsphyrePNG&quot; to USES list).</dd>
+<dt>Name</dt>
+<dd>The name of the newly added image to the list. If this parameter is not set (or set to empty StdString), the default image name will be used equalling to file name with any path information stripped.</dd>
+<dt></dt>
+<dd></dd>
+<dt>MipMapping</dt>
+<dd>This parameter determines whether mipmapping should be automatically enabled for the loaded image.</dd>
+<dt>DynamicImage</dt>
+<dd>This parameter can be used for specifying that the loaded image will be a dynamic image; that is, its pixel data will be updated frequently.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Include"></a><code>function <b>Include</b>(Element: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Includes the specified image to the end of the list and returns its index. If the image already exists in the list, this function returns the index where the image is found.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the index of the image having the specified unique name (not case sensitive). This function uses binary search for finding the requested image quickly. If the image is not found, -1 is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(Element: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a>): Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the index of the specified image in the list. If the image is not in the list, the returned value is -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Resolve"></a><code>function <b>Resolve</b>(const Name: <a   href="AsphyreDef.html#UniString">UniString</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Resolves the unique image name and returns its index in the list. This function uses meta-data describing all images available to the application and if the specified image name is not found among the existing images, the image is loaded from disk using its meta-data specification. <a class="normal"  href="AsphyreImages.TAsphyreImages.html#OnItemLoad">OnItemLoad</a> event is called when the image is about to be loaded and <a class="normal"  href="AsphyreImages.TAsphyreImages.html#OnItemFail">OnItemFail</a> is called when the image is either not found in the meta-data or cannot be loaded with the specified information. If the method succeeds, the index of existing (or loaded) image is returned and -1 is returned otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MarkSearchDirty"></a><code>procedure <b>MarkSearchDirty</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Notifies the image list that one of the image's names has been changed and that internal structure should be updated so that methods that search for images by their name can work properly.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes image at the specified index and releases its memory. The index must be specified in [0..(ItemCount - 1)] range. If the specified index is outside of valid range, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RemoveAll"></a><code>procedure <b>RemoveAll</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all images from the list and releases them from memory.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Image"></a><code>property <b>Image</b>[const Name: <a   href="AsphyreDef.html#UniString">UniString</a>]: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a> read GetImage;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retrieves the image in the list that has the specified unique name (not case sensitive); binary search is used for looking for the requested image.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ItemCount"></a><code>property <b>ItemCount</b>: Integer read GetItemCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of images in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Items"></a><code>property <b>Items</b>[Index: Integer]: <a   href="AsphyreImages.TAsphyreImage.html">TAsphyreImage</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Provides access to individual images in the list by using index that should be specified in [0..(ItemCount - 1)] range. If the index is outside of valid range, the returned value is <code>Nil</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OnItemFail"></a><code>property <b>OnItemFail</b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemFail write FOnItemFail;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This event occurs when the requested image could not be loaded inside <a class="normal"  href="AsphyreImages.TAsphyreImages.html#Resolve">Resolve</a> function either because its meta-data is not found or because it could not be loaded from its specified location.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="OnItemLoad"></a><code>property <b>OnItemLoad</b>: <a   href="AsphyreTypes.html#TResourceProcessEvent">TResourceProcessEvent</a> read FOnItemLoad write FOnItemLoad;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This event occurs when a new image is being loaded on request inside <a class="normal"  href="AsphyreImages.TAsphyreImages.html#Resolve">Resolve</a> function.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

@@ -1,0 +1,625 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: StreamUtils</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit StreamUtils</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td>Classes, Interfaces, Objects and Records</td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td>Types</td><td>Constants</td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Utility routines for saving and loading different data type in streams.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetAnsi4String">StreamGetAnsi4String</a></b>(Stream: TStream): AnsiString;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetAnsiString">StreamGetAnsiString</a></b>(Stream: TStream): AnsiString;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetBool">StreamGetBool</a></b>(Stream: TStream): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetByte">StreamGetByte</a></b>(Stream: TStream): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetByteIndex">StreamGetByteIndex</a></b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetBytePoint2px">StreamGetBytePoint2px</a></b>(Stream: TStream): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetDouble">StreamGetDouble</a></b>(Stream: TStream): Double;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetFloat34">StreamGetFloat34</a></b>(Stream: TStream): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetFloat43">StreamGetFloat43</a></b>(Stream: TStream): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamGetFloats3311">StreamGetFloats3311</a></b>(Stream: TStream; out Value1, Value2: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamGetFloats44">StreamGetFloats44</a></b>(Stream: TStream; out Value1, Value2: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetInt64">StreamGetInt64</a></b>(Stream: TStream): Int64;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetLongInt">StreamGetLongInt</a></b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetLongPoint2px">StreamGetLongPoint2px</a></b>(Stream: TStream): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetLongWord">StreamGetLongWord</a></b>(Stream: TStream): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetShortInt">StreamGetShortInt</a></b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetShortString">StreamGetShortString</a></b>(Stream: TStream): ShortString;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetShortUtf8String">StreamGetShortUtf8String</a></b>(Stream: TStream): <a   href="AsphyreDef.html#UniString">UniString</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetSingle">StreamGetSingle</a></b>(Stream: TStream): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetSmallInt">StreamGetSmallInt</a></b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetUInt64">StreamGetUInt64</a></b>(Stream: TStream): UInt64;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetUtf8String">StreamGetUtf8String</a></b>(Stream: TStream): <a   href="AsphyreDef.html#UniString">UniString</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetWord">StreamGetWord</a></b>(Stream: TStream): Cardinal;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetWordIndex">StreamGetWordIndex</a></b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="StreamUtils.html#StreamGetWordPoint2px">StreamGetWordPoint2px</a></b>(Stream: TStream): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutAnsi4String">StreamPutAnsi4String</a></b>(Stream: TStream; const Value: AnsiString);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutAnsiString">StreamPutAnsiString</a></b>(Stream: TStream; const Text: AnsiString; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutBool">StreamPutBool</a></b>(Stream: TStream; Value: Boolean);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutByte">StreamPutByte</a></b>(Stream: TStream; Value: Cardinal);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutByteIndex">StreamPutByteIndex</a></b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutBytePoint2px">StreamPutBytePoint2px</a></b>(Stream: TStream; const Vec: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutDouble">StreamPutDouble</a></b>(Stream: TStream; Value: Double);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutFloat34">StreamPutFloat34</a></b>(Stream: TStream; Value: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutFloat43">StreamPutFloat43</a></b>(Stream: TStream; Value: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutFloats3311">StreamPutFloats3311</a></b>(Stream: TStream; Value1, Value2: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutFloats44">StreamPutFloats44</a></b>(Stream: TStream; Value1, Value2: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutInt64">StreamPutInt64</a></b>(Stream: TStream; const Value: Int64);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutLongInt">StreamPutLongInt</a></b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutLongPoint2px">StreamPutLongPoint2px</a></b>(Stream: TStream; const Vec: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutLongWord">StreamPutLongWord</a></b>(Stream: TStream; Value: Cardinal);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutShortInt">StreamPutShortInt</a></b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutShortString">StreamPutShortString</a></b>(Stream: TStream; const Text: ShortString; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutShortUtf8String">StreamPutShortUtf8String</a></b>(Stream: TStream; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutSingle">StreamPutSingle</a></b>(Stream: TStream; Value: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutSmallInt">StreamPutSmallInt</a></b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutUInt64">StreamPutUInt64</a></b>(Stream: TStream; const Value: UInt64);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutUtf8String">StreamPutUtf8String</a></b>(Stream: TStream; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutWord">StreamPutWord</a></b>(Stream: TStream; Value: Cardinal);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutWordIndex">StreamPutWordIndex</a></b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a   href="StreamUtils.html#StreamPutWordPoint2px">StreamPutWordPoint2px</a></b>(Stream: TStream; const Vec: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetAnsi4String"></a><code>function <b>StreamGetAnsi4String</b>(Stream: TStream): AnsiString;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads <b>AnsiString</b> (non-unicode, ansi) from the stream previously saved by <a class="normal"  href="StreamUtils.html#StreamPutAnsi4String">StreamPutAnsi4String</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetAnsiString"></a><code>function <b>StreamGetAnsiString</b>(Stream: TStream): AnsiString;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads <b>AnsiString</b> (non-unicode, ansi) from the stream previously saved by <a class="normal"  href="StreamUtils.html#StreamPutAnsiString">StreamPutAnsiString</a>. The returned string can contain up to 65535 characters.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetBool"></a><code>function <b>StreamGetBool</b>(Stream: TStream): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads <b>Boolean</b> value from the stream previously saved by <a class="normal"  href="StreamUtils.html#StreamPutBool">StreamPutBool</a>. The resulting value is treated as 8-bit unsigned integer with values of [0..127] considered as <code>True</code> and values of [128..255] considered as <code>False</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetByte"></a><code>function <b>StreamGetByte</b>(Stream: TStream): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 8-bit unsigned integer from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetByteIndex"></a><code>function <b>StreamGetByteIndex</b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 8-bit unsigned index from the stream. The range of returned values is [0..254], the value of 255 is returned as -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetBytePoint2px"></a><code>function <b>StreamGetBytePoint2px</b>(Stream: TStream): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 2D integer point from the stream. Each coordinate is loaded as 8-bit unsigned integer with values in range of [0..254]. The loaded values of 255 are returned equalling to those from <a class="normal"  href="Vectors2px.html#InfPoint2px">InfPoint2px</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetDouble"></a><code>function <b>StreamGetDouble</b>(Stream: TStream): Double;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 64-bit floating-point value (double-precision) from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetFloat34"></a><code>function <b>StreamGetFloat34</b>(Stream: TStream): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads floating-point value as 8-bit signed byte from the stream using 1:3:4 fixed-point format. The possible values are in [-8..7.9375] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetFloat43"></a><code>function <b>StreamGetFloat43</b>(Stream: TStream): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads floating-point value as 8-bit signed byte from the stream using 1:4:3 fixed-point format. The possible values are in [-16..15.875] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetFloats3311"></a><code>procedure <b>StreamGetFloats3311</b>(Stream: TStream; out Value1, Value2: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads two floating-point values as a single 8-bit unsigned byte from the stream with each value stored in fixed-point 1:2:1 format. The possible values are in [-4..3.5] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetFloats44"></a><code>procedure <b>StreamGetFloats44</b>(Stream: TStream; out Value1, Value2: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads two floating-point values as a single 8-bit unsigned byte from the stream with each value having 4-bits. The possible values are in [-8..7] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetInt64"></a><code>function <b>StreamGetInt64</b>(Stream: TStream): Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 64-bit signed integer from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetLongInt"></a><code>function <b>StreamGetLongInt</b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 32-bit signed integer from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetLongPoint2px"></a><code>function <b>StreamGetLongPoint2px</b>(Stream: TStream): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 2D integer point from the stream. Each coordinate is loaded as 32-bit signed integer.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetLongWord"></a><code>function <b>StreamGetLongWord</b>(Stream: TStream): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 32-bit unsigned integer from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetShortInt"></a><code>function <b>StreamGetShortInt</b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 8-bit signed integer from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetShortString"></a><code>function <b>StreamGetShortString</b>(Stream: TStream): ShortString;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads <b>ShortString</b> from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetShortUtf8String"></a><code>function <b>StreamGetShortUtf8String</b>(Stream: TStream): <a   href="AsphyreDef.html#UniString">UniString</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads <b>UniString</b> (Unicode) from the stream in UTF-8 encoding previously saved by <a class="normal"  href="StreamUtils.html#StreamPutShortUtf8String">StreamPutShortUtf8String</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetSingle"></a><code>function <b>StreamGetSingle</b>(Stream: TStream): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 32-bit floating-point value (single-precision) from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetSmallInt"></a><code>function <b>StreamGetSmallInt</b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 16-bit signed integer from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetUInt64"></a><code>function <b>StreamGetUInt64</b>(Stream: TStream): UInt64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 64-bit unsigned integer from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetUtf8String"></a><code>function <b>StreamGetUtf8String</b>(Stream: TStream): <a   href="AsphyreDef.html#UniString">UniString</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads <b>UniString</b> (Unicode) from the stream in UTF-8 encoding previously saved by <a class="normal"  href="StreamUtils.html#StreamPutUtf8String">StreamPutUtf8String</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetWord"></a><code>function <b>StreamGetWord</b>(Stream: TStream): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 16-bit unsigned integer value from the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetWordIndex"></a><code>function <b>StreamGetWordIndex</b>(Stream: TStream): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 16-bit unsigned index from the stream. The range of returned values is [0..65534], the value of 65535 is returned as -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamGetWordPoint2px"></a><code>function <b>StreamGetWordPoint2px</b>(Stream: TStream): <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Loads 2D integer point from the stream. Each coordinate is loaded as 16-bit unsigned integer with values in range of [0..65534]. The loaded values of 65535 are returned equalling to those from <a class="normal"  href="Vectors2px.html#InfPoint2px">InfPoint2px</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutAnsi4String"></a><code>procedure <b>StreamPutAnsi4String</b>(Stream: TStream; const Value: AnsiString);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves <b>AnsiString</b> (non-unicode, ansi) to the stream. No restrictions are applied to the string, so up to 2 Gb of data can be saved this way. This is most useful when the string contains binary data or very long text. For a more restricted and limited approach, use <a class="normal"  href="StreamUtils.html#StreamPutAnsiString">StreamPutAnsiString</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutAnsiString"></a><code>procedure <b>StreamPutAnsiString</b>(Stream: TStream; const Text: AnsiString; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves <b>AnsiString</b> (non-unicode, ansi) to the stream. The string is limited to a maximum of 65535 characters. If <i>MaxCount</i> is not zero, the string will be limited to the given number of characters.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutBool"></a><code>procedure <b>StreamPutBool</b>(Stream: TStream; Value: Boolean);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves <b>Boolean</b> value to the stream as 8-bit unsigned integer. A value of <code>False</code> is saved as 255, while <code>True</code> is saved as 0.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutByte"></a><code>procedure <b>StreamPutByte</b>(Stream: TStream; Value: Cardinal);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 8-bit unsigned integer to the stream. If the value is outside of [0..255] range, it will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutByteIndex"></a><code>procedure <b>StreamPutByteIndex</b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 8-bit unsigned index to the stream. A value of -1 (and other negative values) is stored as 255. Positive numbers that are outside of [0..254] range will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutBytePoint2px"></a><code>procedure <b>StreamPutBytePoint2px</b>(Stream: TStream; const Vec: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 2D integer point to the stream. Each coordinate is saved as 8-bit unsigned integer with values outside of [0..254] range clamped. Each coordinate values equalling to those of <a class="normal"  href="Vectors2px.html#InfPoint2px">InfPoint2px</a> will be saved as 255.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutDouble"></a><code>procedure <b>StreamPutDouble</b>(Stream: TStream; Value: Double);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 64-bit floating-point value (double-precision) to the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutFloat34"></a><code>procedure <b>StreamPutFloat34</b>(Stream: TStream; Value: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves floating-point value as 8-bit signed byte to the stream using 1:3:4 fixed-point format with values outside of [-8..7.9375] range will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutFloat43"></a><code>procedure <b>StreamPutFloat43</b>(Stream: TStream; Value: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves floating-point value as 8-bit signed byte to the stream using 1:4:3 fixed-point format with values outside of [-16..15.875] range will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutFloats3311"></a><code>procedure <b>StreamPutFloats3311</b>(Stream: TStream; Value1, Value2: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves two floating-point values as a single 8-bit unsigned byte to the stream with each value stored in fixed-point 1:2:1 format. Values outside of [-4..3.5] range will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutFloats44"></a><code>procedure <b>StreamPutFloats44</b>(Stream: TStream; Value1, Value2: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves two floating-point values as a single 8-bit unsigned byte to the stream with each value having 4-bits. Values outside of [-8..7] range will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutInt64"></a><code>procedure <b>StreamPutInt64</b>(Stream: TStream; const Value: Int64);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 64-bit signed integer to the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutLongInt"></a><code>procedure <b>StreamPutLongInt</b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 32-bit signed integer to the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutLongPoint2px"></a><code>procedure <b>StreamPutLongPoint2px</b>(Stream: TStream; const Vec: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 2D integer point to the stream. Each coordinate is saved as 32-bit signed integer.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutLongWord"></a><code>procedure <b>StreamPutLongWord</b>(Stream: TStream; Value: Cardinal);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 32-bit unsigned integer to the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutShortInt"></a><code>procedure <b>StreamPutShortInt</b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 8-bit signed integer to the stream. If the value is outside of [-128..127] range, it will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutShortString"></a><code>procedure <b>StreamPutShortString</b>(Stream: TStream; const Text: ShortString; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves <b>ShortString</b> to the stream. If <i>MaxCount</i> is not zero, the string will be limited to a certain number of characters.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutShortUtf8String"></a><code>procedure <b>StreamPutShortUtf8String</b>(Stream: TStream; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves <b>UniString</b> (Unicode) to the stream in UTF-8 encoding. The resulting UTF-8 string is limited to a maximum of 255 characters; therefore, for certain charsets the actual string is limited to either 127 or even 85 characters in worst case. If <i>MaxCount</i> is not zero, the input string will be limited to the given number of characters.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutSingle"></a><code>procedure <b>StreamPutSingle</b>(Stream: TStream; Value: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 32-bit floating-point value (single-precision) to the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutSmallInt"></a><code>procedure <b>StreamPutSmallInt</b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 16-bit signed integer to the stream. If the value is outside of [-32768..32767] range, it will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutUInt64"></a><code>procedure <b>StreamPutUInt64</b>(Stream: TStream; const Value: UInt64);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 64-bit unsigned integer to the stream.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutUtf8String"></a><code>procedure <b>StreamPutUtf8String</b>(Stream: TStream; const Text: <a   href="AsphyreDef.html#UniString">UniString</a>; MaxCount: Integer = 0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves <b>UniString</b> (Unicode) to the stream in UTF-8 encoding. The resulting UTF-8 string is limited to a maximum of 65535 characters; therefore, for certain charsets the actual string is limited to either 32767 or even 21845 characters in worst case. If <i>MaxCount</i> is not zero, the input string will be limited to the given number of characters.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutWord"></a><code>procedure <b>StreamPutWord</b>(Stream: TStream; Value: Cardinal);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 16-bit unsigned integer to the stream. If the value is outside of [0..65535] range, it will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutWordIndex"></a><code>procedure <b>StreamPutWordIndex</b>(Stream: TStream; Value: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 16-bit unsigned index to the stream. A value of -1 (and other negative values) is stored as 65535. Positive numbers that are outside of [0..65534] range will be clamped.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StreamPutWordPoint2px"></a><code>procedure <b>StreamPutWordPoint2px</b>(Stream: TStream; const Vec: <a   href="Vectors2px.TPoint2px.html">TPoint2px</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Saves 2D integer point to the stream. Each coordinate is saved as 16-bit unsigned integer with values outside of [0..65534] range clamped. Each coordinate values equalling to those of <a class="normal"  href="Vectors2px.html#InfPoint2px">InfPoint2px</a> will be saved as 65535.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

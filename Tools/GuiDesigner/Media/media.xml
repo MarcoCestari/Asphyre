@@ -1,0 +1,15 @@
+<media>
+
+<image-group name="regular">
+ <image name="Tahoma.image" link="\media\Media.asvf | Tahoma.image" />
+</image-group>
+
+
+<font-group name="regular">
+ <font name="Tahoma" link="\media\Media.asvf |  Tahoma.xml" image="Tahoma.image">
+  <attrib kerning="0.0" whitespace="3.0" linespace="4.0" />
+ </font>
+
+</font-group>
+
+</media>

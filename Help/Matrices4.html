@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Matrices4</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Matrices4</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Types and functions working with 4x4 matrices that are meant for transforming 3D floating-point vectors.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Matrices4.TMatrix4.html"><code>TMatrix4</code></a></td>
+<td class="itemdesc">4x4 transformation matrix.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#GetEyePos4">GetEyePos4</a></b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#GetWorldPos4">GetWorldPos4</a></b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#HeadingPitchBankMtx4">HeadingPitchBankMtx4</a></b>(Heading, Pitch, Bank: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#HeadingPitchBankMtx4">HeadingPitchBankMtx4</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#InvertMtx4">InvertMtx4</a></b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#LookAtMtx4">LookAtMtx4</a></b>(const Origin, Target, Roof: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#OrthogonalBDSMtx4">OrthogonalBDSMtx4</a></b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#OrthogonalVOLMtx4">OrthogonalVOLMtx4</a></b>(Width, Height, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#PerspectiveBDSMtx4">PerspectiveBDSMtx4</a></b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#PerspectiveFOVXMtx4">PerspectiveFOVXMtx4</a></b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#PerspectiveFOVYMtx4">PerspectiveFOVYMtx4</a></b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#PerspectiveVOLMtx4">PerspectiveVOLMtx4</a></b>(Width, Height, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#ReflectMtx4">ReflectMtx4</a></b>(const Axis: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#RotateMtx4">RotateMtx4</a></b>(const Axis: <a   href="Vectors3.TVector3.html">TVector3</a>; Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#RotateXMtx4">RotateXMtx4</a></b>(Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#RotateYMtx4">RotateYMtx4</a></b>(Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#RotateZMtx4">RotateZMtx4</a></b>(Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#ScaleMtx4">ScaleMtx4</a></b>(const Coef: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#StringMtx4">StringMtx4</a></b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): string;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#TranslateMtx4">TranslateMtx4</a></b>(const Offset: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#TransposeMtx4">TransposeMtx4</a></b>(const Mtx: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#YawPitchRollMtx4">YawPitchRollMtx4</a></b>(Yaw, Pitch, Roll: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices4.html#YawPitchRollMtx4">YawPitchRollMtx4</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Matrices4.html#PMatrix4">PMatrix4</a></b> = &circ;<a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Matrices4.html#IdentityMtx4">IdentityMtx4</a></b>: <a   href="Matrices4.TMatrix4.html">TMatrix4</a> = (Data: ((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0),
+  (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Matrices4.html#ZeroMtx4">ZeroMtx4</a></b>: <a   href="Matrices4.TMatrix4.html">TMatrix4</a> = (Data: ((0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0)));</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="GetEyePos4"></a><code>function <b>GetEyePos4</b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Assuming that the specified matrix is a view matrix, this method calculates the 3D position where the camera (or &quot;eye&quot;) is supposedly located.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="GetWorldPos4"></a><code>function <b>GetWorldPos4</b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Assuming that the specified matrix is a world matrix, this method calculates the 3D position where the object or world is supposedly located.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="HeadingPitchBankMtx4"></a><code>function <b>HeadingPitchBankMtx4</b>(Heading, Pitch, Bank: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically heading, pitch and Bank. Each of the components is specified individually.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="HeadingPitchBankMtx4"></a><code>function <b>HeadingPitchBankMtx4</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically heading, pitch and bank. The components are taken from the specified vector with Y corresponding to heading, X to pitch and Z to bank.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="InvertMtx4"></a><code>function <b>InvertMtx4</b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the inverse of the matrix. The resulting matrix, in other words, is the transformation that can be applied to a 3D vector to undo the transformation applied previously.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="LookAtMtx4"></a><code>function <b>LookAtMtx4</b>(const Origin, Target, Roof: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a view matrix that is defined by the camera's position, its target and the defined vertical axis or so-called &quot;roof&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="OrthogonalBDSMtx4"></a><code>function <b>OrthogonalBDSMtx4</b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates orthogonal projection matrix defined by the individual axis's boundaries.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="OrthogonalVOLMtx4"></a><code>function <b>OrthogonalVOLMtx4</b>(Width, Height, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates orthogonal projection matrix defined by the viewing volume in 3D space.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveBDSMtx4"></a><code>function <b>PerspectiveBDSMtx4</b>(Left, Right, Top, Bottom, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by the individual axis's boundaries.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveFOVXMtx4"></a><code>function <b>PerspectiveFOVXMtx4</b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by a field of view on X axis. In 3D shooters the field of view needs to be adjusted to allow more visible area on wide-screen monitors. The parameters that define the viewed range are important for defining the precision of the depth transformation or a depth-buffer.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FieldOfView</dt>
+<dd>The camera's field of view in radians. For example Pi/4.</dd>
+<dt>AspectRatio</dt>
+<dd>The screen's aspect ratio. Can be calculated as x/y.</dd>
+<dt>MinRange</dt>
+<dd>The closest range at which the scene will be viewed.</dd>
+<dt>MaxRange</dt>
+<dd>The farthest range at which the scene will be viewed.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveFOVYMtx4"></a><code>function <b>PerspectiveFOVYMtx4</b>(FieldOfView, AspectRatio, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by a field of view on Y axis. This is a common way for typical 3D applications. In 3D shooters special care is to be taken because on wide-screen monitors the visible area will be bigger. The parameters that define the viewed range are important for defining the precision of the depth transformation or a depth-buffer.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FieldOfView</dt>
+<dd>The camera's field of view in radians. For example Pi/4.</dd>
+<dt>AspectRatio</dt>
+<dd>The screen's aspect ratio. Can be calculated as y/x.</dd>
+<dt>MinRange</dt>
+<dd>The closest range at which the scene will be viewed.</dd>
+<dt>MaxRange</dt>
+<dd>The farthest range at which the scene will be viewed.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PerspectiveVOLMtx4"></a><code>function <b>PerspectiveVOLMtx4</b>(Width, Height, MinRange, MaxRange: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates perspective projection matrix defined by the viewing volume in 3D space.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ReflectMtx4"></a><code>function <b>ReflectMtx4</b>(const Axis: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a reflection matrix specified by the given vector defining the orientation of the reflection.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateMtx4"></a><code>function <b>RotateMtx4</b>(const Axis: <a   href="Vectors3.TVector3.html">TVector3</a>; Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along an arbitrary axis defined by the given vector and the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateXMtx4"></a><code>function <b>RotateXMtx4</b>(Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along X matrix using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateYMtx4"></a><code>function <b>RotateYMtx4</b>(Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along Y matrix using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateZMtx4"></a><code>function <b>RotateZMtx4</b>(Angle: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation along Z matrix using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ScaleMtx4"></a><code>function <b>ScaleMtx4</b>(const Coef: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D scaling made using the specified vector coefficient for the axes.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="StringMtx4"></a><code>function <b>StringMtx4</b>(const m: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns textual representation of the matrix. This is mainly suited for debugging purposes to see that the matrix is defined properly.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TranslateMtx4"></a><code>function <b>TranslateMtx4</b>(const Offset: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D translation made using the specified vector offset.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TransposeMtx4"></a><code>function <b>TransposeMtx4</b>(const Mtx: <a   href="Matrices4.TMatrix4.html">TMatrix4</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Transposes the given matrix. That is, the rows become columns and vice-versa.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="YawPitchRollMtx4"></a><code>function <b>YawPitchRollMtx4</b>(Yaw, Pitch, Roll: Single): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically yaw, pitch and roll. Each of the components is specified individually.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="YawPitchRollMtx4"></a><code>function <b>YawPitchRollMtx4</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Matrices4.TMatrix4.html">TMatrix4</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 4x4 matrix containing 3D rotation based on parameters similar to flight dynamics, specifically yaw, pitch and roll. The components are taken from the specified vector with Y corresponding to yaw, X to pitch and Z to roll.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PMatrix4"></a><code><b>PMatrix4</b> = &circ;<a   href="Matrices4.TMatrix4.html">TMatrix4</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Matrices4.TMatrix4.html">TMatrix4</a> by reference.</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IdentityMtx4"></a><code><b>IdentityMtx4</b>: <a   href="Matrices4.TMatrix4.html">TMatrix4</a> = (Data: ((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0),
+  (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+4x4 matrix values representing identity. This can be used either for matrix initialization or where no transformation should be applied.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroMtx4"></a><code><b>ZeroMtx4</b>: <a   href="Matrices4.TMatrix4.html">TMatrix4</a> = (Data: ((0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 0.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+4x4 matrix values containing zeros. This can be used in special occasions for matrix initialization or where no valid matrix exists.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

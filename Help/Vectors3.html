@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Vectors3</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Vectors3</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Types, functions and classes that facilitate working with 3D floating-point vectors.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Vectors3.TVector3.html"><code>TVector3</code></a></td>
+<td class="itemdesc">3D floating-point vector.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Vectors3.TVectors3.html"><code>TVectors3</code></a></td>
+<td class="itemdesc">A general-purpose list of 3D floating-point vectors.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Angle3">Angle3</a></b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#ColorToVec3">ColorToVec3</a></b>(Color: Cardinal): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Cross3">Cross3</a></b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Dot3">Dot3</a></b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Length3">Length3</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Lerp3">Lerp3</a></b>(const v0, v1: <a   href="Vectors3.TVector3.html">TVector3</a>; Alpha: Single): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Norm3">Norm3</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Parallel3">Parallel3</a></b>(const v, n: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Perp3">Perp3</a></b>(const v, n: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Reflect3">Reflect3</a></b>(const i, n: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#SameVec3">SameVec3</a></b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Vec3ToColor">Vec3ToColor</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): Cardinal;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Vec3toString">Vec3toString</a></b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): string;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Vector3">Vector3</a></b>(const p: <a   href="Vectors2.TPoint2.html">TPoint2</a>; z: Single): <a   href="Vectors3.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Vectors3.html#Vector3">Vector3</a></b>(x, y, z: Single): <a   href="Vectors3.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors3.html#PVector3">PVector3</a></b> = &circ;<a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors3.html#AxisXVec3">AxisXVec3</a></b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 1.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Vectors3.html#AxisYVec3">AxisYVec3</a></b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 0.0; y: 1.0; z: 0.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors3.html#AxisZVec3">AxisZVec3</a></b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 1.0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Vectors3.html#UnityVec3">UnityVec3</a></b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 1.0; y: 1.0; z: 1.0);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Vectors3.html#ZeroVec3">ZeroVec3</a></b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Angle3"></a><code>function <b>Angle3</b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the angle between two 3D vectors. The returning value has range of [0..Pi].</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ColorToVec3"></a><code>function <b>ColorToVec3</b>(Color: Cardinal): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts Red, Green and Blue components of 32-bit color to X, Y and Z components of 3D vector accordingly. This can be useful for making calculations with the color as if it was a 3D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Cross3"></a><code>function <b>Cross3</b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the cross-product of the specified 3D vectors. The resulting vector is perpendicular to both source vectors and normal to the plane containing them.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Dot3"></a><code>function <b>Dot3</b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the dot-product of the specified 3D vectors. The dot-product is an indirect measure of the angle between two vectors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Length3"></a><code>function <b>Length3</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the length of the specified 3D vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Lerp3"></a><code>function <b>Lerp3</b>(const v0, v1: <a   href="Vectors3.TVector3.html">TVector3</a>; Alpha: Single): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between the specified two 3D vectors.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>v0</dt>
+<dd>The first vector to be used in the interpolation</dd>
+<dt>v1</dt>
+<dd>The second vector to be used in the interpolation</dd>
+<dt>Alpha</dt>
+<dd>The mixture of the two vectors with the a range of [0..1].</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Norm3"></a><code>function <b>Norm3</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>; ZeroAmpEpsilon: Single = 0.00001): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalizes the specified 3D vector to unity length. The second parameter is used to prevent division by zero in vectors that are of zero length.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Parallel3"></a><code>function <b>Parallel3</b>(const v, n: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the portion of 3D vector &quot;v&quot; that is parallel to the vector &quot;n&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Perp3"></a><code>function <b>Perp3</b>(const v, n: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the portion of 3D vector &quot;v&quot; that is perpendicular to the vector &quot;n&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Reflect3"></a><code>function <b>Reflect3</b>(const i, n: <a   href="Vectors3.TVector3.html">TVector3</a>): <a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates 3D vector that is a reflection of vector &quot;i&quot; from surface given by the normal &quot;n&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="SameVec3"></a><code>function <b>SameVec3</b>(const a, b: <a   href="Vectors3.TVector3.html">TVector3</a>; Epsilon: Single = 0.0001): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compares the two specified 3D vectors using the given threshold.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec3ToColor"></a><code>function <b>Vec3ToColor</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): Cardinal;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Converts X, Y and Z components of 3D vector to Red, Green and Blue components of 32-bit color accordingly. The resulting color has Alpha value of 255.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vec3toString"></a><code>function <b>Vec3toString</b>(const v: <a   href="Vectors3.TVector3.html">TVector3</a>): string;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns a string that describes the source 3D vector with two decimal places precision; for example &quot;(0.25, 0.31, 1.45)&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector3"></a><code>function <b>Vector3</b>(const p: <a   href="Vectors2.TPoint2.html">TPoint2</a>; z: Single): <a   href="Vectors3.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> record using 2D vector and specified Z coordinate.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Vector3"></a><code>function <b>Vector3</b>(x, y, z: Single): <a   href="Vectors3.TVector3.html">TVector3</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates a <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> record using the specified coordinates.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PVector3"></a><code><b>PVector3</b> = &circ;<a   href="Vectors3.TVector3.html">TVector3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> by reference.</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisXVec3"></a><code><b>AxisXVec3</b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 1.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> that defines X axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisYVec3"></a><code><b>AxisYVec3</b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 0.0; y: 1.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> that defines Y axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="AxisZVec3"></a><code><b>AxisZVec3</b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> that defines Z axis.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="UnityVec3"></a><code><b>UnityVec3</b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 1.0; y: 1.0; z: 1.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Special constant for <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> that can be used as a parameter to some function and for vector initialization. This vector, however, contradictory to its name is actually not a unity vector in mathematical terms.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroVec3"></a><code><b>ZeroVec3</b>: <a   href="Vectors3.TVector3.html">TVector3</a> = (x: 0.0; y: 0.0; z: 0.0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Zero constant for <a class="normal"  href="Vectors3.TVector3.html">TVector3</a> that can be used as a parameter to some function and for vector initialization.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Matrices3</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Matrices3</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td><a class="section"  href="#%40Constants">Constants</a></td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Types and functions working with 3x3 matrices that are meant for transforming 2D floating-point vectors.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Matrices3.TMatrix3.html"><code>TMatrix3</code></a></td>
+<td class="itemdesc">3x3 transformation matrix.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices3.html#RotateMtx3">RotateMtx3</a></b>(Angle: Single): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices3.html#ScaleMtx3">ScaleMtx3</a></b>(const Coef: <a   href="Vectors2.TPoint2.html">TPoint2</a>): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Matrices3.html#TranslateMtx3">TranslateMtx3</a></b>(const Offset: <a   href="Vectors2.TPoint2.html">TPoint2</a>): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Matrices3.html#TransposeMtx3">TransposeMtx3</a></b>(const Mtx: <a   href="Matrices3.TMatrix3.html">TMatrix3</a>): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Matrices3.html#PMatrix3">PMatrix3</a></b> = &circ;<a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+</table>
+<a name="%40Constants"></a><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Matrices3.html#IdentityMtx3">IdentityMtx3</a></b>: <a   href="Matrices3.TMatrix3.html">TMatrix3</a> = (Data: ((1.0, 0.0, 0.0), (0.0, 1.0, 0.0),
+  (0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Matrices3.html#ZeroMtx3">ZeroMtx3</a></b>: <a   href="Matrices3.TMatrix3.html">TMatrix3</a> = (Data: ((0.0, 0.0, 0.0), (0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0)));</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="RotateMtx3"></a><code>function <b>RotateMtx3</b>(Angle: Single): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3x3 matrix containing 2D rotation made using the specified angle (in radians).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ScaleMtx3"></a><code>function <b>ScaleMtx3</b>(const Coef: <a   href="Vectors2.TPoint2.html">TPoint2</a>): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3x3 matrix containing 2D scaling made using the specified coefficient for both axes.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TranslateMtx3"></a><code>function <b>TranslateMtx3</b>(const Offset: <a   href="Vectors2.TPoint2.html">TPoint2</a>): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates 3x3 matrix containing 2D translation made using the specified offset.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TransposeMtx3"></a><code>function <b>TransposeMtx3</b>(const Mtx: <a   href="Matrices3.TMatrix3.html">TMatrix3</a>): <a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Transposes the given matrix. That is, the rows become columns and vice-versa.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PMatrix3"></a><code><b>PMatrix3</b> = &circ;<a   href="Matrices3.TMatrix3.html">TMatrix3</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This type is used to pass <a class="normal"  href="Matrices3.TMatrix3.html">TMatrix3</a> by reference.</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="IdentityMtx3"></a><code><b>IdentityMtx3</b>: <a   href="Matrices3.TMatrix3.html">TMatrix3</a> = (Data: ((1.0, 0.0, 0.0), (0.0, 1.0, 0.0),
+  (0.0, 0.0, 1.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+3x3 matrix values representing identity. This can be used either for matrix initialization or where no transformation should be applied.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="ZeroMtx3"></a><code><b>ZeroMtx3</b>: <a   href="Matrices3.TMatrix3.html">TMatrix3</a> = (Data: ((0.0, 0.0, 0.0), (0.0, 0.0, 0.0),
+  (0.0, 0.0, 0.0)));</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+3x3 matrix values containing zeros. This can be used in special occasions for matrix initialization or where no valid matrix exists.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

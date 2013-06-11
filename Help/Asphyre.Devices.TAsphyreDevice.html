@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Devices: Class TAsphyreDevice</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreDevice"></a><h1 class="cio">Class TAsphyreDevice</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Devices.html">Asphyre.Devices</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreDevice = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Hardware device wrapper that handles communication between application and the video card. The device must be created from Asphyre factory and is one of the first objects that needs to be initialized before working with any other components.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreDevice</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Connect">Connect</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Initialize">Initialize</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Devices.TAsphyreDevice.html#IsAtFault">IsAtFault</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Resize">Resize</a></b>(SwapChainIndex: Integer; const NewSize: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Devices.TAsphyreDevice.html#ClearStates">ClearStates</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Disconnect">Disconnect</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Finalize">Finalize</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Render">Render</a></b>(Handler: TNotifyEvent; Background: Cardinal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Render">Render</a></b>(SwapChainIndex: Integer; Handler: TNotifyEvent; Background: Cardinal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Devices.TAsphyreDevice.html#RenderTo">RenderTo</a></b>(Handler: TNotifyEvent; Background: Cardinal; FillBk: Boolean; Texture: <a   href="Asphyre.Textures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Devices.TAsphyreDevice.html#ResetInitFailed">ResetInitFailed</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#DeviceScale">DeviceScale</a></b>: Single read FDeviceScale write FDeviceScale;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#FillDepthValue">FillDepthValue</a></b>: Single read FFillDepthValue
+   write FFillDepthValue;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#FillStencilValue">FillStencilValue</a></b>: Cardinal read FFillStencilValue
+   write FFillStencilValue;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#State">State</a></b>: <a   href="Asphyre.Devices.html#TAsphyreDeviceState">TAsphyreDeviceState</a> read FState;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#SwapChains">SwapChains</a></b>: <a   href="Asphyre.SwapChains.TAsphyreSwapChains.html">TAsphyreSwapChains</a> read FSwapChains;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#TechFeatureVersion">TechFeatureVersion</a></b>: Integer read FTechFeatureVersion;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#Technology">Technology</a></b>: <a   href="Asphyre.Devices.html#TAsphyreDeviceTechnology">TAsphyreDeviceTechnology</a> read FTechnology;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Devices.TAsphyreDevice.html#TechVersion">TechVersion</a></b>: Integer read FTechVersion;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Connect"></a><code>function <b>Connect</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+In native Windows applications, this function initializes the device in the same fashion as <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#Initialize">Initialize</a>. In FireMonkey applications, this function hooks the device into FireMonkey's context so Asphyre can use it for its own rendering.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialize"></a><code>function <b>Initialize</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Initializes the device using the swap chain information provided in <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#SwapChains">SwapChains</a> and prepares it for rendering. If the call succeeds, <code>True</code> is returned and <code>False</code> otherwise. This method should be used in native Windows applications only. For FireMonkey applications, <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#Connect">Connect</a> should be used instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IsAtFault"></a><code>function <b>IsAtFault</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns <code>True</code> if the device either failed to initialize or is in run-time fault state. If the device is working properly or has not yet been initialized, <code>False</code> is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Resize"></a><code>function <b>Resize</b>(SwapChainIndex: Integer; const NewSize: <a   href="Asphyre.Math.TPoint2px.html">TPoint2px</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Changes size of the back-buffer tied to swap chain identified by the given index. The first swap chain has index of zero. If the index is outside of valid range or the swap chain cannot be resized, the returned value is <code>False</code> and the size of swap chain remains unchanged. If this method succeeds, the swap chain will have its size updated and <code>True</code> will be returned. In some providers this may cause device to be reset and some resources to be recreated, so any resources that are not handled by Asphyre should be released before calling this; the best way to handle this scenario is to subscribe to <code>EventDeviceReset</code> and <code>EventDeviceLost</code> events provided in <code>Asphyre.Events.pas</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ClearStates"></a><code>procedure <b>ClearStates</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Clears all textures, shaders and states currently bound to the device. This method works only on some modern providers.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Disconnect"></a><code>procedure <b>Disconnect</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+In native Windows applications, this function finalizes the device in the same fashion as <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#Finalize">Finalize</a>. In FireMonkey applications, this function unhooks the device from FireMonkey's context. Any created resources that are not handled by Asphyre should be released before calling this.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Finalize"></a><code>procedure <b>Finalize</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finalizes the device releasing all its resources and handles. User-created content that is not handled automatically by Asphyre should be released before calling this method.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Render"></a><code>procedure <b>Render</b>(Handler: TNotifyEvent; Background: Cardinal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Begins rendering scene to the first swap chain described in <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#SwapChains">SwapChains</a>, clears the back-buffer with the given background color and values stored in <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#FillDepthValue">FillDepthValue</a>/<a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#FillStencilValue">FillStencilValue</a>, and calls the provided event handler, where the actual rendering should be made.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Render"></a><code>procedure <b>Render</b>(SwapChainIndex: Integer; Handler: TNotifyEvent; Background: Cardinal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Begins rendering scene to the swap chain identified by its index described in <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#SwapChains">SwapChains</a>, clears the back-buffer with the given background color and values stored in <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#FillDepthValue">FillDepthValue</a>/<a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#FillStencilValue">FillStencilValue</a>, and calls the provided event handler, where the actual rendering should be made. The first swap chain has index of zero. If the provided index is outside of valid range, this method does nothing.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RenderTo"></a><code>procedure <b>RenderTo</b>(Handler: TNotifyEvent; Background: Cardinal; FillBk: Boolean; Texture: <a   href="Asphyre.Textures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Begins rendering scene on the specified render target texture. If <code>FillBk</code> is set to <code>True</code>, the render target is cleared using the given background color and values stored in <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#FillDepthValue">FillDepthValue</a>/<a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#FillStencilValue">FillStencilValue</a>. This method calls the provided event handler, where the actual rendering should be made. The render target texture must be property created and initialized before calling this method. If there is a problem starting the rendering to the given render target, this method will silently fail and the given event handler will not be called.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ResetInitFailed"></a><code>procedure <b>ResetInitFailed</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Resets the failed state of the device, which is usually set when the initialization has failed. This must be done explicitly to acknowledge that the application is aware of the situation.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DeviceScale"></a><code>property <b>DeviceScale</b>: Single read FDeviceScale write FDeviceScale;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates the current scale of device display. This is typically used on Retina displays to provide mapping between logical and pixel units. For example, if DisplayScale is 2, then the screen has twice pixel density for each logical unit.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillDepthValue"></a><code>property <b>FillDepthValue</b>: Single read FFillDepthValue
+   write FFillDepthValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The value that should be used for setting depth buffer either on the screen or the currently used rendering target.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillStencilValue"></a><code>property <b>FillStencilValue</b>: Cardinal read FFillStencilValue
+   write FFillStencilValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The value that should be used for setting stencil buffer either on the screen or the currently used rendering target.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="State"></a><code>property <b>State</b>: <a   href="Asphyre.Devices.html#TAsphyreDeviceState">TAsphyreDeviceState</a> read FState;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The current state of the device. If the device is not in working state, any rendering calls may fail either silently or returning <code>False</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="SwapChains"></a><code>property <b>SwapChains</b>: <a   href="Asphyre.SwapChains.TAsphyreSwapChains.html">TAsphyreSwapChains</a> read FSwapChains;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The list of swap chains that will be used for rendering into. In a typical scenario at least one swap chain must be added to this list for device initialization to succeed. In FireMonkey applications the swap chains are not used and will be ignored by the device.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TechFeatureVersion"></a><code>property <b>TechFeatureVersion</b>: Integer read FTechFeatureVersion;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates the feature level version of current technology that is currently being used. The difference between this parameter and <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#TechVersion">TechVersion</a> is that the second parameter indicates type of technology being used (for example, DirectX 10), while this one indicates the level of features available (for example, DirectX 9.0c). The values here are specified in hexadecimal format. That is, a value of $213 would indicate version 2.1.3.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Technology"></a><code>property <b>Technology</b>: <a   href="Asphyre.Devices.html#TAsphyreDeviceTechnology">TAsphyreDeviceTechnology</a> read FTechnology;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates the type of technology that is currently being used.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TechVersion"></a><code>property <b>TechVersion</b>: Integer read FTechVersion;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates the version of current technology that is currently being used. The values are specified in hexadecimal format. That is, a value of $100 indicates version 1.0, while a value of $247 would indicate version 2.4.7. This value is used in combination with <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html#Technology">Technology</a>, so if <code>Technology</code> is set to <i>adtDirectX</i> and this value is set to $A10, it means that <i>DirectX 10.1</i> is being used.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

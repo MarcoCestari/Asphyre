@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreKeyboard: Class TAsphyreKeyboard</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreKeyboard"></a><h1 class="cio">Class TAsphyreKeyboard</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="AsphyreKeyboard.html">AsphyreKeyboard</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreKeyboard = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Keyboard input class that uses DirectInput 8 for retrieving the state of keyboard buttons asynchronously.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreKeyboard</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#Initialize">Initialize</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#Update">Update</a></b>(): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#Finalize">Finalize</a></b>();</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#Background">Background</a></b>: Boolean read FBackground write FBackground;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#Initialized">Initialized</a></b>: Boolean read FInitialized;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#Key">Key</a></b>[KeyNum: Integer]: Boolean read GetKey;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#KeyName">KeyName</a></b>[KeyNum: Integer]: <a   href="AsphyreDef.html#StdString">StdString</a> read GetKeyName;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#KeyPressed">KeyPressed</a></b>[KeyNum: Integer]: Boolean read GetKeyPressed;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#KeyReleased">KeyReleased</a></b>[KeyNum: Integer]: Boolean read GetKeyReleased;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#VKey">VKey</a></b>[VCode: Cardinal]: Boolean read GetVKey;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#VKeyName">VKeyName</a></b>[VCode: Cardinal]: <a   href="AsphyreDef.html#StdString">StdString</a> read GetVKeyName;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#VKeyPressed">VKeyPressed</a></b>[VCode: Cardinal]: Boolean read GetVKeyPressed;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#VKeyReleased">VKeyReleased</a></b>[VCode: Cardinal]: Boolean read GetVKeyReleased;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="AsphyreKeyboard.TAsphyreKeyboard.html#WindowHandle">WindowHandle</a></b>: THandle read FWindowHandle write FWindowHandle;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialize"></a><code>function <b>Initialize</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Initializes the component and prepares DirectInput interface. If the method succeeds, the returned value is <code>True</code> and <code>False</code> otherwise. <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#WindowHandle">WindowHandle</a> must be properly set before for this call to succeed.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Update"></a><code>function <b>Update</b>(): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Updates the state of keyboard keys. The returned value is <code>True</code> if the method succeeds and <code>False</code> otherwise.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Finalize"></a><code>procedure <b>Finalize</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finalizes the component releasing DirectInput interface.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Background"></a><code>property <b>Background</b>: Boolean read FBackground write FBackground;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether the input should still be available when application is minimized or not focused.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Initialized"></a><code>property <b>Initialized</b>: Boolean read FInitialized;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the component has been properly initialized and is ready to be used.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Key"></a><code>property <b>Key</b>[KeyNum: Integer]: Boolean read GetKey;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the status of a single keyboard key. <code>KeyNum</code> is the internal key number as defined in DirectInput. These constants are usually named as <code>DIK_[KeyName]</code>. Search for Microsoft article called &quot;Keyboard Device Enumeration&quot; for more information.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="KeyName"></a><code>property <b>KeyName</b>[KeyNum: Integer]: <a   href="AsphyreDef.html#StdString">StdString</a> read GetKeyName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the name of the given key as it is described by underlying OS. <code>KeyNum</code> is the internal key number as with <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#Key">Key</a> property.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="KeyPressed"></a><code>property <b>KeyPressed</b>[KeyNum: Integer]: Boolean read GetKeyPressed;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the key has been pressed after two consequent calls to <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#Update">Update</a>. <code>KeyNum</code> is the internal key number as with <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#Key">Key</a> property.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="KeyReleased"></a><code>property <b>KeyReleased</b>[KeyNum: Integer]: Boolean read GetKeyReleased;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the key has been released after two consequent calls to <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#Update">Update</a>. <code>KeyNum</code> is the internal key number as with <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#Key">Key</a> property.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VKey"></a><code>property <b>VKey</b>[VCode: Cardinal]: Boolean read GetVKey;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the status of a single keyboard key. <code>VCode</code> is the virtual key code usually defined by VK_[KeyName] constants.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VKeyName"></a><code>property <b>VKeyName</b>[VCode: Cardinal]: <a   href="AsphyreDef.html#StdString">StdString</a> read GetVKeyName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the name of the given key as it is described by underlying OS. <code>VCode</code> is the virtual key code.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VKeyPressed"></a><code>property <b>VKeyPressed</b>[VCode: Cardinal]: Boolean read GetVKeyPressed;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the key has been pressed after two consequent calls to <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#Update">Update</a>. <code>VCode</code> is the virtual key code.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VKeyReleased"></a><code>property <b>VKeyReleased</b>[VCode: Cardinal]: Boolean read GetVKeyReleased;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indicates whether the key has been released after two consequent calls to <a class="normal"  href="AsphyreKeyboard.TAsphyreKeyboard.html#Update">Update</a>. <code>VCode</code> is the virtual key code.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="WindowHandle"></a><code>property <b>WindowHandle</b>: THandle read FWindowHandle write FWindowHandle;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The handle of the application's main window. This should be properly set before initializing the component as it will not work otherwise.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>

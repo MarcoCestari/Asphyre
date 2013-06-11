@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.SwapChains: record TSwapChainDesc</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TSwapChainDesc"></a><h1 class="cio">record TSwapChainDesc</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Hierarchy</td><td><a class="section"  href="#%40Fields">Fields</a></td><td>Methods</td><td>Properties</td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.SwapChains.html">Asphyre.SwapChains</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TSwapChainDesc = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+General description of rendering swap chain.</p>
+<h2 class="overview">Overview</h2>
+<a name="%40Fields"></a><h3 class="summary">Fields</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.SwapChains.TSwapChainDesc.html#Width">Width</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.SwapChains.TSwapChainDesc.html#Height">Height</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.SwapChains.TSwapChainDesc.html#VSync">VSync</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.SwapChains.TSwapChainDesc.html#Format">Format</a></b>: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.SwapChains.TSwapChainDesc.html#WindowHandle">WindowHandle</a></b>: THandle;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="Asphyre.SwapChains.TSwapChainDesc.html#Multisamples">Multisamples</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.SwapChains.TSwapChainDesc.html#DepthStencil">DepthStencil</a></b>: <a   href="Asphyre.SwapChains.html#TDepthStencilType">TDepthStencilType</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fields</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Width"></a><code><b>Width</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The width of rendering surface.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Height"></a><code><b>Height</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The height of rendering surface.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="VSync"></a><code><b>VSync</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This parameter determines whether to wait for vertical retrace to provide flicker-free animations.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Format"></a><code><b>Format</b>: <a   href="Asphyre.Types.html#TAsphyrePixelFormat">TAsphyrePixelFormat</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The desired pixel format to be used in the rendering target. This is a suggestion and different format may be choosen by the provider depending on hardware support. If this parameter is set to <code>apf_Unknown</code> (by default), the best possible pixel format will be used.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="WindowHandle"></a><code><b>WindowHandle</b>: THandle;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The handle to the application's main window or a control where the rendering should be made (can be another window or even a panel).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Multisamples"></a><code><b>Multisamples</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Number of samples to use for antialiasing. This is a suggestion and different value may actually be used by the provider depending on hardware support; values of zero and one are treated as no multisampling.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="DepthStencil"></a><code><b>DepthStencil</b>: <a   href="Asphyre.SwapChains.html#TDepthStencilType">TDepthStencilType</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The type of depth-stencil buffer to be used with the swap chain.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

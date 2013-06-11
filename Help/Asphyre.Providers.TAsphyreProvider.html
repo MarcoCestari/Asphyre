@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Providers: Class TAsphyreProvider</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreProvider"></a><h1 class="cio">Class TAsphyreProvider</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Providers.html">Asphyre.Providers</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreProvider = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+General definition of Asphyre provider, which should create all hardware specific classes.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreProvider</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Providers.TAsphyreProvider.html#CreateCanvas">CreateCanvas</a></b>(): <a   href="Asphyre.Canvas.TAsphyreCanvas.html">TAsphyreCanvas</a>; virtual; abstract;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Providers.TAsphyreProvider.html#CreateDevice">CreateDevice</a></b>(): <a   href="Asphyre.Devices.TAsphyreDevice.html">TAsphyreDevice</a>; virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Providers.TAsphyreProvider.html#CreateLockableTexture">CreateLockableTexture</a></b>(): <a   href="Asphyre.Textures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>; virtual; abstract;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Providers.TAsphyreProvider.html#CreateRenderTargetTexture">CreateRenderTargetTexture</a></b>(): <a   href="Asphyre.Textures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>; virtual; abstract;</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Providers.TAsphyreProvider.html#ProviderID">ProviderID</a></b>: Cardinal read FProviderID;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateCanvas"></a><code>function <b>CreateCanvas</b>(): <a   href="Asphyre.Canvas.TAsphyreCanvas.html">TAsphyreCanvas</a>; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This function creates hardware-specific Asphyre canvas.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateDevice"></a><code>function <b>CreateDevice</b>(): <a   href="Asphyre.Devices.TAsphyreDevice.html">TAsphyreDevice</a>; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This function creates hardware-specific Asphyre device.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateLockableTexture"></a><code>function <b>CreateLockableTexture</b>(): <a   href="Asphyre.Textures.TAsphyreLockableTexture.html">TAsphyreLockableTexture</a>; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This function creates hardware-specific lockable texture.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CreateRenderTargetTexture"></a><code>function <b>CreateRenderTargetTexture</b>(): <a   href="Asphyre.Textures.TAsphyreRenderTargetTexture.html">TAsphyreRenderTargetTexture</a>; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This function creates hardware-specific render target texture. If render targets are not supported in this provider, <code>Nil</code> is returned.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ProviderID"></a><code>property <b>ProviderID</b>: Cardinal read FProviderID;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The numerical identifier of the provider that must be unique among all providers supported in Asphyre.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

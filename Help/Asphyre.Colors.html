@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Colors</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit Asphyre.Colors</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td><a class="section"  href="#%40FuncsProcs">Functions and Procedures</a></td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td>Variables</td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Types, classes and utility routines working with colors defined using floating-point numbers.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">record&nbsp;<a class="bold"  href="Asphyre.Colors.TAsphyreColor.html"><code>TAsphyreColor</code></a></td>
+<td class="itemdesc">High-fidelity color type using floating-point numbers.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold"  href="Asphyre.Colors.TAsphyreColors.html"><code>TAsphyreColors</code></a></td>
+<td class="itemdesc">List of high-fidelity color types that use floating-point numbers.</td>
+</tr>
+</table>
+<a name="%40FuncsProcs"></a><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cBlend">cBlend</a></b>(const Src, Dest: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Alpha: Integer): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cClamp">cClamp</a></b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cColor">cColor</a></b>(r, g, b, a: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cColor">cColor</a></b>(Gray, Alpha: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cColor">cColor</a></b>(Gray: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cCubic">cCubic</a></b>(const c1, c2, c3, c4: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Theta: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cDarken">cDarken</a></b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Light: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cGrayValue">cGrayValue</a></b>(const Color: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cLerp">cLerp</a></b>(const Src, Dest: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Alpha: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cModulateAlpha">cModulateAlpha</a></b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Alpha: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cNegative">cNegative</a></b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cNoAlpha">cNoAlpha</a></b>(const Src: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a   href="Asphyre.Colors.html#cWrap">cWrap</a></b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="Asphyre.Colors.html#PAsphyreColor">PAsphyreColor</a></b> = &circ;<a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cBlend"></a><code>function <b>cBlend</b>(const Src, Dest: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Alpha: Integer): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between two given colors producing the resulting mixture. <code>Alpha</code> should be specified in [0..255] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cClamp"></a><code>function <b>cClamp</b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Clamps the individual components of the given color so that the resulting color has all its components within [0..1] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cColor"></a><code>function <b>cColor</b>(r, g, b, a: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Constructs <a class="normal"  href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a> using individual components.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cColor"></a><code>function <b>cColor</b>(Gray, Alpha: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Constructs <a class="normal"  href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a> where red, green and blue components are set to the given grayscale value and alpha-channel specified separately.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cColor"></a><code>function <b>cColor</b>(Gray: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Constructs <a class="normal"  href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a> where red, green and blue components are set to the given grayscale value and alpha-channel set to one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cCubic"></a><code>function <b>cCubic</b>(const c1, c2, c3, c4: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Theta: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes cubic interpolation between four colors for each individual components using Catmull-Rom interpolation. <code>Theta</code> should be specified in [0..1] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cDarken"></a><code>function <b>cDarken</b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Light: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplies red, green and blue channels of the given color by the specified coefficient and returns the result.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cGrayValue"></a><code>function <b>cGrayValue</b>(const Color: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calculates the gray value that appear in perceptual terms from the source color.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cLerp"></a><code>function <b>cLerp</b>(const Src, Dest: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Alpha: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolates between two given colors producing the resulting mixture. <code>Alpha</code> should be specified in [0..1] range.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cModulateAlpha"></a><code>function <b>cModulateAlpha</b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>; Alpha: Single): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplies alpha-channel from the given color by the specified coefficient and returns the resulting color with red, green and blue components unchanged.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cNegative"></a><code>function <b>cNegative</b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes negative color from the source by subtracting each individual component from one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cNoAlpha"></a><code>function <b>cNoAlpha</b>(const Src: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+This function takes the source color and returns the same color but with alpha-channel set to one.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="cWrap"></a><code>function <b>cWrap</b>(const c: <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>): <a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Similar to <a class="normal"  href="Asphyre.Colors.html#cClamp">cClamp</a> this function makes sure that all components stay within the range of [0..1]. However, if one of the components overpasses the limit, it will be &quot;wrapped&quot; from the limit; for example, value of 1.2 becomes 0.8, 1.1 becomes 0.9, -0.3 becomes 0.3, -1.25 becomes 0.25 and so on.</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="PAsphyreColor"></a><code><b>PAsphyreColor</b> = &circ;<a   href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointer to <a class="normal"  href="Asphyre.Colors.TAsphyreColor.html">TAsphyreColor</a> to pass the structure by reference.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

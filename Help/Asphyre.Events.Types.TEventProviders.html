@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Events.Types: Class TEventProviders</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TEventProviders"></a><h1 class="cio">Class TEventProviders</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Events.Types.html">Asphyre.Events.Types</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TEventProviders = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+List of all available event providers based on observer pattern where subscriber classes are notified of the events sent by other classes.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TEventProviders</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Events.Types.TEventProviders.html#Add">Add</a></b>(): <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Events.Types.TEventProviders.html#IndexOf">IndexOf</a></b>(AProvider: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a   href="Asphyre.Events.Types.TEventProviders.html#Insert">Insert</a></b>(): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProviders.html#AddExecOrder">AddExecOrder</a></b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProviders.html#Clear">Clear</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProviders.html#ClearExecOrder">ClearExecOrder</a></b>();</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProviders.html#MarkEventListsDirty">MarkEventListsDirty</a></b>();</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProviders.html#Remove">Remove</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Events.Types.TEventProviders.html#Unsubscribe">Unsubscribe</a></b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Events.Types.TEventProviders.html#ItemCount">ItemCount</a></b>: Integer read GetItemCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Events.Types.TEventProviders.html#Items">Items</a></b>[Index: Integer]: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a> read GetItem;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Add"></a><code>function <b>Add</b>(): <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Adds a new provider to the end of the list and returns the reference to its class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="IndexOf"></a><code>function <b>IndexOf</b>(AProvider: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Returns the index of the specified provider in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Insert"></a><code>function <b>Insert</b>(): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inserts a new provider to the end of the list and returns its index.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AddExecOrder"></a><code>procedure <b>AddExecOrder</b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Defines the next execution order for all event callback functions of in all existing providers for the given class. This method should be called in a sequence for all registered classes to define in which order they should receive events.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Clear"></a><code>procedure <b>Clear</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes all providers from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ClearExecOrder"></a><code>procedure <b>ClearExecOrder</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Clears all the event ordering initially specified by <a class="normal"  href="Asphyre.Events.Types.TEventProviders.html#AddExecOrder">AddExecOrder</a> for all classes and callback functions.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MarkEventListsDirty"></a><code>procedure <b>MarkEventListsDirty</b>();</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Notifies all providers that their event priority list is dirty and should be updated the next time an event occurs. This can occur when the ordering list has been changed.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Remove"></a><code>procedure <b>Remove</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Removes provider at the specified index from the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Unsubscribe"></a><code>procedure <b>Unsubscribe</b>(const AClassName: <a   href="Asphyre.TypeDef.html#StdString">StdString</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Unsubscribes all existing event callback functions for the specified class from all existing providers.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ItemCount"></a><code>property <b>ItemCount</b>: Integer read GetItemCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Number of registered provider classes in the list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Items"></a><code>property <b>Items</b>[Index: Integer]: <a   href="Asphyre.Events.Types.TEventProvider.html">TEventProvider</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Access to individual provider classes in the list.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

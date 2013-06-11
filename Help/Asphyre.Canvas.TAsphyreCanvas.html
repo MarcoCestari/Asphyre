@@ -1,0 +1,681 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: Asphyre.Canvas: Class TAsphyreCanvas</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<a name="TAsphyreCanvas"></a><h1 class="cio">Class TAsphyreCanvas</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
+<a name="%40Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a   href="Asphyre.Canvas.html">Asphyre.Canvas</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TAsphyreCanvas = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+2D canvas specification for rendering points, lines, filled shapes and images using gradient color fills, different blending effects, and alpha transparency.</p>
+<a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TAsphyreCanvas</li></ul><h2 class="overview">Overview</h2>
+<a name="%40Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#Circle">Circle</a></b>(const Pos: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Radius: Single; Steps: Integer; Color: Cardinal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#DrawIndexedTriangles">DrawIndexedTriangles</a></b>(Vertices: <a   href="Asphyre.Math.html#PPoint2">PPoint2</a>; Colors: PLongWord; Indices: PLongInt; NoVertices, NoTriangles: Integer; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#Ellipse">Ellipse</a></b>(const Pos, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Steps: Integer; Color: Cardinal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillArc">FillArc</a></b>(x, y, Radius, InitPhi, EndPhi: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillArc">FillArc</a></b>(const Pos, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; InitPhi, EndPhi: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillCircle">FillCircle</a></b>(x, y, Radius: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillEllipse">FillEllipse</a></b>(const Pos, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillHexagon">FillHexagon</a></b>(const Mtx: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>; c1, c2, c3, c4, c5, c6: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillQuad">FillQuad</a></b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillRect">FillRect</a></b>(Left, Top, Width, Height: Integer; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillRect">FillRect</a></b>(const Rect: TRect; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillRect">FillRect</a></b>(const Rect: TRect; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillRibbon">FillRibbon</a></b>(const Pos, InRadius, OutRadius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; InitPhi, EndPhi: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillRibbon">FillRibbon</a></b>(const Pos, InRadius, OutRadius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; InitPhi, EndPhi: Single; Steps: Integer; InColor1, InColor2, InColor3, OutColor1, OutColor2, OutColor3: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FillTri">FillTri</a></b>(const p1, p2, p3: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; c1, c2, c3: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#Flush">Flush</a></b>(); virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FrameHexagon">FrameHexagon</a></b>(const Mtx: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>; Color: Cardinal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FrameRect">FrameRect</a></b>(const Rect: TRect; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#FrameRect">FrameRect</a></b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#HorizLine">HorizLine</a></b>(Left, Top, Width: Single; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#HorizLine">HorizLine</a></b>(Left, Top, Width: Single; Color1, Color2: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#Line">Line</a></b>(const Src, Dest: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color: Cardinal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#Line">Line</a></b>(x1, y1, x2, y2: Single; Color: Cardinal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#Line">Line</a></b>(const Src, Dest: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color1, Color2: Cardinal); overload; virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#LineArray">LineArray</a></b>(Points: <a   href="Asphyre.Math.html#PPoint2">PPoint2</a>; Color: Cardinal; NoPoints: Integer); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#PutPixel">PutPixel</a></b>(const Point: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color: Cardinal); overload; virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#PutPixel">PutPixel</a></b>(x, y: Single; Color: Cardinal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#QuadHole">QuadHole</a></b>(const Pos, Size, Center, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; OutColor, InColor: Cardinal; Steps: Integer; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#ResetStates">ResetStates</a></b>(); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#TexMap">TexMap</a></b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#UseImage">UseImage</a></b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; TextureNo: Integer = 0);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#UseImagePt">UseImagePt</a></b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; Pattern: Integer = 0); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#UseImagePt">UseImagePt</a></b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; Pattern: Integer; const SrcRect: TRect; Mirror: Boolean = False; Flip: Boolean = False); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#UseImagePx">UseImagePx</a></b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; TextureNo: Integer = 0);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#UseTexture">UseTexture</a></b>(const Texture: <a   href="Asphyre.Textures.TAsphyreCustomTexture.html">TAsphyreCustomTexture</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>); virtual; abstract;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#UseTexturePx">UseTexturePx</a></b>(const Texture: <a   href="Asphyre.Textures.TAsphyreCustomTexture.html">TAsphyreCustomTexture</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#VertLine">VertLine</a></b>(Left, Top, Height: Single; Color1, Color2: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#VertLine">VertLine</a></b>(Left, Top, Height: Single; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#WireQuad">WireQuad</a></b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#WuLine">WuLine</a></b>(Src, Dest: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color1, Color2: Cardinal);</code></td>
+</tr>
+</table>
+<a name="%40Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#Antialias">Antialias</a></b>: Boolean read GetAntialias write SetAntialias;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#CacheStall">CacheStall</a></b>: Integer read FCacheStall;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#ClipRect">ClipRect</a></b>: TRect read GetClipRect write SetClipRect;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#DeviceScale">DeviceScale</a></b>: Single read FDeviceScale write SetDeviceScale;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#ExternalScale">ExternalScale</a></b>: Single read FExternalScale write SetExternalScale;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a   href="Asphyre.Canvas.TAsphyreCanvas.html#MipMapping">MipMapping</a></b>: Boolean read GetMipMapping write SetMipMapping;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Circle"></a><code>procedure <b>Circle</b>(const Pos: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Radius: Single; Steps: Integer; Color: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws circle at the given position, radius and color. This routine uses <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#Line">Line</a> routine. <code>Steps</code> parameter indicates the number of divisions in the circle.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DrawIndexedTriangles"></a><code>procedure <b>DrawIndexedTriangles</b>(Vertices: <a   href="Asphyre.Math.html#PPoint2">PPoint2</a>; Colors: PLongWord; Indices: PLongInt; NoVertices, NoTriangles: Integer; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws multiple filled triangles using the specified vertices, vertex colors and index buffers. This is a low-level routine and can be used for drawing complex shapes quickly and efficiently.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Ellipse"></a><code>procedure <b>Ellipse</b>(const Pos, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Steps: Integer; Color: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws ellipse at the given position, radius and color. This routine uses <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#Line">Line</a> routine. <code>Steps</code> parameter indicates the number of divisions in the ellipse.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillArc"></a><code>procedure <b>FillArc</b>(x, y, Radius, InitPhi, EndPhi: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled arc at the given coordinates and radius. The arc begins at <code>InitPhi</code> and ends at <code>EndPhi</code> (in radians), subdivided into a number of triangles specified in <code>Steps</code>. The arc's shape is filled with 4-color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillArc"></a><code>procedure <b>FillArc</b>(const Pos, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; InitPhi, EndPhi: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled arc at the given position and radius. The arc begins at <code>InitPhi</code> and ends at <code>EndPhi</code> (in radians), subdivided into a number of triangles specified in <code>Steps</code>. The arc's shape is filled with 4-color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillCircle"></a><code>procedure <b>FillCircle</b>(x, y, Radius: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled circle at the given position and radius. The circle is subdivided into a number of triangles specified in <code>Steps</code>. The shape of circle is filled with 4-color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillEllipse"></a><code>procedure <b>FillEllipse</b>(const Pos, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled ellipse at the given position and radius. The ellipse is subdivided into a number of triangles specified in <code>Steps</code>. The shape of ellipse is filled with 4-color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillHexagon"></a><code>procedure <b>FillHexagon</b>(const Mtx: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>; c1, c2, c3, c4, c5, c6: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws hexagon where vertices are spaced 0.5 pixels apart from its center (so diameter is 1) in all directions, multiplied by the given matrix and filled with gradient of six colors at the corresponding vertices. The size, position and rotation of hexagon can be given using one or a combination of several 3x3 matrices multiplied together.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillQuad"></a><code>procedure <b>FillQuad</b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled quad between the specified vertices and vertex colors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillRect"></a><code>procedure <b>FillRect</b>(Left, Top, Width, Height: Integer; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws rectangle at the given coordinates filled with solid color.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillRect"></a><code>procedure <b>FillRect</b>(const Rect: TRect; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws rectangle filled with the specified 4-color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillRect"></a><code>procedure <b>FillRect</b>(const Rect: TRect; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws rectangle filled with solid color.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillRibbon"></a><code>procedure <b>FillRibbon</b>(const Pos, InRadius, OutRadius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; InitPhi, EndPhi: Single; Steps: Integer; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled ribbon at the given position between inner and outer radiuses. The ribbon begins at <code>InitPhi</code> and ends at <code>EndPhi</code> (in radians), subdivided into a number of triangles specified in <code>Steps</code>. The ribbons's shape is filled with 4-color gradient.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillRibbon"></a><code>procedure <b>FillRibbon</b>(const Pos, InRadius, OutRadius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; InitPhi, EndPhi: Single; Steps: Integer; InColor1, InColor2, InColor3, OutColor1, OutColor2, OutColor3: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled ribbon at the given position between inner and outer radiuses. The ribbon begins at <code>InitPhi</code> and ends at <code>EndPhi</code> (in radians), subdivided into a number of triangles specified in <code>Steps</code>. The ribbons's shape is filled with continuous gradient set by three pairs of inner and outer colors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FillTri"></a><code>procedure <b>FillTri</b>(const p1, p2, p3: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; c1, c2, c3: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws filled triangle between the specified vertices and vertex colors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Flush"></a><code>procedure <b>Flush</b>(); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Flushes the canvas cache and presents the pending primitives on the screen or render target. This can be useful to make sure that nothing remains in canvas cache before starting to draw, for instance, a 3D scene.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FrameHexagon"></a><code>procedure <b>FrameHexagon</b>(const Mtx: <a   href="Asphyre.Math.TMatrix3.html">TMatrix3</a>; Color: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws lines between each vertex in hexagon. The vertices are spaced 0.5 pixels apart from its center (so diameter is 1) in all directions, multiplied by the given matrix and filled with gradient of six colors at the corresponding vertices. The size, position and rotation of hexagon can be given using one or a combination of several 3x3 matrices multiplied together.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FrameRect"></a><code>procedure <b>FrameRect</b>(const Rect: TRect; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws lines that form the specified rectangle using colors from the given 4-color gradient. This primitive uses filled shapes and not actual lines for pixel-perfect mapping.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="FrameRect"></a><code>procedure <b>FrameRect</b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws lines between four corners of the given rectangle where the lines are filled using 4-color gradient. This method uses filled shapes instead of line primitives for pixel-perfect mapping but assumes that the four vertex points are aligned to form rectangle.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="HorizLine"></a><code>procedure <b>HorizLine</b>(Left, Top, Width: Single; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws horizontal line using the specified coordinates and filled with solid color. This primitive uses a filled shape and not line primitive for pixel-perfect mapping.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="HorizLine"></a><code>procedure <b>HorizLine</b>(Left, Top, Width: Single; Color1, Color2: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws horizontal line using the specified coordinates and filled with two color gradient. This primitive uses a filled shape and not line primitive for pixel-perfect mapping.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Line"></a><code>procedure <b>Line</b>(const Src, Dest: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color: Cardinal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws line between the two specified 2D floating-point vectors using solid color.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Line"></a><code>procedure <b>Line</b>(x1, y1, x2, y2: Single; Color: Cardinal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws line between the specified coordinates using solid color.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Line"></a><code>procedure <b>Line</b>(const Src, Dest: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color1, Color2: Cardinal); overload; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws line between the two specified 2D floating-point vectors using gradient of two colors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LineArray"></a><code>procedure <b>LineArray</b>(Points: <a   href="Asphyre.Math.html#PPoint2">PPoint2</a>; Color: Cardinal; NoPoints: Integer); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws series of lines between specified vertices using solid color.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PutPixel"></a><code>procedure <b>PutPixel</b>(const Point: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color: Cardinal); overload; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws a single pixel on the screen or render target using the specified 2D floating-point vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="PutPixel"></a><code>procedure <b>PutPixel</b>(x, y: Single; Color: Cardinal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws a single pixel on the screen or render target using the specified coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="QuadHole"></a><code>procedure <b>QuadHole</b>(const Pos, Size, Center, Radius: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; OutColor, InColor: Cardinal; Steps: Integer; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws a filled rectangle at the given position and size with a hole (in form of ellipse) inside at the given center and radius. The quality of the hole is defined by the value of <code>Steps</code> in number of subdivisions. This entire shape is filled with gradient starting from outer color at the edges of rectangle and inner color ending at the edge of hole. This shape can be particularly useful for highlighting items on the screen by darkening the entire area except the one inside the hole.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ResetStates"></a><code>procedure <b>ResetStates</b>(); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Resets all the states necessary for canvas operation. This can be useful when custom state changes have been made (for instance, in a 3D scene) so to restore the canvas to its working condition this method should be called.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="TexMap"></a><code>procedure <b>TexMap</b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws textured rectangle at the given vertices and multiplied by the specified 4-color gradient. The texture must be set prior to this call by one of <code>UseTexture[...]</code> or <code>UseImage[...]</code> calls. For every call of <code>TexMap</code> there must be a corresponding <code>UseTexture[...]</code> or <code>UseImage[...]</code> call to specify the image or texture. All pixels of the rendered texture are multiplied by the gradient color before applying alpha-blending. If the texture has no alpha-channel present, alpha value of the gradient will be used instead.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UseImage"></a><code>procedure <b>UseImage</b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; TextureNo: Integer = 0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Defines the specified image with one of its textures to be used in next call to <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#TexMap">TexMap</a>. The coordinates inside the texture are defined in logical units in range of [0..1].</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UseImagePt"></a><code>procedure <b>UseImagePt</b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; Pattern: Integer = 0); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Defines the specified image with one of its patterns to be used in next call to <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#TexMap">TexMap</a>. If the image has none or just one pattern, the value of <code>Pattern</code> should be set to zero; in this case, the entire texture is used instead of pattern.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UseImagePt"></a><code>procedure <b>UseImagePt</b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; Pattern: Integer; const SrcRect: TRect; Mirror: Boolean = False; Flip: Boolean = False); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Defines the specified image with one of its patterns to be used in next call to <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#TexMap">TexMap</a>. Only part of pattern is used for rendering defined by the given coordinates; these coordinates can also be mirrored horizontally and/or flipped vertically, if needed. If the image has no or just one pattern, the value of <code>Pattern</code> should be set to zero; in this case, the entire texture is used instead of pattern.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UseImagePx"></a><code>procedure <b>UseImagePx</b>(const Image: <a   href="Asphyre.Images.TAsphyreImage.html">TAsphyreImage</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; TextureNo: Integer = 0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Defines the specified image with one of its textures to be used in next call to <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#TexMap">TexMap</a>. The coordinates inside the texture are defined in pixels using floating-point coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UseTexture"></a><code>procedure <b>UseTexture</b>(const Texture: <a   href="Asphyre.Textures.TAsphyreCustomTexture.html">TAsphyreCustomTexture</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Defines the specified texture to be used in next call to <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#TexMap">TexMap</a>. The coordinates inside the texture are defined in logical units in range of [0..1].</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="UseTexturePx"></a><code>procedure <b>UseTexturePx</b>(const Texture: <a   href="Asphyre.Textures.TAsphyreCustomTexture.html">TAsphyreCustomTexture</a>; const Mapping: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Defines the specified texture to be used in next call to <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#TexMap">TexMap</a>. The coordinates inside the texture are defined in pixels using floating-point coordinates.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VertLine"></a><code>procedure <b>VertLine</b>(Left, Top, Height: Single; Color1, Color2: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws vertical line using the specified coordinates and filled with two color gradient. This primitive uses a filled shape and not line primitive for pixel-perfect mapping.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="VertLine"></a><code>procedure <b>VertLine</b>(Left, Top, Height: Single; Color: Cardinal; Effect: <a   href="Asphyre.Canvas.html#TBlendingEffect">TBlendingEffect</a> = beNormal); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws vertical line using the specified coordinates and filled with solid color. This primitive uses a filled shape and not line primitive for pixel-perfect mapping.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="WireQuad"></a><code>procedure <b>WireQuad</b>(const Points: <a   href="Asphyre.Types.html#TPoint4">TPoint4</a>; const Colors: <a   href="Asphyre.Types.html#TColor4">TColor4</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws lines between the specified vertices (making it a wireframe quad) and vertex colors.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="WuLine"></a><code>procedure <b>WuLine</b>(Src, Dest: <a   href="Asphyre.Math.TPoint2.html">TPoint2</a>; Color1, Color2: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Draws antialiased &quot;wu-line&quot; using <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#PutPixel">PutPixel</a> primitive between the specified 2D floating-point vectors using two color gradient.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Antialias"></a><code>property <b>Antialias</b>: Boolean read GetAntialias write SetAntialias;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether antialiasing should be used when stretching images and textures. If this parameter is set to <code>False</code>, no antialiasing will be made and stretched images will appear pixelated. There is little to none performance gain from not using antialiasing, so this parameter should typically be set to <code>True</code>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="CacheStall"></a><code>property <b>CacheStall</b>: Integer read FCacheStall;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Number of times the rendering cache was reseted during last rendering frame. Each cache reset is typically a time-consuming operation so high number of such events could be detrimental to the application's rendering performance. If this parameter happens to be considerably high (above 20) in the rendered scene, the rendering code should be revised for better grouping of images, shapes and blending types.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ClipRect"></a><code>property <b>ClipRect</b>: TRect read GetClipRect write SetClipRect;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The clipping rectangle in which the rendering will be made. This can be useful for restricting the rendering to a certain part of screen.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="DeviceScale"></a><code>property <b>DeviceScale</b>: Single read FDeviceScale write SetDeviceScale;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines the current scale of device to be rendered on. This value should be typically taken from <a class="normal"  href="Asphyre.Devices.TAsphyreDevice.html">TAsphyreDevice</a> when rendering on the screen, or set to 1.0 when rendering on render target. Additionally, this value can be set to other values to compensate for screen's DPI.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="ExternalScale"></a><code>property <b>ExternalScale</b>: Single read FExternalScale write SetExternalScale;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines the scale that user (or application) uses for rendering on this canvas. If this scale matches <a class="normal"  href="Asphyre.Canvas.TAsphyreCanvas.html#DeviceScale">DeviceScale</a>, then pixel to pixel mapping is achieved.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="MipMapping"></a><code>property <b>MipMapping</b>: Boolean read GetMipMapping write SetMipMapping;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Determines whether mipmapping should be used when rendering images and textures. Mipmapping can improve visual quality when extreme shrinking of original images is made at the expense of performance.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2013-05-26 10:39:41</em>
+</span>
+</body></html>

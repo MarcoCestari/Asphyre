@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="PasDoc 0.12.1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Asphyre Sphinx: AsphyreAuth</title>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<h1 class="unit">Unit AsphyreAuth</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section"  href="#%40Description">Description</a></td><td>Uses</td><td><a class="section"  href="#%40Classes">Classes, Interfaces, Objects and Records</a></td><td>Functions and Procedures</td><td><a class="section"  href="#%40Types">Types</a></td><td>Constants</td><td><a class="section"  href="#%40Variables">Variables</a></td></tr></table>
+<a name="%40Description"></a><h2 class="description">Description</h2>
+<p>
+Archive password authentication management, where passwords are provided for encrypted Asphyre archives.</p>
+<a name="%40Uses"></a><h2 class="overview">Overview</h2>
+<a name="%40Classes"></a><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold"  href="AsphyreAuth.TAsphyreAuth.html"><code>TAsphyreAuth</code></a></td>
+<td class="itemdesc">Archive password authentication class that implements observer pattern for providing passwords to archives for encrypting and decrypting sensitive information.</td>
+</tr>
+</table>
+<a name="%40Types"></a><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreAuth.html#TAuthCallback">TAuthCallback</a></b> = procedure(Sender: TObject; Auth: <a   href="AsphyreAuth.TAsphyreAuth.html">TAsphyreAuth</a>; Archive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>; AuthType: <a   href="AsphyreAuth.html#TAuthType">TAuthType</a>) of object;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a   href="AsphyreAuth.html#TAuthType">TAuthType</a></b> = (...);</code></td>
+</tr>
+</table>
+<a name="%40Variables"></a><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a   href="AsphyreAuth.html#Auth">Auth</a></b>: <a   href="AsphyreAuth.TAsphyreAuth.html">TAsphyreAuth</a> = nil;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TAuthCallback"></a><code><b>TAuthCallback</b> = procedure(Sender: TObject; Auth: <a   href="AsphyreAuth.TAsphyreAuth.html">TAsphyreAuth</a>; Archive: <a   href="AsphyreArchives.TAsphyreArchive.html">TAsphyreArchive</a>; AuthType: <a   href="AsphyreAuth.html#TAuthType">TAuthType</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Archive password authentication callback function. In this event it is necessary to call <code>ProvideKey</code> function of <a class="normal"  href="AsphyreAuth.TAsphyreAuth.html">TAsphyreAuth</a> to provide the password for archive access.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Sender</dt>
+<dd>Sender class that requires secure access to sensitive content in Asphyre archive.</dd>
+<dt>Auth</dt>
+<dd>Reference to authentication class that handles the transaction.</dd>
+<dt>Archive</dt>
+<dd>Reference to Asphyre's archive class that is currently being accessed.</dd>
+<dt>AuthType</dt>
+<dd>The required authentication type.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="TAuthType"></a><code><b>TAuthType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Password authentication type for Asphyre archives.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+atProvideKey: Indicates that the secure key should be provided for decrypting sensitive content. <br> <br></li>
+<li>
+atBurnKey: Indicates that the secure key should be destroyed as it is no longer necessary to prevent third party from acquiring it. The memory used to store the key should be replaced with zeros or other random data.</li>
+</ul>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><a name="Auth"></a><code><b>Auth</b>: <a   href="AsphyreAuth.TAsphyreAuth.html">TAsphyreAuth</a> = nil;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Instance of <a class="normal"  href="AsphyreAuth.TAsphyreAuth.html">TAsphyreAuth</a> that is used by Asphyre components for providing passwords to Asphyre archives for encrypting and decrypting secure information.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2012-09-14 11:55:49</em>
+</span>
+</body></html>
