@@ -14,7 +14,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, System.Math, Asphyre.DDraw7;
+{$ifndef fpc}
+ Winapi.Windows, System.Math,
+{$else}
+ Windows, Math,
+{$endif}
+ Asphyre.DDraw7;
 
 //---------------------------------------------------------------------------
 (* TD3DValue is the fundamental Direct3D fractional data type *)

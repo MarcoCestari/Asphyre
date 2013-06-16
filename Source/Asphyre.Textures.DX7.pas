@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, Asphyre.DDraw7, Asphyre.D3D7, System.Types, Asphyre.TypeDef, 
+{$ifndef fpc}
+ Winapi.Windows, System.Types,
+{$else}
+ Windows, Types,
+{$endif}
+ Asphyre.DDraw7, Asphyre.D3D7, Asphyre.TypeDef,
  Asphyre.Math, Asphyre.Surfaces, Asphyre.Textures;
 
 //---------------------------------------------------------------------------
@@ -98,7 +103,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Types.DX7, Asphyre.Types;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Types.DX7, Asphyre.Types;
 
 //---------------------------------------------------------------------------
 function ComputeMipLevels(Width, Height: Integer): Integer;

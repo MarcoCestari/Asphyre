@@ -48,7 +48,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Textures.GLES, Asphyre.Canvas.GLES, 
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Textures.GLES, Asphyre.Canvas.GLES,
  Asphyre.Devices.GLES;
 
 //---------------------------------------------------------------------------

@@ -16,7 +16,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, System.Classes, Vcl.Graphics, Asphyre.TypeDef, 
+{$ifndef fpc}
+ System.SysUtils, System.Classes, Vcl.Graphics,
+{$else}
+ SysUtils, Classes, Graphics,
+{$endif}
+ Asphyre.TypeDef,
  Asphyre.Surfaces, Asphyre.Bitmaps;
 
 //---------------------------------------------------------------------------

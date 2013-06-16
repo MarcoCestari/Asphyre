@@ -109,7 +109,12 @@ implementation
 
 //--------------------------------------------------------------------------
 uses
- Winapi.Windows, Asphyre.DDraw7, Asphyre.Types.DX7;
+{$ifndef fpc}
+ Winapi.Windows,
+{$else}
+ Windows,
+{$endif}
+ Asphyre.DDraw7, Asphyre.Types.DX7;
 
 //--------------------------------------------------------------------------
 const

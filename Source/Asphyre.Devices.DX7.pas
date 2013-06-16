@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.Classes, Asphyre.DDraw7, Asphyre.D3D7, Asphyre.Devices, 
+{$ifndef fpc}
+ System.Classes,
+{$else}
+ Classes,
+{$endif}
+ Asphyre.DDraw7, Asphyre.D3D7, Asphyre.Devices,
  Asphyre.SwapChains;
 
 //---------------------------------------------------------------------------
@@ -86,7 +91,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, System.SysUtils, Asphyre.Types.DX7, Asphyre.Types, 
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ Asphyre.Types.DX7, Asphyre.Types,
  Asphyre.Events;
 
 //---------------------------------------------------------------------------

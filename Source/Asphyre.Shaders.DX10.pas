@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- JSB.D3D10, System.Classes, Asphyre.TypeDef, Asphyre.Math;
+{$ifndef fpc}
+ System.Classes,
+{$else}
+ Classes,
+{$endif}
+ JSB.D3D10, Asphyre.TypeDef, Asphyre.Math;
 
 //---------------------------------------------------------------------------
 // Remove dot "." to enable loading shaders from external files. This will
@@ -162,7 +167,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, System.SysUtils, Asphyre.Types.DX10;
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ Asphyre.Types.DX10;
 
 //---------------------------------------------------------------------------
 constructor TDX10EffectVariables.Create(AEffect: ID3D10Effect);

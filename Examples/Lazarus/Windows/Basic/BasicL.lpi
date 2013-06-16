@@ -11,7 +11,6 @@
       <Title Value="Asphyre Basic Example"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
-      <ActiveWindowIndexAtStart Value="0"/>
     </General>
     <VersionInfo>
       <Language Value=""/>
@@ -38,17 +37,15 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="217">
+    <Units Count="239">
       <Unit0>
         <Filename Value="BasicL.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BasicL"/>
-        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="15" Y="2"/>
-        <UsageCount Value="70"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="71"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
       <Unit1>
@@ -59,12 +56,10 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainFm"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="53"/>
-        <CursorPos X="13" Y="63"/>
-        <UsageCount Value="70"/>
-        <Loaded Value="True"/>
+        <TopLine Value="60"/>
+        <CursorPos X="23" Y="72"/>
+        <UsageCount Value="71"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -1337,12 +1332,10 @@
       </Unit174>
       <Unit175>
         <Filename Value="..\..\..\..\Source\Asphyre.Config.inc"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="139"/>
-        <CursorPos X="30" Y="164"/>
+        <CursorPos X="30" Y="150"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit175>
       <Unit176>
@@ -1397,23 +1390,19 @@
       <Unit183>
         <Filename Value="..\..\..\..\Source\Asphyre.Events.Types.pas"/>
         <UnitName Value="Asphyre.Events.Types"/>
-        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="44"/>
         <CursorPos X="2" Y="63"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit183>
       <Unit184>
         <Filename Value="..\..\..\..\Source\Asphyre.FormTimers.pas"/>
         <UnitName Value="Asphyre.FormTimers"/>
-        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="23" Y="136"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit184>
       <Unit185>
@@ -1530,9 +1519,10 @@
       </Unit200>
       <Unit201>
         <Filename Value="..\..\..\..\Source\Asphyre.Bitmaps.pas"/>
+        <UnitName Value="Asphyre.Bitmaps"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="23"/>
-        <CursorPos X="1" Y="45"/>
+        <TopLine Value="73"/>
+        <CursorPos X="1" Y="22"/>
         <UsageCount Value="10"/>
       </Unit201>
       <Unit202>
@@ -1643,113 +1633,203 @@
         <CursorPos X="128" Y="23"/>
         <UsageCount Value="10"/>
       </Unit216>
+      <Unit217>
+        <Filename Value="..\..\..\..\Source\Asphyre.Providers.DX10.pas"/>
+        <UnitName Value="Asphyre.Providers.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="39"/>
+        <CursorPos X="11" Y="54"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit217>
+      <Unit218>
+        <Filename Value="..\..\..\..\Source\Asphyre.Textures.DX10.pas"/>
+        <UnitName Value="Asphyre.Textures.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="119"/>
+        <CursorPos X="2" Y="134"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit218>
+      <Unit219>
+        <Filename Value="..\..\..\..\Source\Asphyre.Types.DX10.pas"/>
+        <UnitName Value="Asphyre.Types.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="2" Y="25"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit219>
+      <Unit220>
+        <Filename Value="..\..\..\..\Source\Asphyre.Formats.DX10.pas"/>
+        <UnitName Value="Asphyre.Formats.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="44"/>
+        <CursorPos X="2" Y="59"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit220>
+      <Unit221>
+        <Filename Value="..\..\..\..\Source\Asphyre.Canvas.DX10.pas"/>
+        <UnitName Value="Asphyre.Canvas.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="155"/>
+        <CursorPos X="2" Y="170"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit221>
+      <Unit222>
+        <Filename Value="..\..\..\..\Source\Asphyre.Shaders.DX10.pas"/>
+        <UnitName Value="Asphyre.Shaders.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="161"/>
+        <CursorPos X="11" Y="173"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit222>
+      <Unit223>
+        <Filename Value="..\..\..\..\Source\Asphyre.Devices.DX10.pas"/>
+        <UnitName Value="Asphyre.Devices.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="83"/>
+        <CursorPos X="11" Y="98"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit223>
+      <Unit224>
+        <Filename Value="..\..\..\..\Source\Asphyre.SwapChains.DX10.pas"/>
+        <UnitName Value="Asphyre.SwapChains.DX10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="91"/>
+        <CursorPos X="11" Y="106"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit224>
+      <Unit225>
+        <Filename Value="..\..\..\..\Source\Asphyre.Providers.DX7.pas"/>
+        <UnitName Value="Asphyre.Providers.DX7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="39"/>
+        <CursorPos X="2" Y="54"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit225>
+      <Unit226>
+        <Filename Value="..\..\..\..\Source\Asphyre.Devices.DX7.pas"/>
+        <UnitName Value="Asphyre.Devices.DX7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="82"/>
+        <CursorPos X="2" Y="97"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit226>
+      <Unit227>
+        <Filename Value="..\..\..\..\Source\Asphyre.DDraw7.pas"/>
+        <UnitName Value="Asphyre.DDraw7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1408"/>
+        <CursorPos X="66" Y="1426"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit227>
+      <Unit228>
+        <Filename Value="..\..\..\..\Source\Asphyre.D3D7.pas"/>
+        <UnitName Value="Asphyre.D3D7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="11" Y="20"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit228>
+      <Unit229>
+        <Filename Value="..\..\..\..\Source\Asphyre.Types.DX7.pas"/>
+        <UnitName Value="Asphyre.Types.DX7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="36"/>
+        <CursorPos X="2" Y="51"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit229>
+      <Unit230>
+        <Filename Value="..\..\..\..\Source\Asphyre.Canvas.DX7.pas"/>
+        <UnitName Value="Asphyre.Canvas.DX7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="100"/>
+        <CursorPos X="2" Y="115"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit230>
+      <Unit231>
+        <Filename Value="..\..\..\..\Source\Asphyre.Textures.DX7.pas"/>
+        <UnitName Value="Asphyre.Textures.DX7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="94"/>
+        <CursorPos X="2" Y="109"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit231>
+      <Unit232>
+        <Filename Value="..\..\..\..\Source\Asphyre.Providers.GLES.pas"/>
+        <UnitName Value="Asphyre.Providers.GLES"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="39"/>
+        <CursorPos X="2" Y="54"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit232>
+      <Unit233>
+        <Filename Value="..\..\..\..\Source\Asphyre.Textures.GLES.pas"/>
+        <UnitName Value="Asphyre.Textures.GLES"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="5" Y="22"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit233>
+      <Unit234>
+        <Filename Value="..\..\..\..\Source\Asphyre.Bitmaps.TGA.pas"/>
+        <UnitName Value="Asphyre.Bitmaps.TGA"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="67"/>
+        <CursorPos X="2" Y="25"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit234>
+      <Unit235>
+        <Filename Value="..\..\..\..\Source\Asphyre.Bitmaps.Vampyre.pas"/>
+        <UnitName Value="Asphyre.Bitmaps.Vampyre"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="2" Y="24"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit235>
+      <Unit236>
+        <Filename Value="..\..\..\..\Source\Asphyre.Bitmaps.BMP.pas"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="7"/>
+        <CursorPos X="2" Y="22"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit236>
+      <Unit237>
+        <Filename Value="..\..\..\..\Source\Asphyre.Bitmaps.JPG.pas"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="2" Y="22"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit237>
+      <Unit238>
+        <Filename Value="..\..\..\..\Source\Asphyre.Bitmaps.PNG.pas"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="40"/>
+        <CursorPos X="21" Y="22"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit238>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
-      <Position1>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="41" Column="56" TopLine="28"/>
-      </Position1>
-      <Position2>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="84" Column="54" TopLine="72"/>
-      </Position2>
-      <Position3>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="76" Column="1" TopLine="59"/>
-      </Position3>
-      <Position4>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="80" Column="57" TopLine="62"/>
-      </Position4>
-      <Position5>
-        <Filename Value="..\..\..\..\Source\Asphyre.Events.Types.pas"/>
-        <Caret Line="139" Column="12" TopLine="121"/>
-      </Position5>
-      <Position6>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="80" Column="21" TopLine="73"/>
-      </Position6>
-      <Position7>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="33" Column="15" TopLine="15"/>
-      </Position7>
-      <Position8>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="36" Column="15" TopLine="18"/>
-      </Position8>
-      <Position9>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="45" Column="15" TopLine="28"/>
-      </Position9>
-      <Position10>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="97" Column="8" TopLine="80"/>
-      </Position10>
-      <Position11>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="48" Column="15" TopLine="30"/>
-      </Position11>
-      <Position12>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="169" Column="65" TopLine="152"/>
-      </Position12>
-      <Position13>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
-      </Position13>
-      <Position14>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="136" Column="11" TopLine="106"/>
-      </Position14>
-      <Position15>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="137" Column="11" TopLine="107"/>
-      </Position15>
-      <Position16>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="138" Column="11" TopLine="108"/>
-      </Position16>
-      <Position17>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="143" Column="62" TopLine="119"/>
-      </Position17>
-      <Position18>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="83" Column="56" TopLine="61"/>
-      </Position18>
-      <Position19>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="33" Column="15" TopLine="15"/>
-      </Position19>
-      <Position20>
-        <Filename Value="..\..\..\..\Source\Asphyre.Config.inc"/>
-        <Caret Line="23" Column="75" TopLine="13"/>
-      </Position20>
-      <Position21>
-        <Filename Value="MainFm.pas"/>
-        <Caret Line="80" Column="57" TopLine="43"/>
-      </Position21>
-      <Position22>
-        <Filename Value="..\..\..\..\Source\Asphyre.Config.inc"/>
-        <Caret Line="173" Column="12" TopLine="139"/>
-      </Position22>
-      <Position23>
-        <Filename Value="..\..\..\..\Source\Asphyre.Config.inc"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
-      </Position23>
-      <Position24>
-        <Filename Value="..\..\..\..\Source\Asphyre.Config.inc"/>
-        <Caret Line="39" Column="12" TopLine="9"/>
-      </Position24>
-      <Position25>
-        <Filename Value="..\..\..\..\Source\Asphyre.Config.inc"/>
-        <Caret Line="61" Column="13" TopLine="31"/>
-      </Position25>
-      <Position26>
-        <Filename Value="..\..\..\..\Source\Asphyre.Config.inc"/>
-        <Caret Line="147" Column="12" TopLine="117"/>
-      </Position26>
-    </JumpHistory>
+    <JumpHistory Count="0" HistoryIndex="-1"/>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>

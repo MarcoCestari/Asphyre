@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, JSB.DXGI, JSB.D3D10, JSB.D3D10_1, Asphyre.TypeDef;
+{$ifndef fpc}
+ Winapi.Windows,
+{$else}
+ Windows,
+{$endif}
+ JSB.DXGI, JSB.D3D10, JSB.D3D10_1, Asphyre.TypeDef;
 
 //---------------------------------------------------------------------------
 type

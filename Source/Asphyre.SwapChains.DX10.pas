@@ -100,7 +100,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, System.SysUtils, Asphyre.Types.DX10, Asphyre.Formats.DX10;
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ Asphyre.Types.DX10, Asphyre.Formats.DX10;
 
 //---------------------------------------------------------------------------
 constructor TDX10SwapChain.Create();

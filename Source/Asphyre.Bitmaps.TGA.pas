@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, System.Classes, Asphyre.TypeDef, Asphyre.Surfaces, 
+{$ifndef fpc}
+ System.SysUtils, System.Classes,
+{$else}
+ SysUtils, Classes,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Surfaces,
  Asphyre.Bitmaps;
 
 //---------------------------------------------------------------------------

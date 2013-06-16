@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, JSB.DXGI, Asphyre.TypeDef, Asphyre.Types;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ JSB.DXGI, Asphyre.TypeDef, Asphyre.Types;
 
 //---------------------------------------------------------------------------
 function AsphyreToDX10Format(Format: TAsphyrePixelFormat): DXGI_FORMAT;
@@ -48,7 +53,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, JSB.D3D10, Asphyre.Formats, Asphyre.Types.DX10;
+{$ifndef fpc}
+ Winapi.Windows,
+{$else}
+ Windows,
+{$endif}
+ JSB.D3D10, Asphyre.Formats, Asphyre.Types.DX10;
 
 //---------------------------------------------------------------------------
 const

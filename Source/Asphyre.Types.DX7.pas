@@ -45,7 +45,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Formats;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Formats;
 
 //---------------------------------------------------------------------------
 const

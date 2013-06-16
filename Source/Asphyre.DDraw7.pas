@@ -27,7 +27,11 @@ interface
 //{$DEFINE VER140}
 
 uses
-  Winapi.Windows;
+{$ifndef fpc}
+ Winapi.Windows;
+{$else}
+ Windows;
+{$endif}
 
 var
   DDrawDLL : HMODULE = 0;
@@ -1025,7 +1029,7 @@ type
     function GetAvailableVidMem (const lpDDSCaps: TDDSCaps2;
         out lpdwTotal, lpdwFree: DWORD) : HResult; stdcall;
     (*** Added in the V4 Interface ***)
-    function GetSurfaceFromDC (hdc : Winapi.Windows.HDC;
+    function GetSurfaceFromDC (hdc : {$ifndef fpc}Winapi.Windows.HDC{$else}Windows.HDC{$endif};
         out lpDDS4: IDirectDrawSurface4) : HResult; stdcall;
     function RestoreAllSurfaces : HResult; stdcall;
     function TestCooperativeLevel : HResult; stdcall;
@@ -1074,7 +1078,7 @@ type
     function GetAvailableVidMem (const lpDDSCaps: TDDSCaps2;
         out lpdwTotal, lpdwFree: DWORD) : HResult; stdcall;
     (*** Added in the V4 Interface ***)
-    function GetSurfaceFromDC (hdc : Winapi.Windows.HDC;
+    function GetSurfaceFromDC (hdc : {$ifndef fpc}Winapi.Windows.HDC{$else}Windows.HDC{$endif};
         out lpDDS: IDirectDrawSurface7) : HResult; stdcall;
     function RestoreAllSurfaces : HResult; stdcall;
     function TestCooperativeLevel : HResult; stdcall;
@@ -1162,7 +1166,7 @@ type
     function IsLost: HResult; stdcall;
     function Lock (lpDestRect: PRect; out lpDDSurfaceDesc:
         TDDSurfaceDesc; dwFlags: DWORD; hEvent: THandle) : HResult; stdcall;
-    function ReleaseDC (hDC: Winapi.Windows.HDC) : HResult; stdcall;
+    function ReleaseDC (hDC: {$ifndef fpc}Winapi.Windows.HDC{$else}Windows.HDC{$endif}) : HResult; stdcall;
     function _Restore: HResult; stdcall;
     function SetClipper (lpDDClipper: IDirectDrawClipper) : HResult; stdcall;
     function SetColorKey (dwFlags: DWORD; lpDDColorKey: PDDColorKey) :
@@ -1223,7 +1227,7 @@ type
     function Lock (lpDestRect: PRect;
         out lpDDSurfaceDesc: TDDSurfaceDesc; dwFlags: DWORD;
         hEvent: THandle) : HResult; stdcall;
-    function ReleaseDC (hDC: Winapi.Windows.HDC) : HResult; stdcall;
+    function ReleaseDC (hDC: {$ifndef fpc}Winapi.Windows.HDC{$else}Windows.HDC{$endif}) : HResult; stdcall;
     function _Restore: HResult; stdcall;
     function SetClipper (lpDDClipper: IDirectDrawClipper) : HResult; stdcall;
     function SetColorKey (dwFlags: DWORD; lpDDColorKey: PDDColorKey) :
@@ -1284,7 +1288,7 @@ type
     function Lock (lpDestRect: PRect;
         out lpDDSurfaceDesc: TDDSurfaceDesc; dwFlags: DWORD;
         hEvent: THandle) : HResult; stdcall;
-    function ReleaseDC (hDC: Winapi.Windows.HDC) : HResult; stdcall;
+    function ReleaseDC (hDC: {$ifndef fpc}Winapi.Windows.HDC{$else}Windows.HDC{$endif}) : HResult; stdcall;
     function _Restore: HResult; stdcall;
     function SetClipper (lpDDClipper: IDirectDrawClipper) : HResult; stdcall;
     function SetColorKey (dwFlags: DWORD; lpDDColorKey: PDDColorKey) :
@@ -1350,7 +1354,7 @@ type
     function Lock (lpDestRect: PRect;
         out lpDDSurfaceDesc: TDDSurfaceDesc2; dwFlags: DWORD;
         hEvent: THandle) : HResult; stdcall;
-    function ReleaseDC (hDC: Winapi.Windows.HDC) : HResult; stdcall;
+    function ReleaseDC (hDC: {$ifndef fpc}Winapi.Windows.HDC{$else}Windows.HDC{$endif}) : HResult; stdcall;
     function _Restore: HResult; stdcall;
     function SetClipper (lpDDClipper: IDirectDrawClipper) : HResult; stdcall;
     function SetColorKey (dwFlags: DWORD; lpDDColorKey: PDDColorKey) :
@@ -1421,7 +1425,7 @@ type
     function Lock (lpDestRect: PRect;
         out lpDDSurfaceDesc: TDDSurfaceDesc2; dwFlags: DWORD;
         hEvent: THandle) : HResult; stdcall;
-    function ReleaseDC (hDC: Winapi.Windows.HDC) : HResult; stdcall;
+    function ReleaseDC (hDC: {$ifndef fpc}Winapi.Windows.HDC{$else}Windows.HDC{$endif}) : HResult; stdcall;
     function _Restore: HResult; stdcall;
     function SetClipper (lpDDClipper: IDirectDrawClipper) : HResult; stdcall;
     function SetColorKey (dwFlags: DWORD; lpDDColorKey: PDDColorKey) :
