@@ -32,7 +32,12 @@ uses
  {$endif}
 {$endif}
 
- System.Types, System.SysUtils, System.Classes, System.Math, Asphyre.TypeDef;
+{$ifndef fpc}
+ System.Types, System.SysUtils, System.Classes, System.Math,
+{$else}
+ Types, SysUtils, Classes, Math,
+{$endif}
+ Asphyre.TypeDef;
 
 //---------------------------------------------------------------------------
 {

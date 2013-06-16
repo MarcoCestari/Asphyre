@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
+{$ifndef fpc}
  System.SysUtils, Asphyre.TypeDef;
+{$else}
+ SysUtils, Asphyre.TypeDef;
+{$endif}
+
 
 //---------------------------------------------------------------------------
 { Determines whether both strings have the same text ignoring the case. }

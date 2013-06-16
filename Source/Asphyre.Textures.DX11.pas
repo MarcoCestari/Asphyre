@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- JSB.DXGI, JSB.D3D11, System.Types, Asphyre.TypeDef, Asphyre.Types, 
+{$ifndef fpc}
+ System.Types,
+{$else}
+ Types,
+{$endif}
+ JSB.DXGI, JSB.D3D11, Asphyre.TypeDef, Asphyre.Types,
  Asphyre.Surfaces, Asphyre.Textures;
 
 //---------------------------------------------------------------------------
@@ -130,7 +135,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, System.SysUtils, Asphyre.Types.DX11, Asphyre.Formats.DX11;
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ Asphyre.Types.DX11, Asphyre.Formats.DX11;
 
 //---------------------------------------------------------------------------
 constructor TDX11LockableTexture.Create();

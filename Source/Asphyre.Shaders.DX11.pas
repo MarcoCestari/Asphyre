@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, JSB.D3D11, Asphyre.TypeDef, Asphyre.Math;
+{$ifndef fpc}
+ Winapi.Windows,
+{$else}
+ Windows,
+{$endif}
+ JSB.D3D11, Asphyre.TypeDef, Asphyre.Math;
 
 //---------------------------------------------------------------------------
 type
@@ -200,7 +205,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Types, Asphyre.Types.DX11;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Types, Asphyre.Types.DX11;
 
 //---------------------------------------------------------------------------
 constructor TDX11BufferVariables.Create();

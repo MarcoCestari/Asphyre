@@ -1,0 +1,13 @@
+object MainForm: TMainForm
+  Left = 14
+  Height = 407
+  Top = 0
+  Width = 661
+  Caption = 'Asphyre: Shapes example'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  Visible = True
+end

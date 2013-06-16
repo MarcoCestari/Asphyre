@@ -1,0 +1,11 @@
+object MainForm: TMainForm
+  Left = 316
+  Height = 500
+  Top = 119
+  Width = 600
+  BorderStyle = bsSingle
+  Caption = 'Asphyre 3D basic example for FPC/Lazarus.'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.0.1.3'
+end

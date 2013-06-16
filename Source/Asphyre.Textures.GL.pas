@@ -25,7 +25,12 @@ uses
  Asphyre.GL
 {$endif},
 
- System.Types, Asphyre.TypeDef, Asphyre.Types, Asphyre.Textures, 
+{$ifndef fpc}
+ System.Types,
+{$else}
+ Types,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Types, Asphyre.Textures,
  Asphyre.Surfaces;
 
 //---------------------------------------------------------------------------
@@ -92,7 +97,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Formats, Asphyre.Types.GL;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Formats, Asphyre.Types.GL;
 
 //---------------------------------------------------------------------------
 constructor TGLLockableTexture.Create();

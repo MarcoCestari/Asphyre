@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.Classes, Asphyre.TypeDef, Asphyre.Devices, Asphyre.Textures, 
+{$ifndef fpc}
+ System.Classes,
+{$else}
+ Classes,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Devices, Asphyre.Textures,
  Asphyre.SwapChains, Asphyre.SwapChains.DX11;
 
 //---------------------------------------------------------------------------
@@ -75,8 +80,13 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- JSB.DXTypes, JSB.D3DCommon, JSB.DXGI, JSB.D3D11, Winapi.Windows, 
- System.SysUtils, Asphyre.Types.DX11, Asphyre.Events;
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ JSB.DXTypes, JSB.D3DCommon, JSB.DXGI, JSB.D3D11,
+ Asphyre.Types.DX11, Asphyre.Events;
 
 //---------------------------------------------------------------------------
 var

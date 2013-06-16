@@ -50,7 +50,7 @@
 {$ELSE}
 
   // *** FreePascal compiler support ***
-  {$INCLUDE AsphyreD3DJedi.inc}
+  {$INCLUDE Asphyre.D3D9.Jedi.inc}
 
   {$APPTYPE GUI}
 

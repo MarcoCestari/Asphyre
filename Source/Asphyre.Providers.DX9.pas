@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Providers, Asphyre.Devices, Asphyre.Canvas,
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Providers, Asphyre.Devices, Asphyre.Canvas,
  Asphyre.Textures;
 
 //---------------------------------------------------------------------------

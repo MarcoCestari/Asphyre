@@ -212,7 +212,9 @@ constructor TAsphyreMatrix.Create();
 begin
  inherited;
 
+{$ifndef fpc}
  Inc(AsphyreClassInstances);
+{$endif}
 
  MemAddr:= AllocMem(SizeOf(TMatrix4) + 16);
  FRawMtx:= Pointer(PtrInt(MemAddr) + ($10 - (PtrInt(MemAddr) and $0F)));
@@ -223,7 +225,9 @@ end;
 //---------------------------------------------------------------------------
 destructor TAsphyreMatrix.Destroy();
 begin
+{$ifndef fpc}
  Dec(AsphyreClassInstances);
+{$endif}
 
  FreeMem(MemAddr);
 

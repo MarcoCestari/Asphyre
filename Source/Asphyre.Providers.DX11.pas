@@ -48,7 +48,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Devices.DX11, Asphyre.Canvas.DX11, 
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Devices.DX11, Asphyre.Canvas.DX11,
  Asphyre.Textures.DX11;
 
 //---------------------------------------------------------------------------

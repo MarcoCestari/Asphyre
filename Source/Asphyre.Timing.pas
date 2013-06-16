@@ -99,7 +99,11 @@ implementation
 //---------------------------------------------------------------------------
 uses
 {$ifdef MsWindows}
+ {$ifndef fpc}
  Winapi.Windows, Winapi.MMSystem,
+ {$else}
+ Windows, MMSystem,
+ {$endif}
  {$define OSTimingSupport}
 {$endif}
 
@@ -108,7 +112,11 @@ uses
  {$define OSTimingSupport}
 {$endif}
 
+{$ifndef fpc}
  System.SysUtils;
+{$else}
+ SysUtils;
+{$endif}
 
 //---------------------------------------------------------------------------
 constructor TAsphyreTiming.Create();

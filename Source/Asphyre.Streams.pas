@@ -23,7 +23,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.Classes, Asphyre.TypeDef, Asphyre.Math;
+{$ifndef fpc}
+ System.Classes,
+{$else}
+ Classes,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Math;
 
 //---------------------------------------------------------------------------
 { Saves 8-bit unsigned integer to the stream. If the value is outside of

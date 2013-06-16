@@ -350,15 +350,18 @@ constructor TPoints2.Create();
 begin
  inherited;
 
+{$ifndef fpc}
  Inc(AsphyreClassInstances);
-
+{$endif}
  DataCount:= 0;
 end;
 
 //---------------------------------------------------------------------------
 destructor TPoints2.Destroy();
 begin
+{$ifndef fpc}
  Dec(AsphyreClassInstances);
+{$endif}
 
  DataCount:= 0;
  SetLength(Data, 0);

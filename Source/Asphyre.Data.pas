@@ -24,7 +24,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
+{$ifndef fpc}
  System.Types, System.SysUtils, System.Classes,
+{$else}
+ Types, SysUtils, Classes,
+{$endif}
+
 
 {$ifdef fpc}
  paszlib

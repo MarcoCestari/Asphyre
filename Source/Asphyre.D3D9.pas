@@ -67,7 +67,13 @@ interface
 (*$HPPEMIT '#include "d3d9types.h"' *)
 (*$HPPEMIT '#include "d3d9caps.h"' *)
 
-uses Winapi.Windows, Asphyre.D3D9.Types;
+uses
+{$ifndef fpc}
+ Winapi.Windows,
+{$else}
+ Windows,
+{$endif}
+ Asphyre.D3D9.Types;
 
 ///// Helper constants (for use in SetRenderState) /////
 const

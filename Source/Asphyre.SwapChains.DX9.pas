@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Asphyre.D3D9, Winapi.Windows, Asphyre.Types, Asphyre.SwapChains;
+ {$ifndef fpc}
+ Winapi.Windows, Asphyre.Types,
+ {$else}
+ Windows, Types,
+ {$endif}
+ Asphyre.D3D9, Asphyre.SwapChains;
 
 //---------------------------------------------------------------------------
 type
@@ -97,7 +102,12 @@ uses
  FMX.Platform.Win, FMX.Types,
 {$endif}
 
- System.SysUtils, Asphyre.Types.DX9;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Types.DX9;
 
 //---------------------------------------------------------------------------
 constructor TDX9SwapChain.Create();

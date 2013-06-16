@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Asphyre.D3D9, Winapi.Windows, Asphyre.TypeDef, Asphyre.Math, Asphyre.Types,
+{$ifndef fpc}
+ Winapi.Windows,
+{$else}
+ Windows,
+{$endif}
+ Asphyre.D3D9, Asphyre.TypeDef, Asphyre.Math, Asphyre.Types,
  Asphyre.Textures, Asphyre.Canvas;
 
 //---------------------------------------------------------------------------

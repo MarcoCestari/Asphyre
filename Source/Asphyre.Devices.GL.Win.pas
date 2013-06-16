@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, System.Classes, Asphyre.Devices, Asphyre.SwapChains;
+{$ifndef fpc}
+ Winapi.Windows, System.Classes,
+{$else}
+ Windows, Classes,
+{$endif}
+ Asphyre.Devices, Asphyre.SwapChains;
 
 //---------------------------------------------------------------------------
 type
@@ -99,7 +104,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.GL, Asphyre.Events, Asphyre.Types.GL;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.GL, Asphyre.Events, Asphyre.Types.GL;
 
 //---------------------------------------------------------------------------
 var

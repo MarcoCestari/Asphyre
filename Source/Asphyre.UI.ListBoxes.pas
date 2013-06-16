@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.Types, System.Classes, System.SysUtils, Asphyre.TypeDef, 
+{$ifndef fpc}
+ System.Types, System.Classes, System.SysUtils,
+{$else}
+ Types, Classes, SysUtils,
+{$endif}
+ Asphyre.TypeDef,
  Asphyre.Math, Asphyre.Types, Asphyre.UI.Types, Asphyre.UI.Controls, 
  Asphyre.UI.ScrollBars, Asphyre.UI.SelectLists;
 

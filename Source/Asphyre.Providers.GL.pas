@@ -48,7 +48,11 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, 
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
  
 {$ifdef FireMonkey}
  Asphyre.Devices.GL.FMX,

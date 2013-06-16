@@ -48,7 +48,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, JSB.D3D11, System.SysUtils, Asphyre.Formats, 
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ JSB.D3D11, Asphyre.Formats,
  Asphyre.Types.DX11;
 
 //---------------------------------------------------------------------------

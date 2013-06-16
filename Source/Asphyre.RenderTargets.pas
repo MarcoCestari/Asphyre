@@ -22,7 +22,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Types, Asphyre.Textures;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Types, Asphyre.Textures;
 
 //---------------------------------------------------------------------------
 type

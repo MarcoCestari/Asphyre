@@ -1,0 +1,19 @@
+object MainForm: TMainForm
+  Left = 316
+  Height = 400
+  Top = 128
+  Width = 500
+  Caption = 'Asphyre GUI example for FPC/Lazarus.'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnKeyUp = FormKeyUp
+  OnMouseDown = FormMouseDown
+  OnMouseMove = FormMouseMove
+  OnMouseUp = FormMouseUp
+  OnMouseWheel = FormMouseWheel
+  OnResize = FormResize
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+end

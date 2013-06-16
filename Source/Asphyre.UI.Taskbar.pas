@@ -44,10 +44,19 @@ uses
 {$ifdef FireMonkey}
  System.UITypes,
 {$else}
- Vcl.Controls,
+ {$ifndef fpc}
+  Vcl.Controls,
+ {$else}
+  Controls,
+ {$endif}
 {$endif}
 
- System.Classes, Asphyre.TypeDef, Asphyre.Math, Asphyre.Archives, 
+{$ifndef fpc}
+ System.Classes,
+{$else}
+ Classes,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Math, Asphyre.Archives,
  Asphyre.UI.Types, Asphyre.UI.Controls;
 
 //---------------------------------------------------------------------------
@@ -106,7 +115,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Archives.Auth, Asphyre.UI.Forms;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Archives.Auth, Asphyre.UI.Forms;
 
 //---------------------------------------------------------------------------
 constructor TGuiTaskbar.Create(const AOwner: TGuiControl);

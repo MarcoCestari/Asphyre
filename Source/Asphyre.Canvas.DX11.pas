@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, JSB.D3D11, System.Types, Asphyre.TypeDef, Asphyre.Math, 
+{$ifndef fpc}
+ Winapi.Windows, System.Types,
+{$else}
+ Windows, Types,
+{$endif}
+ JSB.D3D11, Asphyre.TypeDef, Asphyre.Math,
  Asphyre.Types, Asphyre.Textures, Asphyre.Canvas, Asphyre.Shaders.DX11;
 
 //---------------------------------------------------------------------------
@@ -156,7 +161,12 @@ implementation
 
 //--------------------------------------------------------------------------
 uses
- JSB.DXGI, JSB.D3DCommon, System.SysUtils, Asphyre.Types.DX11, 
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ JSB.DXGI, JSB.D3DCommon, Asphyre.Types.DX11,
  Asphyre.Canvas.DX11.Shaders;
 
 //--------------------------------------------------------------------------

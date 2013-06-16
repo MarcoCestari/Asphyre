@@ -24,7 +24,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.Types, System.Math, Asphyre.TypeDef, Asphyre.Math;
+{$ifndef fpc}
+ System.Types, System.Math,
+{$else}
+ Types, Math,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Math;
 
 //---------------------------------------------------------------------------
 {$ENDREGION}

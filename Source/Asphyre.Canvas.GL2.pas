@@ -25,7 +25,12 @@ uses
  Asphyre.GL
 {$endif},
 
- System.Types, Asphyre.TypeDef, Asphyre.Math, Asphyre.Types, 
+{$ifndef fpc}
+ System.Types,
+{$else}
+ Types,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Math, Asphyre.Types,
  Asphyre.Textures, Asphyre.Canvas;
 
 //---------------------------------------------------------------------------
@@ -150,7 +155,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, Asphyre.Types.GL, Asphyre.Canvas.GL2.Shaders;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Types.GL, Asphyre.Canvas.GL2.Shaders;
 
 //---------------------------------------------------------------------------
 type

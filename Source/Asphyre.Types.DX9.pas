@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Asphyre.D3D9, Winapi.Windows, System.SysUtils, Asphyre.Types;
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ Asphyre.D3D9, Asphyre.Types;
 
 //---------------------------------------------------------------------------
 type

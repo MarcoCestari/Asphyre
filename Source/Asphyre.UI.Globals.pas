@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.Types, Asphyre.TypeDef, Asphyre.Math, Asphyre.Types, Asphyre.Images, 
+{$ifndef fpc}
+ System.Types,
+{$else}
+ Types,
+{$endif}
+ Asphyre.TypeDef, Asphyre.Math, Asphyre.Types, Asphyre.Images,
  Asphyre.Fonts;
 
 //---------------------------------------------------------------------------

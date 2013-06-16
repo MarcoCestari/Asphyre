@@ -382,7 +382,9 @@ constructor TVectors4.Create();
 begin
  inherited;
 
+{$ifndef fpc}
  Inc(AsphyreClassInstances);
+{$endif}
 
  DataCount:= 0;
 end;
@@ -390,7 +392,9 @@ end;
 //---------------------------------------------------------------------------
 destructor TVectors4.Destroy();
 begin
+{$ifndef fpc}
  Dec(AsphyreClassInstances);
+{$endif}
 
  DataCount:= 0;
  SetLength(Data, 0);

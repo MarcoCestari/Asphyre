@@ -106,7 +106,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, System.SysUtils, Asphyre.Types.DX11, Asphyre.Formats.DX11;
+{$ifndef fpc}
+ Winapi.Windows, System.SysUtils,
+{$else}
+ Windows, SysUtils,
+{$endif}
+ Asphyre.Types.DX11, Asphyre.Formats.DX11;
 
 //---------------------------------------------------------------------------
 constructor TDX11SwapChain.Create();

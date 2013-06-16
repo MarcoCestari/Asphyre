@@ -37,7 +37,12 @@ uses
  LCLType, Controls,
 {$endif}
 
- System.Types, System.Classes, System.SysUtils, Asphyre.TypeDef, 
+{$ifndef fpc}
+ System.Types, System.Classes, System.SysUtils,
+{$else}
+ Types, Classes, SysUtils,
+{$endif}
+ Asphyre.TypeDef,
  Asphyre.Math, Asphyre.Types, Asphyre.Canvas, Asphyre.Images, Asphyre.Fonts;
 
 //---------------------------------------------------------------------------
@@ -215,7 +220,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- System.Math, Asphyre.Data;
+{$ifndef fpc}
+ System.Math,
+{$else}
+ Math,
+{$endif}
+ Asphyre.Data;
 
 //---------------------------------------------------------------------------
 type

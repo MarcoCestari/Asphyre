@@ -16,7 +16,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- WinApi.Windows, WinApi.MultiMon, Asphyre.TypeDef;
+{$ifndef fpc}
+ WinApi.Windows, WinApi.MultiMon,
+{$else}
+ Windows, MultiMon,
+{$endif}
+ Asphyre.TypeDef;
 
 //---------------------------------------------------------------------------
 type
@@ -80,7 +85,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
+{$ifndef fpc}
  System.SysUtils;
+{$else}
+ SysUtils;
+{$endif}
+
 
 //---------------------------------------------------------------------------
 const

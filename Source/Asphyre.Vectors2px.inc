@@ -297,7 +297,9 @@ constructor TPoints2px.Create();
 begin
  inherited;
 
+{$ifndef fpc}
  Inc(AsphyreClassInstances);
+{$endif}
 
  DataCount:= 0;
 end;
@@ -305,7 +307,9 @@ end;
 //---------------------------------------------------------------------------
 destructor TPoints2px.Destroy();
 begin
+{$ifndef fpc}
  Dec(AsphyreClassInstances);
+{$endif}
 
  DataCount:= 0;
  SetLength(Data, 0);

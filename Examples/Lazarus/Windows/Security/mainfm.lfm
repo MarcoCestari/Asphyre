@@ -1,0 +1,12 @@
+object MainForm: TMainForm
+  Left = 263
+  Height = 450
+  Top = 103
+  Width = 600
+  Caption = 'Asphyre: Security example'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  LCLVersion = '1.0.1.3'
+end

@@ -57,7 +57,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Winapi.Windows, JSB.DXTypes, Asphyre.Types;
+{$ifndef fpc}
+ Winapi.Windows,
+{$else}
+ Windows,
+{$endif}
+ JSB.DXTypes, Asphyre.Types;
 
 //---------------------------------------------------------------------------
 function DX11CreateBasicBlendState(SrcBlend, DestBlend: D3D11_BLEND;

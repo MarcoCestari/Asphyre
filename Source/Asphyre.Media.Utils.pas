@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, System.Classes, Asphyre.TypeDef, Asphyre.XML;
+{$ifndef fpc}
+ System.SysUtils, System.Classes,
+{$else}
+ SysUtils, Classes,
+{$endif}
+ Asphyre.TypeDef, Asphyre.XML;
 
 //---------------------------------------------------------------------------
 // IsArchiveLink()

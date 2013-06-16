@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- Asphyre.D3D9, Winapi.Windows, System.Classes, Asphyre.Devices,
+ {$ifndef fpc}
+ Winapi.Windows, System.Classes,
+ {$else}
+ Windows, Classes,
+ {$endif}
+ Asphyre.D3D9, Asphyre.Devices,
  Asphyre.Textures, Asphyre.SwapChains, Asphyre.SwapChains.DX9;
 
 //---------------------------------------------------------------------------
@@ -88,7 +93,12 @@ uses
  FMX.Platform.Win, FMX.Types,
 {$endif}
 
- System.SysUtils, Asphyre.Types.DX9, Asphyre.Events;
+{$ifndef fpc}
+ System.SysUtils,
+{$else}
+ SysUtils,
+{$endif}
+ Asphyre.Types.DX9, Asphyre.Events;
 
 //---------------------------------------------------------------------------
 constructor TDX9Device.Create();

@@ -24,7 +24,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- System.SysUtils, System.Classes, Asphyre.TypeDef;
+{$ifndef fpc}
+ System.SysUtils, System.Classes,
+{$else}
+ SysUtils, Classes,
+{$endif}
+ Asphyre.TypeDef;
 
 //---------------------------------------------------------------------------
 type
