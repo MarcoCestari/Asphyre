@@ -1,0 +1,11 @@
+object MainForm: TMainForm
+  Left = 243
+  Height = 600
+  Top = 127
+  Width = 800
+  Caption = 'Asphyre: Basic example and startup sheet.'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  LCLVersion = '1.1'
+end

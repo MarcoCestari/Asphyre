@@ -59,6 +59,8 @@ uses
 {$else}
 {$ifdef Windows}
  Asphyre.Devices.GL.Win,
+{$else}
+ Asphyre.Devices.GL.X,
 {$endif}
 {$endif}
 
