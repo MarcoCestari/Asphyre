@@ -92,6 +92,17 @@
  {$define DelphiXE4}
 {$endif}
 
+{$ifdef ver260} // Delphi XE 5
+ {$define Delphi2009Up}
+ {$define Delphi2010Up}
+ {$define DelphiXEUp}
+ {$define DelphiXE2Up}
+ {$define DelphiXE3Up}
+ {$define DelphiXE3}
+ {$define DelphiXE4}
+ {$define DelphiXE5}
+{$endif}
+
 {$endif}
 
 //---------------------------------------------------------------------------

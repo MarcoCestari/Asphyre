@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- iOSapi.OpenGLES, Asphyre.Math;
+ {$IFDEF IOS}
+ iOSapi.GLES,
+ {$ELSE}
+ Androidapi.Gles, Androidapi.Gles2, Androidapi.Gles2ext,
+ {$ENDIF}
+ Asphyre.Math;
 
 //---------------------------------------------------------------------------
 var
@@ -105,7 +110,7 @@ begin
  Result:= (Width > 0)and(Height > 0);
  if (not Result) then Exit;
 
- glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width, Height, 0, GL_BGRA,
+ glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width, Height, 0, GL_BGRA_EXT,
   GL_UNSIGNED_BYTE, SurfaceBits);
 
  Result:= glGetError() = GL_NO_ERROR;
@@ -131,7 +136,7 @@ begin
  glActiveTexture(GL_TEXTURE0);
  glBindTexture(GL_TEXTURE_2D, Texture);
 
- glTexSubImage2D(GL_TEXTURE_2D, Level, 0, 0, Width, Height, GL_BGRA,
+ glTexSubImage2D(GL_TEXTURE_2D, Level, 0, 0, Width, Height, GL_BGRA_EXT,
   GL_UNSIGNED_BYTE, SurfaceBits);
 
  Result:= glGetError() = GL_NO_ERROR;

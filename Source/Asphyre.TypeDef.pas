@@ -154,10 +154,6 @@ const
 
  //---------------------------------------------------------------------------
 {$ifndef DelphiXE2Up}
-type
- TArithmeticExceptionMask = TFPUExceptionMask;
-
- //---------------------------------------------------------------------------
 const
  exAllArithmeticExceptions = [exInvalidOp, exDenormalized, exZeroDivide,
   exOverflow, exUnderflow, exPrecision];

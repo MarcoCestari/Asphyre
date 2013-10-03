@@ -19,7 +19,12 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- iOSapi.OpenGLES, System.Types, System.SysUtils, Asphyre.TypeDef, 
+ {$IFDEF IOS}
+ iOSapi.GLES,
+ {$ELSE}
+ Androidapi.Gles2,
+ {$ENDIF}
+ System.Types, System.SysUtils, Asphyre.TypeDef,
  Asphyre.Types, Asphyre.Textures, Asphyre.Surfaces;
 
 //---------------------------------------------------------------------------

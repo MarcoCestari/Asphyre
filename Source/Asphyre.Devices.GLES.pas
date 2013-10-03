@@ -44,7 +44,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- iOSapi.OpenGLES, FMX.Types, Asphyre.Math, Asphyre.Events, Asphyre.SwapChains, 
+ {$IFDEF IOS}
+ iOSapi.GLES,
+ {$ELSE}
+ Androidapi.Gles2,
+ {$ENDIF}
+ FMX.Types, Asphyre.Math, Asphyre.Events, Asphyre.SwapChains,
  Asphyre.Types.GLES;
 
 //---------------------------------------------------------------------------

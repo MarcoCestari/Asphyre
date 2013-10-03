@@ -123,7 +123,12 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- iOSapi.OpenGLES, System.SysUtils;
+ {$IFDEF IOS}
+ iOSapi.GLES,
+ {$ELSE}
+ Androidapi.Gles2,
+ {$ENDIF}
+ System.SysUtils;
 
 //---------------------------------------------------------------------------
 const

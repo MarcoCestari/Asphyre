@@ -1,0 +1,8 @@
+EXPORTED {
+	global:
+		ANativeActivity_onCreate;
+		_NativeMain;
+		__rsrc_*;
+		__rstr_*;
+	local: *;
+};

@@ -69,13 +69,13 @@ uses
  Asphyre.D3D9, FMX.Context.DX9, Asphyre.Types.DX9, Asphyre.Providers.DX9,
 {$endif}
 
-{$ifdef iOS}
+{$if Declared(IOS) or Declared(ANDROID)}
  Asphyre.Providers.GLES,
 {$else}
- {$ifdef Posix}
-  Asphyre.Providers.GL,
- {$endif}
-{$endif}
+ {$if Declared(Posix)}
+ Asphyre.Providers.GL,
+ {$ifend}
+{$ifend}
 
  Asphyre.Monkey.Types, Asphyre.Events, Asphyre.Providers;
 
@@ -158,13 +158,13 @@ begin
  //..........................................................................
  // Mac OS X: Hook into FireMonkey (OpenGL).
  //..........................................................................
-{$ifdef iOS}
+{$if Declared(IOS) or Declared(ANDROID)}
  Factory.UseProvider(idOpenGL_ES);
 {$else}
- {$ifdef Posix}
+ {$if Declared(Posix)}
  Factory.UseProvider(idOpenGL);
- {$endif}
-{$endif}
+ {$ifend}
+{$ifend}
 
  FInitialized:= True;
  Result:= True;
