@@ -104,7 +104,7 @@ type
 
   function SaveToFile(const Filename: StdString): Boolean;
   function LoadFromFile(const Filename: StdString): Boolean;
-  function LoadFromArchive(const Key: WideString;
+  function LoadFromArchive(const Key: StdString;
    Archive: TAsphyreArchive): Boolean;
 
   constructor Create(const AOwner: TGuiControl); override;
@@ -446,7 +446,7 @@ begin
 end;
 
 //---------------------------------------------------------------------------
-function TGuiTaskbar.LoadFromArchive(const Key: WideString;
+function TGuiTaskbar.LoadFromArchive(const Key: StdString;
  Archive: TAsphyreArchive): Boolean;
 var
  Stream: TMemoryStream;

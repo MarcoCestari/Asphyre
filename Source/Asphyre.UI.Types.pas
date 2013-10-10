@@ -29,7 +29,7 @@ uses
  {$endif}
 {$ifend}
 
-{$if defined(FireMonkey) and defined(MacOS)}
+{$if defined(FireMonkey) and (defined(MacOS) or defined(Android))}
  System.UITypes,
 {$ifend}
 
