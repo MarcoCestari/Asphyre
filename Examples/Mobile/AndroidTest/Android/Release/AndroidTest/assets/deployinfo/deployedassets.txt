@@ -1,4 +1,1 @@
 .\assets\internal\media.asvf
-.\assets\internal\lena.png
-.\assets\internal\Tahoma18b.png
-.\assets\internal\Tahoma18b.xml

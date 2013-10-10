@@ -125,7 +125,7 @@
 //---------------------------------------------------------------------------
 {$if defined(Delphi) and defined(posix)}
  {$define FireMonkey}
-{$ifend}
+{$endif}
 
 //---------------------------------------------------------------------------
 // FreePascal does not support assembly instructions on 64-bit platform.

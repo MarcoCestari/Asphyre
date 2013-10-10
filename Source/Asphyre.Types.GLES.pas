@@ -19,11 +19,11 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- {$IFDEF IOS}
+ {$ifdef IOS}
  iOSapi.GLES,
- {$ELSE}
- Androidapi.Gles, Androidapi.Gles2, Androidapi.Gles2ext,
- {$ENDIF}
+ {$else}
+ Androidapi.Gles, Androidapi.Gles2, Androidapi.Gles2ext, FMX.Dialogs, SysUtils,
+ {$endif}
  Asphyre.Math;
 
 //---------------------------------------------------------------------------
@@ -110,7 +110,7 @@ begin
  Result:= (Width > 0)and(Height > 0);
  if (not Result) then Exit;
 
- glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width, Height, 0, GL_BGRA_EXT,
+ glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width, Height, 0, GL_RGBA,
   GL_UNSIGNED_BYTE, SurfaceBits);
 
  Result:= glGetError() = GL_NO_ERROR;

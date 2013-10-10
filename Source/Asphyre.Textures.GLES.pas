@@ -19,11 +19,11 @@ interface
 
 //---------------------------------------------------------------------------
 uses
- {$IFDEF IOS}
+ {$ifdef IOS}
  iOSapi.GLES,
- {$ELSE}
+ {$else}
  Androidapi.Gles2,
- {$ENDIF}
+ {$endif}
  System.Types, System.SysUtils, Asphyre.TypeDef,
  Asphyre.Types, Asphyre.Textures, Asphyre.Surfaces;
 

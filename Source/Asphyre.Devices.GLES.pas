@@ -44,11 +44,11 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- {$IFDEF IOS}
+ {$ifdef IOS}
  iOSapi.GLES,
- {$ELSE}
+ {$else}
  Androidapi.Gles2,
- {$ENDIF}
+ {$endif}
  FMX.Types, Asphyre.Math, Asphyre.Events, Asphyre.SwapChains,
  Asphyre.Types.GLES;
 

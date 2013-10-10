@@ -74,8 +74,8 @@ uses
 {$else}
  {$if Declared(Posix)}
  Asphyre.Providers.GL,
- {$ifend}
-{$ifend}
+ {$endif}
+{$endif}
 
  Asphyre.Monkey.Types, Asphyre.Events, Asphyre.Providers;
 
@@ -163,8 +163,8 @@ begin
 {$else}
  {$if Declared(Posix)}
  Factory.UseProvider(idOpenGL);
- {$ifend}
-{$ifend}
+ {$endif}
+{$endif}
 
  FInitialized:= True;
  Result:= True;

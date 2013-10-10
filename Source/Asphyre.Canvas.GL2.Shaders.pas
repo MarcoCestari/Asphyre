@@ -19,20 +19,20 @@ interface
 
 //---------------------------------------------------------------------------
 const
- VertexShaderSource: string =
+ VertexShaderSource: AnsiString =
   '#version 110'#13#10 +
   'attribute vec2 InpVertex; attribute vec2 InpTexCoord; attribute vec4 InpColor;'#13#10 +
   'varying vec4 VarCol; varying vec2 VarTex;'#13#10 +
   'void main() { gl_Position = vec4(InpVertex, 0.0, 1.0); VarCol = InpColor; VarTex = InpTexCoord; }' + #0;
 
 //---------------------------------------------------------------------------
- PixelShaderSolidSource: string =
+ PixelShaderSolidSource: AnsiString =
   '#version 110'#13#10 +
   'varying vec4 VarCol;'#13#10 +
   'void main() { if (VarCol.w < 0.00390625) discard; gl_FragColor = VarCol; }' + #0;
 
 //---------------------------------------------------------------------------
- PixelShaderTexturedSource: string =
+ PixelShaderTexturedSource: AnsiString =
   '#version 110'#13#10 +
   'uniform sampler2D SourceTex;'#13#10 +
   'varying vec4 VarCol; varying vec2 VarTex;'#13#10 +

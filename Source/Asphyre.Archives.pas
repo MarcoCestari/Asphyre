@@ -341,7 +341,7 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- Asphyre.Streams, Asphyre.Data;
+ Asphyre.Streams, Asphyre.Data, Asphyre.Types;
 
 //---------------------------------------------------------------------------
 const
@@ -628,7 +628,8 @@ begin
 
      ataPackaged:
       Result:= TFileStream.Create(ExtractFilePath(ParamStr(0)) +
-       ExtractFileName(FFileName), fmOpenRead or fmShareDenyWrite);
+       {$ifdef ANDROID}FFileName{$else}ExtractFileName(FFileName){$endif},
+       fmOpenRead or fmShareDenyWrite);
     end;
   end;
  except
@@ -740,7 +741,7 @@ begin
 
  Result:= True;
  try
-  Stream.Seek(TableOffset, soFromBeginning);
+  Stream.Seek(TableOffset, TSeekOrigin.soBeginning);
 
   for i:= 0 to Length(Records) - 1 do
    begin
@@ -780,7 +781,7 @@ begin
 
  Result:= True;
  try
-  Stream.Seek(TableOffset, soFromBeginning);
+  Stream.Seek(TableOffset, TSeekOrigin.soBeginning);
 
   for i:= 0 to Length(Records) - 1 do
    begin
@@ -814,7 +815,7 @@ begin
  try
   for i:= 0 to Length(Records) - 1 do
    begin
-    Stream.Seek(Records[i].Offset, soFromBeginning);
+    Stream.Seek(Records[i].Offset, TSeekOrigin.soBeginning);
 
     // --> Record Type + Security
     Value:= StreamGetByte(Stream);
@@ -1016,7 +1017,7 @@ begin
  if (RecDate = 0.0) then RecDate:= Now();
 
  try
-  Stream.Seek(RecordOffset, soFromBeginning);
+  Stream.Seek(RecordOffset, TSeekOrigin.soBeginning);
 
   // --> Record Type + Security
   Value:= Integer(RecType) and $0F;
@@ -1143,7 +1144,7 @@ begin
  // (2) Read the record from the archive.
  try
   // Move to the position of the data block in the archive.
-  Stream.Seek(DataOffset, soFromBeginning);
+  Stream.Seek(DataOffset, TSeekOrigin.soBeginning);
 
   // Read the record's data from the archive.
   Stream.ReadBuffer(PhysBuf^, PhysSize);
@@ -1233,7 +1234,7 @@ begin
  // (2) Read the record from the archive.
  try
   // Move to the position of the data block in the archive.
-  Stream.Seek(DataOffset, soFromBeginning);
+  Stream.Seek(DataOffset, TSeekOrigin.soBeginning);
 
   // Read the record's data from the archive.
   Stream.ReadBuffer(PhysBuf^, PhysSize);
@@ -1365,7 +1366,7 @@ begin
      ReallocMem(TempData, TempDataSize);
 
      // Read the data from source archive.
-     InStream.Seek(Records[i].Offset, soFromBeginning);
+     InStream.Seek(Records[i].Offset, TSeekOrigin.soBeginning);
      InStream.ReadBuffer(TempData^, TempDataSize);
 
      // Write the data to the destination archive.

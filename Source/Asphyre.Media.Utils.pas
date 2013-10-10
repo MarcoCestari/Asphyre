@@ -308,7 +308,7 @@ begin
  {$else}
  PrevDecimalSpeparator:= FormatSettings.DecimalSeparator;
  FormatSettings.DecimalSeparator:= '.';
- {$ifend}
+ {$endif}
 
  Result:= StrToFloatDef(Text, AutoValue);
 
@@ -316,7 +316,7 @@ begin
  DecimalSeparator:= PrevDecimalSpeparator;
  {$else}
  FormatSettings.DecimalSeparator:= PrevDecimalSpeparator;
- {$ifend}
+ {$endif}
 end;
 
 //---------------------------------------------------------------------------

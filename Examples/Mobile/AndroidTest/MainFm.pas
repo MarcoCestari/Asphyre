@@ -53,7 +53,7 @@ implementation
 
 //---------------------------------------------------------------------------
 uses
- FMX.Platform, FMX.Forms, FMX.Dialogs, Asphyre.Math, Asphyre.Types, Asphyre.Events.Types,
+ FMX.Platform, FMX.Forms, Asphyre.Math, Asphyre.Types, Asphyre.Events.Types,
  Asphyre.Events, Asphyre.FeedTimers, Asphyre.Archives, Asphyre.Providers,
  Asphyre.Images, Asphyre.Fonts, Asphyre.Monkey.Connectors, Asphyre.Devices,
  GameTypes, IOUtils, Asphyre.Providers.GLES;
@@ -119,7 +119,7 @@ end;
 procedure TMainForm.OnAsphyreCreate(const Sender: TObject;
  const Param: Pointer; var Handled: Boolean);
 begin
- //Factory.UseProvider(idOpenGL_ES);
+ Factory.UseProvider(idOpenGL_ES);
  // Create all Asphyre components.
  GameDevice:= Factory.CreateDevice();
  GameDevice.DeviceScale:= GetDeviceScale();
@@ -131,28 +131,9 @@ begin
  GameFonts.Images:= GameImages;
  GameFonts.Canvas:= GameCanvas;
 
- //ArchiveTypeAccess := ataResource;
-
- //ShowMessage(GetHomePath + PathDelim + 'media.asvf');
- //ShowMessage(TPath.Combine(TPath.GetDocumentsPath,'media.asvf'));
-
  MediaFile:= TAsphyreArchive.Create();
  MediaFile.OpenMode:= aomReadOnly;
- //if FileExists(GetHomePath + PathDelim + 'media.asvf') then
- //begin
- // ShowMessage('1');
- // MediaFile.FileName := GetHomePath + PathDelim + 'media.asvf';
- //end
- {else} if FileExists(TPath.Combine(TPath.GetDocumentsPath,'media.asvf')) then
- begin
-  ShowMessage('2');
-  MediaFile.FileName:= TPath.Combine(TPath.GetDocumentsPath,'media.asvf');
- end
- else if FileExists('media.asvf') then
- begin
-  ShowMessage('3');
-  MediaFile.FileName := 'media.asvf';
- end;
+ MediaFile.FileName:= TPath.GetDocumentsPath + PathDelim + 'media.asvf';
 end;
 
 //---------------------------------------------------------------------------
@@ -181,42 +162,29 @@ end;
 //---------------------------------------------------------------------------
 procedure TMainForm.OnDeviceCreate(const Sender: TObject;
  const Param: Pointer; var Handled: Boolean);
-//var
-// x: NativeInt;
 begin
- {if TFile.Exists(TPath.Combine(TPath.GetDocumentsPath,'Tahoma18b.png')) then
-  ShowMessage('tahoma');
+ GameImages.AddFromArchive('tahoma18b.image', MediaFile, '', False);
 
- //GameImages.AddFromArchive('tahoma18b.image', MediaFile, '', False);
- x := GameImages.AddFromFileEx(TPath.Combine(TPath.GetDocumentsPath,'Tahoma18b.png'),'tahoma18b.image');
- ShowMessage(IntToStr(x));
+ //fontTahoma:= GameFonts.Insert('media.asvf | tahoma18b.xml', 'tahoma18b.image');
+ fontTahoma:= GameFonts.Insert(MediaFile.FileName + ' | tahoma18b.xml', 'tahoma18b.image');
 
- fontTahoma:= GameFonts.Insert('media.asvf | tahoma18b.xml', 'tahoma18b.image');
+ imageLena:= GameImages.AddFromArchive('lena.image', MediaFile);
 
- //imageLena:= GameImages.AddFromArchive('lena.image', MediaFile);
- imageLena:= GameImages.AddFromFileEx(TPath.Combine(TPath.GetDocumentsPath,'lena.png'),'lena.image');
-
- ShowMessage(IntToStr(fontTahoma));
- ShowMessage(IntToStr(imageLena)); }
-
- PBoolean(Param)^:= True;
- { (PBoolean(Param)^)and
+ PBoolean(Param)^:=
+  (PBoolean(Param)^)and
   (imageLena <> -1)and
-  (fontTahoma <> -1);}
+  (fontTahoma <> -1);
 end;
 
 //---------------------------------------------------------------------------
 procedure TMainForm.OnTimer(Sender: TObject);
 begin
- //ShowMessage('OnTimer');
  if (not MonkeyAsphyreConnect.Init(Context)) then Exit;
- //ShowMessage('OnTimer 2');
  if (not Assigned(GameDevice))or(not GameDevice.Connect()) then Exit;
- //ShowMessage('OnTimer 3');
+
  GameDevice.Render(OnRender, $FF000000);
 
  Timer.Process();
- //ShowMessage('OnTimer Done');
 end;
 
 //---------------------------------------------------------------------------
@@ -227,8 +195,6 @@ var
  j, i: NativeInt;
  Omega, Kappa: Single;
 begin
- //ShowMessage('OnRender');
-
  // Let the canvas our own scale units and the actual scale of device.
  GameCanvas.ExternalScale:= 1.0;
  GameCanvas.DeviceScale:= GameDevice.DeviceScale;
@@ -263,12 +229,12 @@ begin
   $20FFFFFF, $80955BFF, 16);
 
  // Draw the image of famous Lenna.
- {GameCanvas.UseImagePx(GameImages[imageLena], pBounds4(0, 0, 512, 512));
+ GameCanvas.UseImagePx(GameImages[imageLena], pBounds4(0, 0, 512, 512));
  GameCanvas.TexMap(pRotate4c(
   Point2(DisplaySize.x * 0.5, DisplaySize.y * 0.5),
   Point2(300.0, 300.0),
   GameTicks * 0.01),
-  cAlpha4(128));}
+  cAlpha4(128));
 
  // Draw an animated Arc.
  Omega:= GameTicks * 0.0274;
@@ -294,7 +260,7 @@ begin
 
    The result is that on Retina display, it will be rendered twice of its size,
    so 0.5 x 2.0 = 1.0, while on non-Retina display it will appear half of its size. }
- {GameFonts[fontTahoma].Scale:= 0.5;
+ GameFonts[fontTahoma].Scale:= 0.5;
 
  GameFonts[fontTahoma].TextOut(
   Point2(4.0, 4.0),
@@ -304,7 +270,7 @@ begin
  GameFonts[fontTahoma].TextOut(
   Point2(4.0, 24.0),
   'Technology: ' + GetFullDeviceTechString(GameDevice),
-  cColor2($FFE8FFAA, $FF12C312));}
+  cColor2($FFE8FFAA, $FF12C312));
 end;
 
 //---------------------------------------------------------------------------
